@@ -9,5 +9,15 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+
+<%!
+
+    public String Name()
+    {
+        return "<br> this is Leo";
+    }
+%>
+
+<%= Name()%>
 </body>
 </html>
