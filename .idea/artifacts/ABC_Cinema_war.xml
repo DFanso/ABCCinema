@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ABC_Cinema:war">
+    <output-path>$PROJECT_DIR$/ABC_Cinema/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ABC_Cinema</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ABC_Cinema-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ABC_Cinema:war exploded" />
+    </root>
+  </artifact>
+</component>
