@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const seatcontainer = document.querySelector('.seatcontainer');
 const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
@@ -57,7 +57,7 @@ function populateUI() {
 // });
 
 // Seat click event
-container.addEventListener('click', e => {
+seatcontainer.addEventListener('click', e => {
   if (
     e.target.classList.contains('seat') &&
     !e.target.classList.contains('occupied')

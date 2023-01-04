@@ -22,23 +22,35 @@
                 </a>
             </div>
         </header>
-        <div class="photoWallpaper">
-            <img src="img/bookingPage/shuri.png" alt="shuri poster">
-            <img src="img/bookingPage/poster1.png" alt="green poster">
-            <img src="img/bookingPage/poster2.png" alt="blue poster">
-            <img src="img/bookingPage/poster3.png" alt="Panther poster">
-        </div>
+       
     </div>
+
+    <div class="seating-container">
+        <div class="seating-row">
+            <div class="seating-col-4">
+                <img class="seating-img" src="img/bookingPage/shuri.png">
+            </div>
+            <div class="seating-col-4">
+                <img class="seating-img" src="img/bookingPage/poster1.png">
+            </div>
+            <div class="seating-col-4">
+                <img class="seating-img" src="img/bookingPage/poster2.png">
+            </div>
+            <div class="seating-col-4">
+                <img class="seating-img" src="img/bookingPage/poster3.png">
+            </div>
+        </div>
+      </div>
     <!-- Date Selection Section -->
     <div class="showTimeContainer">
         <div class="showTimeText">
             <h2>Show<br>Times</h2>
         </div>
         <div class="dates">
-            <h2>Today</h2>
-            <h2>Tomorrow</h2>
-            <h2>28th</h2>
-            <h2>29th</h2>
+            <button><h2>Today</h2></button>
+            <button><h2>Tomorrow</h2></button>
+            <button><h2>28th</h2></button>
+            <button><h2>29th</h2></button>
         </div>
             
     </div>
@@ -52,53 +64,53 @@
                 </div>
                 <div class="hallTimes">
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
                     </div>
                     <hr>
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
                     </div>
                 </div>
             </div>
             <!-- 2nd Hall -->
             <div class="timeContainer1">
-                <div class="hallName" style="background: #36DC96;">
-                    <h2>Luxe<br>Cinema</h2>
+                <div class="hallName" style="background-color: #36DC96;">
+                    <h2>LUXE<br>Cinema</h2>
                 </div>
                 <div class="hallTimes">
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
                     </div>
                     <hr>
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
+                        <a href="seatingpage.jsp"><h3>times</h3></a>
                     </div>
                 </div>
             </div>
             <!-- 3rd hall -->
             <div class="timeContainer1">
-                <div class="hallName" style="background: #FF2E2E;">
-                    <h2>Kids<br>Cinema</h2>
+                <div class="hallName" style="background-color: #FF2E2E;">
+                    <h2>KIDS<br>Cinema</h2>
                 </div>
                 <div class="hallTimes">
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
                     </div>
                     <hr>
                     <div class="time-item">
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
-                        <h3>times</h3>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
+                        <a href="#"><h3>times</h3></a>
                     </div>
                 </div>
             </div>
@@ -120,45 +132,53 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer-upper-section">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQ's</a>
-                <a href="#">Feedback</a>
-            </div>
-            <div class="movie-policie-footer">
-                <a href="#">Now Showing</a>
-                <a href="#">Upcoming Movie</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="social-download-footer">
-                <p>Let's get social!</p>
-                <div class="footer-social">
-                    <img src="img/social/insta-icon.png" alt="insta">
-                    <img src="img/social/twitter-icon.png" alt="twitter">
-                    <img src="img/social/youtube.png" alt="youtube">
-                    <img src="img/social/tiktok.png" alt="tiktok">
+    <section id="footer">
+        <div class="fcontainer">
+            <div class="frow row-color">
+                <div class="fcol-3">
+                    <ul class="footer-ul first-sec-res">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
                 </div>
-                <h3>ABC<font color="red">CINEMA</font> App for Mobile</h3>
-                <div class="footer-stickers">
-                    <img src="img/social/Appstore.png" alt="Appstore">
-                    <img src="img/social/GooglePlay.png" alt="googleplay">
+                <div class="fcol-3">
+                    <ul class="footer-ul second-sec-res">
+                        <li><a href="#">Now Showing</a></li>
+                        <li><a href="#">Upcoming movies</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext">Follow us for exclusive offers and content!</p>
+                    <a href="#" class="fa soc-icon fb fa-facebook"></a>
+                    <a href="#" class="fa soc-icon ig fa-instagram"></a>
+                    <a href="#" class="fa soc-icon tw fa-twitter"></a>
+                    <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                    <p class="ftext">ABCCinema app for mobile</p>
                 </div>
             </div>
+            <hr class="footerhr">
         </div>
-        <div class="footer-lower-section">
-            <div class="black-footer">
-                <h5 class="copyright-footer">Copyright &#169; 2022 ABCCINEMA</h5>
-                <h1>ABC<font color="red">CINEMA</font></h1>
-                <h5 class="allrights-footer">All rights reserved.</h5>
+    
+        <div class="fcontainer ">
+            <div class="frow row-end-color">
+                <div class="fcol-3">
+                    <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
+                </div>
+                <div class="fcol-3">
+                    <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext grey-text">All rights reserved. </p>
+                </div>
             </div>
             
         </div>
-    </footer>
+    </section>
     <script src="navtoggle.js"></script>
 </body>
 </html>
