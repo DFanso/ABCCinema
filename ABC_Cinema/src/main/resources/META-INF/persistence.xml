@@ -16,8 +16,6 @@
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
 
         <property name="hibernate.transaction.platform" value="org.hibernate.service.platform.internal.JBossAppServerJtaPlatform" />
-            <!--     <property name="hibernate.transaction.platform" value="org.hibernate.service.platform.internal.SunOneJtaPlatform"/> -->
-
 
 
         </properties>

@@ -1,5 +1,6 @@
 package com.abccinema.entity;
-import javax.naming.Name;
+import jdk.jfr.Name;
+
 import javax.persistence.*;
 
 

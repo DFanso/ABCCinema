@@ -14,6 +14,73 @@
   margin: 0;
   padding: 0;
 }
+body{
+width: 100%;
+margin: 0;
+padding: 0;
+font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
+}
 /* ---------------------Home Page------------------------- */
 .wallpaperImg{
   min-width: 100%;
@@ -24,175 +91,201 @@
 
 
 /*--------------------------navbar----------------------*/
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines{
-    display: none;
+.header-navbar .navbar-ul{
+  list-style:none;
+  float:right;
+  height: 62px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+}
+.header-navbar .navbar-ul li{
+  padding:14px 16px;
+  display:inline;
+
 }
 
-.nav-container{
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
+.header-navbar .navbar-ul li a{
+  text-decoration:none;
+  font-size:17px;
+  color:white;
+  border-radius:20px;
+  padding:2px 11px;
+}
+.header-navbar .navbar-ul li a:hover{
+  background-color: #850000;
+  transition: 0.5s;
+
+}
+.logo-div .logo{
+  display:block;
+  padding-left:20px;
+  color:black;
+  font-size:26px;
+
+}
+.nav{
+  justify-content: space-between;
+  align-items: center;
+  padding-top:5px;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #A30000;
+}
+.flex-row{
+  display:flex;
+  flex-direction: row;
+}
+.social-icon{
+  text-decoration:none;
+  color:white;
 }
 
-.navbar{
-    box-shadow: 0px 5px 10px 0px rgb(49, 49, 49);
-    position: relative;
+.social-icon-div{
+  display:inline;
+  padding-left:40px;
+}
+.social-icon-div .social-icon{
+  font-size: 20px;
+  margin-left:5px;
+  margin-right:20px;
+}
+.social-icon-div .social-icon:hover{
+  color: #850000;
+  transition: 0.5s;
+}
+.search-color{
+  color:white;
+}
+.search-color:hover{
+  color: #850000;
+  transition: 0.5s;
+}
+.below-nav{
+  background-color: black;
+  height:53px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size:11px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*----------------navbar responsive--------------*/
+@media only screen and (max-width:800px) {
+  /*--------movie----------------------*/
+  .header-navbar .navbar-ul li {
+    padding: 14px 16px;
+    display: block;
+    border-bottom: 1px solid white;
+  }
+
+  .header-navbar .navbar-ul {
+    position: absolute;
+    top: 33.5px;
+    left: 0;
+    background: #950101;
     width: 100%;
-    background: #3d0000;
-    color: white;
-    z-index: 100;
+    height: 250px;
+    display: block;
+  }
+
+  .search-res {
+    padding-left: 13px;
+  }
+
+  .social-icon-div {
+    display: none;
+  }
+
+  .logo-div .logo {
+    display: inline;
+    padding-left: 0;
+    color: black;
+    font-size: 26px;
+
+  }
+
+  .logo-div {
+    text-align: center;
+  }
+
+  .nav {
+    padding-top: 5px;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #A30000;
+  }
+}
+/*header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 3em;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
+.topnav{
+  overflow: hidden;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+.topnav a.active {
+  color: red;
 }
 
-.menu-items{
-    order: 2;
-    display: flex;
-}
-.logo{
-    order: 1;
-    font-size: 2.3rem;
+.topnav .icon {
+  display: none;
 }
 
-.menu-items li{
-    list-style: none;
-    margin-left: 3rem;
-    font-size: 1.3rem;
+@media screen and (max-width: 950px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }
 
-.navbar a{
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
+@media screen and (max-width: 950px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: -18px;
+    top: -20px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  header{
+    flex-direction: column;
+  }
+  .topnav{
+    width: 100%;
+    height: 100%;
+  }
 }
-
-.navbar a:hover{
-    color: #117964;
-}
-
-@media (max-width: 768px){
-    .navbar{
-        opacity: 0.95;
-    }
-
-    .navbar-container input[type="checkbox"],
-    .navbar-container .hamburger-lines{
-        display: block;
-    }
-
-    .navbar-container{
-        display: block;
-        position: relative;
-        height: 64px;
-    }
-
-    .navbar-container input[type="checkbox"]{
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 30px;
-        top: 20px;
-        left: 20px;
-        z-index: 5;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .navbar-container .hamburger-lines{
-        display: block;
-        height: 28px;
-        width: 35px;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .navbar-container .hamburger-lines .line{
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: white;
-    }
-    
-    .navbar-container .hamburger-lines .line1{
-        transform-origin: 0% 0%;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .navbar-container .hamburger-lines .line2{
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .navbar-container .hamburger-lines .line3{
-        transform-origin: 0% 100%;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .navbar .menu-items{
-        padding-top: 100px;
-        background: #3D0000;
-        height: 100vh;
-        max-width: 300px;
-        transform: translate(-150%);
-        display: flex;
-        flex-direction: column;
-        margin-left: -40px;
-        padding-left: 40px;
-        transition: transform 0.5s ease-in-out;
-        box-shadow:  5px 0px 10px 0px rgb(73, 73, 73);
-        overflow: scroll;
-    }
-
-    .navbar .menu-items li{
-        margin-bottom: 1.8rem;
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
-
-    .logo{
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 2.5rem;
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
-        transform: translateX(0);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
-        transform: rotate(45deg);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
-        transform: scaleY(0);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
-        transform: rotate(-45deg);
-    }
-
-}
-
-@media (max-width: 500px){
-    .navbar-container input[type="checkbox"]:checked ~ .logo{
-        display: none;
-    }
-}
-
-
+*/
 /*Best Experience Card */
 .getTheBestExperience{
   width: 70%;
@@ -928,14 +1021,6 @@ justify-content: space-evenly;
   color: white;
   border: none;
 }
-.calendar{
-  width: 200px;
-  height: 50px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  border-radius: 12px;
-  border: none;
-}
 .time-background-gradient{
 width: 100%;
 height: auto;
@@ -1060,22 +1145,19 @@ font-size: 10px;
 /* ------------------Booking Page End--------------------------------- */
 /* ------------------------Payment Page------------------------------- */
 .bg-wallpaper-payment-page{
-  width: 100%;
-  height: auto;
-  background: rgb(61,0,0);
-  background: radial-gradient(circle, rgba(61,0,0,1) 18%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 100%);
+background: rgb(61,0,0);
+background: radial-gradient(circle, rgba(61,0,0,1) 18%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 100%);
 }
 .paymentContactDetailsContainer{
-margin: 0 5%;
-padding: 0;
-padding-top: 5%;
 width: 90%;
 height: 469px;
 background: #d9d9d91e;
 mix-blend-mode: lighten;
 border-radius: 66px;
+margin: 5%;
 }
 .paymentContactDetailsContainer h1{
+margin: 2%;
 text-align: center;
 color: white;
 font-family: 'Roboto Condensed', sans-serif;
@@ -1088,10 +1170,6 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
-}
-.form-content{
-  margin: 0;
-  padding: 0;
 }
 .form-row{
 width: 100%;
@@ -1224,9 +1302,8 @@ font-size: 32px;
   }
 }
 .payment-section{
-  padding: 0;
   width: 70%;
-  height: auto;
+  height: 750px;
   margin: 0 5%;
   background: #d9d9d91e;
   mix-blend-mode: lighten;
@@ -1335,18 +1412,14 @@ font-size: 32px;
 
 
 /* -----------------Admin Page-------------------------- */
-.bg-wallpaper-admin-page{
-  width: 100%;
-  height: 800px;
-  background: rgb(61,0,0);
-  background: radial-gradient(circle, rgba(61,0,0,1) 18%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 100%);
-}
 .adminLoginContainer{
   width: 45%;
   height: 629px;
+  margin: 10% 0%;
   background: #d9d9d91e;
   mix-blend-mode: lighten;
   border-radius: 66px;
+  color: white;
 }
 
 @media (max-width: 700px){
@@ -1379,6 +1452,18 @@ font-size: 32px;
   align-items: center;
   justify-content: center;
 }
+/* @media (max-width: 1100px) {
+  .form-content-admin{
+    width: 100%;
+  }
+
+  .form-content-admin .form-row .form-input{
+    width: 200px;
+    font-size: 18px;
+  }
+} */
+
+
 
 /* ---------------------Seating Page------------------------------------------ */
 .seating-container{
@@ -1600,7 +1685,6 @@ p.text span {
 
 }
 .center-rrow{
-  background: radial-gradient(circle, rgba(61,0,0,1) 18%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 100%);
   height: 50vh;
   display:flex;
   flex-direction:row;
@@ -1777,7 +1861,7 @@ p.text span {
 }
 
 
-.form-content-contact{
+.form-content{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1794,30 +1878,23 @@ p.text span {
   font-family: 'Noto Sans JP', sans-serif;
 }
 .form-container{
-  background-color: #ffc6c41e;
+  background-color: #ffc6c4;
   padding:50px 50px;
   border-radius: 30px;
 }
-
 .textboxPadding{
   margin-right:10px;
   margin-bottom: 20px;
   height:60px;
   width:550px;
   padding-left:15px;
-}
 
+}
 .form-container input{
   font-family: 'Helvetica', sans-serif;
   font-size: 16px;
   border:none;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.199);
-  color: white;
-}
-.form-container textarea{
-  background: rgba(255, 255, 255, 0.199);
-  color: white;
 }
 .textbox-des{
   border:none;
@@ -1848,7 +1925,7 @@ p.text span {
 }
 
 .color-contact-form{
-  background: radial-gradient(115.1% 57.74% at 63.65% 29.46%, #3D0000 0%, rgb(42, 0, 0) 33.85%, rgb(0, 0, 0) 97.92%);
+  background: linear-gradient(113.36deg, rgba(61, 0, 0, 0.18) 3.43%, rgba(217, 217, 217, 0) 100.28%);
 }
 .smalltext-con{
   font-size:16px;
@@ -2069,7 +2146,7 @@ p.text span {
     padding-left:15px;
 
   }
-  .form-content-contact{
+  .form-content{
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -2121,7 +2198,7 @@ p.text span {
     padding-top:12px;
     border-radius: 20px;
   }
-  .form-content-contact{
+  .form-content{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2151,7 +2228,7 @@ p.text span {
     padding-top:12px;
     border-radius: 20px;
   }
-  .form-content-contact{
+  .form-content{
     display: flex;
     align-items: center;
     justify-content: center;
