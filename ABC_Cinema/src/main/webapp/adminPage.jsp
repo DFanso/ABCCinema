@@ -7,21 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="background: black; width: 100%;">
-        <header>
-            <h1>ABC<font color="red">CINEMA</font></h1>
-            <!-- Nav -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact Us</a>
-                <a href="instagram.com"><img src="img/Insta.png" alt="insta"></a>
-                <a href="twitter.com"><img src="img/Twitter.png" alt="twitter"></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
+        <section id="header">
+            <div class="nav flex-row">
+                <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
+                <div class="logo-div">
+                    <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+                </div>
+                <div class="header-navbar">
+                    <ul class="navbar-ul" id="menuitems">
+                        <li><i class="fa search-res search-color fa-search"></i></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <div class="social-icon-div">
+                            <a href="#" class="fa social-icon fa-twitter"></a>
+                            <a href="#" class="fa social-icon fa-instagram"></a>
+                        </div>
+
+                    </ul>
+
+                </div>
             </div>
-        </header>
+
+            <div class="below-nav">
+                <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
+            </div>
+        </section>
+        <!-- admin Form Section -->
         <section class="bg-wallpaper-payment-page" style="display: flex; align-items: center; justify-content: center;">
             <div class="adminLoginContainer">
                 <div class="adminLoginContent">
@@ -35,7 +47,7 @@
                                 <input type="password" name="adminPassword" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <center><input type="submit" value="Login" class="go-btn"></center>
+                                <center><input type="submit" value="Login" class="go-btn "></center>
                             </div>
                         </form>
 
@@ -48,10 +60,11 @@
                         <p id="number" class="invalid">A <b>number</b></p>
                         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                     </div>
-                    <a href="#">Forgot Password?</a>
+                    <a href="forgotPassword.jsp">Forgot Password?</a>
                 </div>
             </div>
         </section>
+
         <script language="JavaScript">
             function validate()
             {
@@ -165,18 +178,77 @@
                 <div class="footer-stickers">
                     <img src="img/social/Appstore.png" alt="Appstore">
                     <img src="img/social/GooglePlay.png" alt="googleplay">
+
+        <!-- End -->
+        <section id="footer">
+            <div class="fcontainer">
+                <div class="frow row-color">
+                    <div class="fcol-3">
+                        <ul class="footer-ul first-sec-res">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="fcol-3">
+                        <ul class="footer-ul second-sec-res">
+                            <li><a href="#">Now Showing</a></li>
+                            <li><a href="#">Upcoming movies</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="fcol-3">
+                        <p class="ftext">Follow us for exclusive offers and content!</p>
+                        <a href="#" class="fa soc-icon fb fa-facebook"></a>
+                        <a href="#" class="fa soc-icon ig fa-instagram"></a>
+                        <a href="#" class="fa soc-icon tw fa-twitter"></a>
+                        <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                        <p class="ftext">ABCCinema app for mobile</p>
+                    </div>
+
                 </div>
+                <hr class="footerhr">
             </div>
-        </div>
-        <div class="footer-lower-section">
-            <div class="black-footer">
-                <h5 class="copyright-footer">Copyright &#169; 2022 ABCCINEMA</h5>
-                <h1>ABC<font color="red">CINEMA</font></h1>
-                <h5 class="allrights-footer">All rights reserved.</h5>
+        
+            <div class="fcontainer ">
+                <div class="frow row-end-color">
+                    <div class="fcol-3">
+                        <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
+                    </div>
+                    <div class="fcol-3">
+                        <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                    </div>
+                    <div class="fcol-3">
+                        <p class="ftext grey-text">All rights reserved. </p>
+                    </div>
+                </div>
+                
             </div>
-            
-        </div>
-    </footer>
+        </section>
     <script src="navtoggle.js"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menuitems");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            const mediaQuery = window.matchMedia('(max-width: 800px)')
+
+            if (mediaQuery.matches) {
+                (function() {
+                    var x = document.getElementById("menuitems");
+                    x.style.display = "none";
+                })();
+
+            }
+
+        </script>
 </body>
 </html>
