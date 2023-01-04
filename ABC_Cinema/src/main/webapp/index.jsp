@@ -2,40 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Demo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <script src="jquery-3.6.1.min.js"></script>
 </head>
 <body>
-
-        <section id="header">
-            <div class="nav flex-row">
-                <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
-                <div class="logo-div">
-                    <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+        <nav class="navbar">
+            <div class="navbar-container nav-container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
                 </div>
-                <div class="header-navbar">
-                    <ul class="navbar-ul" id="menuitems">
-                        <li><i class="fa search-res search-color fa-search"></i></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <div class="social-icon-div">
-                            <a href="#" class="fa social-icon fa-twitter"></a>
-                            <a href="#" class="fa social-icon fa-instagram"></a>
-                        </div>
-
-                    </ul>
-
-                </div>
+                <ul class="menu-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
             </div>
-
-            <div class="below-nav">
-                <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
-            </div>
-        </section>
+        </nav>
+        
         <div class="wallpaperImg"></div>
     <section class="background-gradient">
     
@@ -148,52 +141,6 @@
     
         <div class="up-coming-movie-section">
             <center><h1 class="upcomingHeading">Upcoming Movies</h1></center>
-    <!-- <section>
-        
-        <div class="seating-container">
-            <div class="movie-row seating-row">
-                <div class="movie seating-col-4">
-                    <img src="img/blackAdam.png" alt="1">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/drishyam.png" alt="2">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/ticketToParadisePoster.png" alt="3">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/ends.png" alt="4">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/avatarWOW.jpg" alt="5">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/pussInBoots.jpg" alt="6">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/blackAdam.png" alt="1">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/drishyam.png" alt="2">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/ticketToParadisePoster.png" alt="3">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/ends.png" alt="4">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/avatarWOW.jpg" alt="5">
-                </div>
-                <div class="movie seating-col-4">
-                    <img src="img/pussInBoots.jpg" alt="6">
-                </div>
-            </div>
-          </div>
-
-    </section> -->
-
-
     <section class="product" style="background: transparent;"> 
         <h2 class="product-category">best selling</h2>
         <button class="pre-btn"><img src="img/icon-next.png" alt=""></button>
@@ -303,7 +250,7 @@
                     <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
                 </div>
                 <div class="fcol-3">
-                    <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                    <h1 class="logo-f logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
                 </div>
                 <div class="fcol-3">
                     <p class="ftext grey-text">All rights reserved. </p>
@@ -312,7 +259,6 @@
             
         </div>
     </section>
-    <script src="navtoggle.js"></script>
     <script src="slider.js"></script>
     <script src="swiperSlider.js"></script>
             <script>
@@ -334,6 +280,17 @@
                     })();
 
                 }
+
+            </script>
+
+            <script>
+
+                $('.menu-toggle').click(function() {
+                    $('.site-nav').toggleClass('site-nav-open', 500);
+
+                    $(this).toggleClass('open');
+
+                })
 
             </script>
 </body>
