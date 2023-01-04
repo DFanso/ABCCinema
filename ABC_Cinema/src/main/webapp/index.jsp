@@ -5,24 +5,38 @@
     <title>Home Page Demo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 <body>
-    <div class="wallpaperImg">
-        <header>
-            <h1>ABC<font color="red">CINEMA</font></h1>
-            <!-- Nav -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="bookingPage.jsp">About Us</a>
-                <a href="#contact">Contact Us</a>
-                <a href="instagram.com"><img src="img/Insta.png" alt="insta"></a>
-                <a href="twitter.com"><img src="img/Twitter.png" alt="twitter"></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
+
+        <section id="header">
+            <div class="nav flex-row">
+                <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
+                <div class="logo-div">
+                    <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+                </div>
+                <div class="header-navbar">
+                    <ul class="navbar-ul" id="menuitems">
+                        <li><i class="fa search-res search-color fa-search"></i></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <div class="social-icon-div">
+                            <a href="#" class="fa social-icon fa-twitter"></a>
+                            <a href="#" class="fa social-icon fa-instagram"></a>
+                        </div>
+
+                    </ul>
+
+                </div>
             </div>
-        </header>
-    </div>
+
+            <div class="below-nav">
+                <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
+            </div>
+        </section>
+        <div class="wallpaperImg"></div>
     <section class="background-gradient">
     
         <div class="getTheBestExperience">
@@ -35,182 +49,292 @@
             </div>
         </div>
         <!-- Now Showing Movies -->
-        <div class="Now-Showing-Section">
-            <h1>Now Showing</h1>
-            <div class="movie-container">
-                <!-- item 1 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
+        <h1 class="nowshowingHeading">Now Showing</h1>
+        <div class="container"> 
+            <div class="slider">
+                <div class="box1 box">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1 class="slider-Content-h">Strange World</h1>
+                        <p class="slider-Content-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p class="slider-Content">
+                        <button>Check Now</button>
                     </div>
+
+                    <div class="illustration"><div class="inner"></div></div>
                 </div>
-                <!-- item 2 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- item 3 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- next row -->
-            <div class="movie-container">
-                <!-- item 1 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- item 2 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- item 3 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="movie-container">
-                <!-- item 1 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- item 2 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- item 3 -->
-                <div class="movie-item">
-                    <div class="movie-item-content">
-                        <h3>Name Of The Movie</h3>
-                        <p>rating</p>
-                        <div class="movie-buttons">
-                            <button>Book Tickets</button>
-                            <button>Movie Trailer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>
-    </section>
-    <section>
-        <div class="up-coming-movie-section">
-            <h1>Upcoming Movies</h1>
-            <div class="up-movie-summary">
-                <img src="img/avatar.png" alt="avatar" width="45%">
-                <div class="up-typo">
-                    <h3>AVATARR: The Way Of Water</h3>
-                    <p>Jake Sully lives with his newfound family formed on the planet of Pandora.
-                        Once a familiar threat returns to finish what was previously started, 
-                        Jake must work with Neytiri and the army of the Na'vi race to protect their
-                        planet.
-                    </p>
-                    <div class="up-buttons">
-                        <button>Book Tickets</button>
-                        <button>Movie Trailer</button>
-                    </div>
-                </div>
+                                
                 
+                <div class="box2 box">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1 class="slider-Content-h">Avatar: The Way Of Water</h1>
+                        <p class="slider-Content-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p>
+                        <button>Check Now</button>
+                    </div>
+
+                    <div class="illustration"><div class="inner"></div></div>
+                </div>
+                                
+                <div class="box3 box">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1 class="slider-Content-h">John Wick: Chapter 4</h1>
+                        <p class="slider-Content-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p>
+                        <button>Check Now</button>
+                    </div>
+
+                    <div class="illustration"><div class="inner"></div></div>
+                </div>
+                                
+                <div class="box4 box">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1 class="slider-Content-h">Black Adam</h1>
+                        <p class="slider-Content-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p>
+                        <button>Check Now</button>
+                    </div>
+
+                    <div class="illustration"><div class="inner"></div></div>
+                </div>
+                                
+                <div class="box5 box">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1 class="slider-Content">Puss in Boots: The Last Wish</h1>
+                        <p class="slider-Content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p>
+                        <button>Check Now</button>
+                    </div>
+
+                    <div class="illustration"><div class="inner"></div></div>
+                </div>
+                                
             </div>
-        </div>
-        <div class="UpComingMovieRow">
-            <img src="img/BlackAdamPoster.png" alt="ttpp">
-            <img src="img/ticketToParadisePoster.png" alt="ttpp">
-            <img src="img/drishyam.png" alt="ttpp">
-            <img src="img/ends.png" alt="ttpp">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
+            <div class="trail">
+                    <div class="box1 active">1</div>
+                    <div class="box2">2</div>
+                    <div class="box3">3</div>
+                    <div class="box4">4</div>
+                    <div class="box5">5</div>
+            </div>
+            <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+            <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+        </div>   
+        
+    </section>
+    <!-- upcoming movies -->
+    
+        <div class="up-coming-movie-section">
+            <center><h1 class="upcomingHeading">Upcoming Movies</h1></center>
+    <!-- <section>
+        
+        <div class="seating-container">
+            <div class="movie-row seating-row">
+                <div class="movie seating-col-4">
+                    <img src="img/blackAdam.png" alt="1">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/drishyam.png" alt="2">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/ticketToParadisePoster.png" alt="3">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/ends.png" alt="4">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/avatarWOW.jpg" alt="5">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/pussInBoots.jpg" alt="6">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/blackAdam.png" alt="1">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/drishyam.png" alt="2">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/ticketToParadisePoster.png" alt="3">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/ends.png" alt="4">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/avatarWOW.jpg" alt="5">
+                </div>
+                <div class="movie seating-col-4">
+                    <img src="img/pussInBoots.jpg" alt="6">
+                </div>
+            </div>
+          </div>
+
+    </section> -->
+
+
+    <section class="product" style="background: transparent;"> 
+        <h2 class="product-category">best selling</h2>
+        <button class="pre-btn"><img src="img/icon-next.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/icon-next.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/avatarWOW.jpg" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Avatar: The Way Of Water</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/blackAdam.png" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Black Adam</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/drishyam.png" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Drishyam Movie</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/ends.png" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Ends Movie</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/ticketToParadisePoster.png" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Ticket To Paradise</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/pussInBoots.jpg" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Puss in Boots: The Last Wish</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/strangeWorld.jpg" class="product-thumb" alt="">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">The Strange World</h2>
+                    <button>Check Now</button>
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-upper-section">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQ's</a>
-                <a href="#">Feedback</a>
-            </div>
-            <div class="movie-policie-footer">
-                <a href="#">Now Showing</a>
-                <a href="#">Upcoming Movie</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="social-download-footer">
-                <p>Let's get social!</p>
-                <div class="footer-social">
-                    <img src="img/social/insta-icon.png" alt="insta">
-                    <img src="img/social/twitter-icon.png" alt="twitter">
-                    <img src="img/social/youtube.png" alt="youtube">
-                    <img src="img/social/tiktok.png" alt="tiktok">
+
+    <section id="footer">
+        <div class="fcontainer">
+            <div class="frow row-color">
+                <div class="fcol-3">
+                    <ul class="footer-ul first-sec-res">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
                 </div>
-                <h3>ABC<font color="red">CINEMA</font> App for Mobile</h3>
-                <div class="footer-stickers">
-                    <img src="img/social/Appstore.png" alt="Appstore">
-                    <img src="img/social/GooglePlay.png" alt="googleplay">
+                <div class="fcol-3">
+                    <ul class="footer-ul second-sec-res">
+                        <li><a href="#">Now Showing</a></li>
+                        <li><a href="#">Upcoming movies</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext">Follow us for exclusive offers and content!</p>
+                    <a href="#" class="fa soc-icon fb fa-facebook"></a>
+                    <a href="#" class="fa soc-icon ig fa-instagram"></a>
+                    <a href="#" class="fa soc-icon tw fa-twitter"></a>
+                    <a href="#" class="fa soc-icon yt fa-youtube"></a>
+
                 </div>
             </div>
+            <hr class="footerhr">
         </div>
-        <div class="footer-lower-section">
-            <div class="black-footer">
-                <h5 class="copyright-footer">Copyright &#169; 2022 ABCCINEMA</h5>
-                <h1>ABC<font color="red">CINEMA</font></h1>
-                <h5 class="allrights-footer">All rights reserved.</h5>
+    
+        <div class="fcontainer ">
+            <div class="frow-last row-end-color">
+                <div class="fcol-3">
+                    <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
+                </div>
+                <div class="fcol-3">
+                    <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext grey-text">All rights reserved. </p>
+                </div>
             </div>
             
         </div>
-    </footer>
+    </section>
     <script src="navtoggle.js"></script>
+    <script src="slider.js"></script>
+    <script src="swiperSlider.js"></script>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("menuitems");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+
+                const mediaQuery = window.matchMedia('(max-width: 800px)')
+
+                if (mediaQuery.matches) {
+                    (function() {
+                        var x = document.getElementById("menuitems");
+                        x.style.display = "none";
+                    })();
+
+                }
+
+            </script>
 </body>
 </html>

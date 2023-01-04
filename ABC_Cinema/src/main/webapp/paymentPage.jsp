@@ -8,21 +8,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div style="background: black; width: 100%;">
-        <header>
-            <h1>ABC<font color="red">CINEMA</font></h1>
-            <!-- Nav -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact Us</a>
-                <a href="instagram.com"><img src="img/Insta.png" alt="insta"></a>
-                <a href="twitter.com"><img src="img/Twitter.png" alt="twitter"></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </header>
+<section id="header">
+    <div class="nav flex-row">
+        <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
+        <div class="logo-div">
+            <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+        </div>
+        <div class="header-navbar">
+            <ul class="navbar-ul" id="menuitems">
+                <li><i class="fa search-res search-color fa-search"></i></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <div class="social-icon-div">
+                    <a href="#" class="fa social-icon fa-twitter"></a>
+                    <a href="#" class="fa social-icon fa-instagram"></a>
+                </div>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="below-nav">
+        <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
+    </div>
+</section>
         <section class="bg-wallpaper-payment-page">
             <div class="paymentContactDetailsContainer">
                 <div class="form-content">
@@ -42,10 +53,9 @@
                     </form>
                 </div>
             </div>
-            <hr/ class="section-divider"><br>
+            <hr class="section-divider"><br>
             <h1 class="payment-header">Payment Details</h1>
-            <div class="secondSection">
-                
+               <!--<div class="secondSection">
                 <div class="timePoster">
                     <div class="posterContainer">
                         <div class="posterImg">
@@ -60,14 +70,35 @@
                             </div>
                         </div>
                     </div>
+                </div>--> 
+
+                <div class="poster-container">
+                    <div class="poster-row">
+                        <div class="poster-col-2">
+                            <div class="posterContainer">
+                                <div class="posterImg">
+                                    <img src="img/bookingPage/poster2.png" alt="poster">
+                                </div>
+                                <div class="posterInfo">
+                                    <p><b>BLACK PANTHER: WAKANDA<br>FOREVER</b><br><span>NOW SCREENING</span></p>
+                                    <hr/>
+                                    <div class="poster-trailer-icon">
+                                        <img src="img/bookingPage/TV Show.png" alt="trailer" style="padding-left:15px;">
+                                        <p>Play<br>Trailer</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
+                
+            
                 <div class="payment-section">     
                     <div class="payment-content">
                         <div class="paywithContent">
                             <h3>Pay With: </h3>
-                            <img src="img/PayPal.png" alt="paypal">
-                            <img src="img/VISA.png" alt="visa">
-                            <img src="img/mastercard.png" alt="master">
+                            <a href="#"><img src="img/PayPal.png" alt="paypal"></a>
+                            <a href="#"><img src="img/VISA.png" alt="visa"></a>
+                            <a href="#"><img src="img/mastercard.png" alt="master"></a>
                         </div>
                         <div class="form-content-Payment">
                             <form action="#" method="post">
@@ -82,8 +113,11 @@
                                     <center><input type="text" placeholder="CVC" class="form-input-new"></center>
                                 </div>
                                 <div class="form-row">
-                                    <input type="checkbox">
-                                    <p>I agree to the terms and conditions of ABCCINEMA</p>
+                                    <div class="last-row">
+                                        <input type="checkbox" class="chkBoxInput">
+                                        <p>I agree to the terms and conditions of ABCCINEMA</p>
+                                    </div>
+                                    
                                 </div>
                                 <div class="form-row">
                                     <center><input type="submit" value="Confrim" class="go-btn"></center>
@@ -94,45 +128,74 @@
                 </div>
             </div>
         </section>
-    <footer>
-        <div class="footer-upper-section">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQ's</a>
-                <a href="#">Feedback</a>
-            </div>
-            <div class="movie-policie-footer">
-                <a href="#">Now Showing</a>
-                <a href="#">Upcoming Movie</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="social-download-footer">
-                <p>Let's get social!</p>
-                <div class="footer-social">
-                    <img src="img/social/insta-icon.png" alt="insta">
-                    <img src="img/social/twitter-icon.png" alt="twitter">
-                    <img src="img/social/youtube.png" alt="youtube">
-                    <img src="img/social/tiktok.png" alt="tiktok">
+    <section id="footer">
+        <div class="fcontainer">
+            <div class="frow row-color">
+                <div class="fcol-3">
+                    <ul class="footer-ul first-sec-res">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
                 </div>
-                <h3>ABC<font color="red">CINEMA</font> App for Mobile</h3>
-                <div class="footer-stickers">
-                    <img src="img/social/Appstore.png" alt="Appstore">
-                    <img src="img/social/GooglePlay.png" alt="googleplay">
+                <div class="fcol-3">
+                    <ul class="footer-ul second-sec-res">
+                        <li><a href="#">Now Showing</a></li>
+                        <li><a href="#">Upcoming movies</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext">Follow us for exclusive offers and content!</p>
+                    <a href="#" class="fa soc-icon fb fa-facebook"></a>
+                    <a href="#" class="fa soc-icon ig fa-instagram"></a>
+                    <a href="#" class="fa soc-icon tw fa-twitter"></a>
+                    <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                    <p class="ftext">ABCCinema app for mobile</p>
                 </div>
             </div>
+            <hr class="footerhr">
         </div>
-        <div class="footer-lower-section">
-            <div class="black-footer">
-                <h5 class="copyright-footer">Copyright &#169; 2022 ABCCINEMA</h5>
-                <h1>ABC<font color="red">CINEMA</font></h1>
-                <h5 class="allrights-footer">All rights reserved.</h5>
+    
+        <div class="fcontainer ">
+            <div class="frow row-end-color">
+                <div class="fcol-3">
+                    <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
+                </div>
+                <div class="fcol-3">
+                    <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext grey-text">All rights reserved. </p>
+                </div>
             </div>
             
         </div>
-    </footer>
+    </section>
     <script src="navtoggle.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("menuitems");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 800px)')
+
+    if (mediaQuery.matches) {
+        (function() {
+            var x = document.getElementById("menuitems");
+            x.style.display = "none";
+        })();
+
+    }
+
+</script>
 </body>
 </html>
