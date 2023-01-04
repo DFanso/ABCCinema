@@ -5,24 +5,38 @@
     <title>Home Page Demo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 <body>
-    <div class="wallpaperImg">
-        <header>
-            <h1>ABC<font color="red">CINEMA</font></h1>
-            <!-- Nav -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="bookingPage.jsp">About Us</a>
-                <a href="#contact">Contact Us</a>
-                <a href="instagram.com"><img src="img/Insta.png" alt="insta"></a>
-                <a href="twitter.com"><img src="img/Twitter.png" alt="twitter"></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
+
+        <section id="header">
+            <div class="nav flex-row">
+                <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
+                <div class="logo-div">
+                    <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+                </div>
+                <div class="header-navbar">
+                    <ul class="navbar-ul" id="menuitems">
+                        <li><i class="fa search-res search-color fa-search"></i></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <div class="social-icon-div">
+                            <a href="#" class="fa social-icon fa-twitter"></a>
+                            <a href="#" class="fa social-icon fa-instagram"></a>
+                        </div>
+
+                    </ul>
+
+                </div>
             </div>
-        </header>
-    </div>
+
+            <div class="below-nav">
+                <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
+            </div>
+        </section>
+        <div class="wallpaperImg"></div>
     <section class="background-gradient">
     
         <div class="getTheBestExperience">
@@ -277,14 +291,14 @@
                     <a href="#" class="fa soc-icon ig fa-instagram"></a>
                     <a href="#" class="fa soc-icon tw fa-twitter"></a>
                     <a href="#" class="fa soc-icon yt fa-youtube"></a>
-                    <p class="ftext">ABCCinema app for mobile</p>
+
                 </div>
             </div>
             <hr class="footerhr">
         </div>
     
         <div class="fcontainer ">
-            <div class="frow row-end-color">
+            <div class="frow-last row-end-color">
                 <div class="fcol-3">
                     <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
                 </div>
@@ -301,26 +315,26 @@
     <script src="navtoggle.js"></script>
     <script src="slider.js"></script>
     <script src="swiperSlider.js"></script>
-    <script>
-        // movieROw
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("menuitems");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
 
-        var movieRow = document.querySelector('.movie-row');
-        var movies = movieRow.children;
-        var movieWidth = movies[0].offsetWidth;
-        var currentSlide = 0;
+                const mediaQuery = window.matchMedia('(max-width: 800px)')
 
-        setInterval(nextSlide, 2000);
+                if (mediaQuery.matches) {
+                    (function() {
+                        var x = document.getElementById("menuitems");
+                        x.style.display = "none";
+                    })();
 
-        function nextSlide() {
-        currentSlide++;
-        if (currentSlide >= movies.length) {
-            currentSlide = 0;
-            movieRow.scrollLeft = 0;
-        } else {
-            movieRow.scrollLeft += movieWidth;
-        }
-    }
+                }
 
-    </script>
+            </script>
 </body>
 </html>

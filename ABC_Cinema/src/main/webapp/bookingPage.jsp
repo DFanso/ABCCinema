@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="background: black; width: 100%;">
-        <header>
-            <h1>ABC<font color="red">CINEMA</font></h1>
-            <!-- Nav -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact Us</a>
-                <a href="instagram.com"><img src="img/Insta.png" alt="insta"></a>
-                <a href="twitter.com"><img src="img/Twitter.png" alt="twitter"></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </header>
-       
+<section id="header">
+    <div class="nav flex-row">
+        <i class="fa fa-bars menu-icon" style="font-size:24px" onclick="myFunction()"></i>
+        <div class="logo-div">
+            <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
+        </div>
+        <div class="header-navbar">
+            <ul class="navbar-ul" id="menuitems">
+                <li><i class="fa search-res search-color fa-search"></i></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <div class="social-icon-div">
+                    <a href="#" class="fa social-icon fa-twitter"></a>
+                    <a href="#" class="fa social-icon fa-instagram"></a>
+                </div>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="below-nav">
+        <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
     </div>
 
     <div class="seating-container">
@@ -180,5 +188,26 @@
         </div>
     </section>
     <script src="navtoggle.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menuitems");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        const mediaQuery = window.matchMedia('(max-width: 800px)')
+
+        if (mediaQuery.matches) {
+            (function() {
+                var x = document.getElementById("menuitems");
+                x.style.display = "none";
+            })();
+
+        }
+
+    </script>
 </body>
 </html>
