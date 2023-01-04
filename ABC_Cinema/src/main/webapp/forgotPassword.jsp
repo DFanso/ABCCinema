@@ -7,34 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section id="header">
-    <div class="nav flex-row">
-        <img src="img/menu.png" class="menu-icon" width="25px" alt="menu-icon" onclick="myFunction()">
-        <div class="logo-div">
-            <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
-        </div>
-        <div class="header-navbar">
-            <ul class="navbar-ul" id="menuitems">
-                <li><i class="fa search-res search-color fa-search"></i></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT US</a></li>
-                <div class="social-icon-div">
-                    <a href="#" class="fa social-icon fa-twitter"></a>
-                    <a href="#" class="fa social-icon fa-instagram"></a>
-                </div>
-
+    <nav class="navbar">
+        <div class="navbar-container nav-container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-
+            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
         </div>
-    </div>
-
-    <div class="below-nav">
-        <h2 class="below-nav-heading">SIGN UP TO WATCH UNLIMITED MOVIES</h2>
-    </div>
-</section>
+    </nav>
         <!-- admin Form Section -->
-        <section class="bg-wallpaper-payment-page" style="display: flex; align-items: center; justify-content: center;">
+        <section class="bg-wallpaper-admin-page" style="display: flex; align-items: center; justify-content: center;">
             <div class="adminLoginContainer">
                 <div class="adminLoginContent">
                     <h1>Reset Password</h1>
@@ -96,7 +86,7 @@
                         <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
                     </div>
                     <div class="fcol-3">
-                        <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                        <h1 class="logo-f logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
                     </div>
                     <div class="fcol-3">
                         <p class="ftext grey-text">All rights reserved. </p>

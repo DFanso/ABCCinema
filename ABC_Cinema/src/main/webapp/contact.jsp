@@ -8,7 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <title>Contact Us</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
@@ -20,44 +25,30 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-<section id="header">
-    <div class="nav flex-row">
-        <i class="fa fa-bars menu-icon" style="font-size:24px" onclick="myFunction()"></i>
-        <div class="logo-div">
-            <h1 class="logo">ABC<font color="#3D0000">Cinema</font></h1>
-        </div>
-        <div class="header-navbar">
-            <ul class="navbar-ul" id="menuitems">
-                <li><i class="fa search-res search-color fa-search"></i></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT US</a></li>
-                <div class="social-icon-div">
-                    <a href="#" class="fa social-icon fa-twitter"></a>
-                    <a href="#" class="fa social-icon fa-instagram"></a>
-                </div>
-
-            </ul>
-
-        </div>
-    </div>
-
-    <div class="contact-cover-container ">
-        <div class="row">
-            <div class="col-1">
-                <img class="contact-cover-img" src="img/help-contact.jpg">
+    <nav class="navbar">
+        <div class="navbar-container nav-container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
             </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
         </div>
-    </div>
-
-</section>
+    </nav>
 
 <div class="center-container">
     <div class="center-rrow support-body-padding center-row-conactQ">
         <div class="col-2 ">
-            <div class="support-text-div"><h1 class="contact-h-support">Do you have any questions?</h1>
-                <h1 class="contact-h-support">Contact us</h1>
-                <p class="con-text-p">We truly care about you. Please let us know how we can improve our service. IF you wish to contact us for any matter you can reach us
+            <div class="support-text-div">
+                <h1 class="contact-h-support" style="color: white;">Do you have any questions?</h1>
+                <h1 class="contact-h-support" style="color: white;">Contact us</h1>
+                <p class="con-text-p" style="color: white;">We truly care about you. Please let us know how we can improve our service. IF you wish to contact us for any matter you can reach us
                     through our forum and we will get in touch
                     with you at the earliest</p></div>
         </div>
@@ -92,8 +83,8 @@
     <div class="contact-form-container">
         <div class="row color-contact-form">
             <div class="col-1">
-                <h1 class="form-title">Get in touch With us</h1>
-                <div class="form-content">
+                <h1 class="form-title" style="color: white">Get in touch With us</h1>
+                <div class="form-content-contact">
                     <div class="form-container">
                         <form action="" method="POST">
                             <input type="text"name="fname" class="textboxPadding" placeholder="First Name" width="200px"><input type="text" class="textboxPadding" name="lname" placeholder="Last Name"><br>
@@ -144,7 +135,7 @@
                 <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
             </div>
             <div class="fcol-3">
-                <h1 class="logo logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                <h1 class="logo-f logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
             </div>
             <div class="fcol-3">
                 <p class="ftext grey-text">All rights reserved. </p>
