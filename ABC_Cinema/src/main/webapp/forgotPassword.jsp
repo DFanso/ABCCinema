@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Page</title>
+    <title>Forgot Password</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,21 +26,23 @@
         <section class="bg-wallpaper-payment-page" style="display: flex; align-items: center; justify-content: center;">
             <div class="adminLoginContainer">
                 <div class="adminLoginContent">
-                    <h1>Admin Login</h1>
+                    <h1>Reset Password</h1>
                     <div class="form-content-admin">
                         <form action="#" method="post">
                             <div class="form-row">
-                                <input type="text" name="adminUsername" placeholder="Username: " class="form-input">
+                                <input type="text" name="secret" placeholder="Secret: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <input type="password" name="adminPassword" placeholder="Password: " class="form-input">
+                                <input type="password" name="newPassword" placeholder="New Password: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <center><input type="submit" value="Login" class="go-btn "></center>
+                                <input type="password" name="confirmPassword" placeholder="Confirm Password: " class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <center><input type="submit" value="Change" class="go-btn "></center>
                             </div>
                         </form>
                     </div>
-                    <a href="forgotPassword.jsp">Forgot Password?</a>
                 </div>
             </div>
         </section>
