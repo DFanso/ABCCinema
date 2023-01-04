@@ -141,83 +141,53 @@
                 }
             }
         </script>
-    <footer>
-        <div class="footer-upper-section">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQ's</a>
-                <a href="#">Feedback</a>
-            </div>
-            <div class="movie-policie-footer">
-                <a href="#">Now Showing</a>
-                <a href="#">Upcoming Movie</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="social-download-footer">
-                <p>Let's get social!</p>
-                <div class="footer-social">
-                    <img src="img/social/insta-icon.png" alt="insta">
-                    <img src="img/social/twitter-icon.png" alt="twitter">
-                    <img src="img/social/youtube.png" alt="youtube">
-                    <img src="img/social/tiktok.png" alt="tiktok">
+    <section id="footer">
+        <div class="fcontainer">
+            <div class="frow row-color">
+                <div class="fcol-3">
+                    <ul class="footer-ul first-sec-res">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
                 </div>
-                <h3>ABC<font color="red">CINEMA</font> App for Mobile</h3>
-                <div class="footer-stickers">
-                    <img src="img/social/Appstore.png" alt="Appstore">
-                    <img src="img/social/GooglePlay.png" alt="googleplay">
-
-        <!-- End -->
-        <section id="footer">
-            <div class="fcontainer">
-                <div class="frow row-color">
-                    <div class="fcol-3">
-                        <ul class="footer-ul first-sec-res">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">FAQ's</a></li>
-                            <li><a href="#">Feedback</a></li>
-                        </ul>
-                    </div>
-                    <div class="fcol-3">
-                        <ul class="footer-ul second-sec-res">
-                            <li><a href="#">Now Showing</a></li>
-                            <li><a href="#">Upcoming movies</a></li>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                        </ul>
-                    </div>
-                    <div class="fcol-3">
-                        <p class="ftext">Follow us for exclusive offers and content!</p>
-                        <a href="#" class="fa soc-icon fb fa-facebook"></a>
-                        <a href="#" class="fa soc-icon ig fa-instagram"></a>
-                        <a href="#" class="fa soc-icon tw fa-twitter"></a>
-                        <a href="#" class="fa soc-icon yt fa-youtube"></a>
-                        <p class="ftext">ABCCinema app for mobile</p>
-                    </div>
-
+                <div class="fcol-3">
+                    <ul class="footer-ul second-sec-res">
+                        <li><a href="#">Now Showing</a></li>
+                        <li><a href="#">Upcoming movies</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
                 </div>
-                <hr class="footerhr">
-            </div>
-        
-            <div class="fcontainer ">
-                <div class="frow row-end-color">
-                    <div class="fcol-3">
-                        <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
-                    </div>
-                    <div class="fcol-3">
-                        <h1 class="logo-f logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
-                    </div>
-                    <div class="fcol-3">
-                        <p class="ftext grey-text">All rights reserved. </p>
-                    </div>
+                <div class="fcol-3">
+                    <p class="ftext">Follow us for exclusive offers and content!</p>
+                    <a href="#" class="fa soc-icon fb fa-facebook"></a>
+                    <a href="#" class="fa soc-icon ig fa-instagram"></a>
+                    <a href="#" class="fa soc-icon tw fa-twitter"></a>
+                    <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                    <p class="ftext">ABCCinema app for mobile</p>
                 </div>
-                
             </div>
-        </section>
+            <hr class="footerhr">
+        </div>
+    
+        <div class="fcontainer ">
+            <div class="frow row-end-color">
+                <div class="fcol-3">
+                    <p class="ftext grey-text">Copyright © 2022 ABCCinema</p>
+                </div>
+                <div class="fcol-3">
+                    <h1 class="logo-f logo-res-padding"><font color="white">ABC</font><font color="#A30000">Cinema</font></h1>
+                </div>
+                <div class="fcol-3">
+                    <p class="ftext grey-text">All rights reserved. </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
     <script src="navtoggle.js"></script>
         <script>
             function myFunction() {
