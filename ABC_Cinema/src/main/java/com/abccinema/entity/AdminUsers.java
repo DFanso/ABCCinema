@@ -4,7 +4,14 @@ import jdk.jfr.Name;
 import javax.persistence.*;
 
 
+
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "AdminUsers.findAll", query = "SELECT u FROM AdminUsers u"),
+        @NamedQuery(name ="AdminUsers.CountAll", query = "select count (*) from AdminUsers u"),
+        @NamedQuery(name="AdminUsers.checkLogin",query = "select u from AdminUsers u where UserName =:userName and Password =:password")
+
+})
 public class AdminUsers {
     private Integer UserID;
     private String UserName;

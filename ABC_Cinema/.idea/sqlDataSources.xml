@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DdlMappings">
     <mapping uuid="068d9615-44e5-4b47-8d3c-8c5be85d9e48" name="@fanso.database.windows.net Mapping">
-      <data-sources db="bb0d1f87-1a13-440b-b4b1-6c4a3e2522ea" ddl="9cb59ab9-573c-40d9-8f19-e51a4b9c98d9" />
+      <data-sources db="bb0d1f87-1a13-440b-b4b1-6c4a3e2522ea" ddl="e24fb1da-5591-487a-89c7-ea79e8971e28" />
     </mapping>
   </component>
 </project>

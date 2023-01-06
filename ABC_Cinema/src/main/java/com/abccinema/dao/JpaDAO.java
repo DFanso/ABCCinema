@@ -3,6 +3,11 @@ package com.abccinema.dao;
 import com.abccinema.entity.AdminUsers;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 public abstract class JpaDAO<E> {
   protected   EntityManager entityManager;
@@ -45,6 +50,30 @@ public abstract class JpaDAO<E> {
         Object reference = entityManager.getReference(type,id);
         entityManager.remove(reference);
         entityManager.getTransaction().commit();
+    }
+
+    public List<E> findWithNamedQuery(String queryName)
+    {
+        Query query = entityManager.createNamedQuery(queryName);
+        return query.getResultList();
+    }
+
+    public long countWithNamedQuery(String queryName)
+    {
+        Query query = entityManager.createNamedQuery(queryName);
+        return (long) query.getSingleResult();
+    }
+    public List<E> findWithNamedQuery(String queryName, Map<String, Object> parameters)
+    {
+        Query query = entityManager.createNamedQuery(queryName);
+
+        Set<Map.Entry<String,Object>>  setParameters = parameters.entrySet();
+
+        for (Map.Entry<String,Object> entry : setParameters)
+        {
+            query.setParameter(entry.getKey(), entry.getValue());
+        }
+        return query.getResultList();
     }
 
 

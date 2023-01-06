@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ABC_Cinema/Hibernate" uuid="05549b0a-1d96-4ee9-9392-7c7b1cfc2961">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/Git/ABC_Cinema/ABC_Cinema/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

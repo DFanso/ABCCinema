@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +32,15 @@
                 <div class="adminLoginContent">
                     <h1>Admin Login</h1>
                     <div class="form-content-admin">
-                        <form name ="Adminlogin" action="index.jsp" method="post" onsubmit="return validate() ">
+                        <form name ="Adminlogin" action="./AdminLoginServlet" method="post" onsubmit="return validate() ">
+                            <div>
+
+                                <c:if test="${message != null}">
+                                    <div align="center">
+                                        <h4 class="message" style="color: white">${message}</h4>
+                                    </div>
+                                </c:if>
+                            </div>
                             <div class="form-row">
                                 <input type="text" name="adminUsername" id="adminUsername" placeholder="Username: " class="form-input">
                             </div>
