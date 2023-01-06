@@ -1,14 +1,16 @@
 import com.abccinema.dao.AdminDAO;
 import com.abccinema.entity.AdminUsers;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static  org.junit.Assert.*;
+import org.testng.annotations.AfterClass;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 
 public class AdminDAOTest {
@@ -33,7 +35,7 @@ public class AdminDAOTest {
         AdminUsers adminUsers = new AdminUsers();
 
         adminUsers.setUserName("Bamtu");
-        adminUsers.setPassword("Bamtu123");
+        adminUsers.setPassword("Bamtu@123");
         adminUsers.setIsActive(1);
         adminUsers = adminDAO.create(adminUsers);
 
@@ -93,6 +95,37 @@ public class AdminDAOTest {
         assertNull(adminUsers);
     }
 
+   @Test
+   public  void testListAll()
+    {
+        List<AdminUsers> adminUsersList = adminDAO.listAll();
+
+        for(AdminUsers adminUsers: adminUsersList)
+        {
+            System.out.println(adminUsers.getUserName());
+        }
+
+        assertTrue(adminUsersList.size() >0);
+    }
+    @Test
+    public void testCout()
+    {
+        long totalUsers = adminDAO.count();
+        assertEquals(4,totalUsers);
+    }
+
+    @Test
+    public void checkLogin()
+    {
+        String userName = "abc";
+        String password = "Leo2213";
+
+        boolean loginResult = adminDAO.checkLogin(userName,password);
+
+        assertTrue(loginResult);
+    }
+
+
     @AfterClass
     public static void tearDownClass()
     {
@@ -100,6 +133,8 @@ public class AdminDAOTest {
         entityManager.close();
         entityManagerFactory.close();
     }
+
+
 
 
 

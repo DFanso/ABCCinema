@@ -3,7 +3,9 @@ package com.abccinema.dao;
 import com.abccinema.entity.AdminUsers;
 
 import javax.persistence.EntityManager;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AdminDAO extends JpaDAO<AdminUsers> implements GenericDAO<AdminUsers> {
 
@@ -29,11 +31,25 @@ public class AdminDAO extends JpaDAO<AdminUsers> implements GenericDAO<AdminUser
 
     @Override
     public List<AdminUsers> listAll() {
-        return null;
+        return super.findWithNamedQuery("AdminUsers.findAll");
     }
 
     @Override
     public long count() {
-        return 0;
+        return super.countWithNamedQuery("AdminUsers.CountAll");
+    }
+    public boolean checkLogin(String userName, String password)
+    {
+        Map<String,Object> parameters = new HashMap<>();
+        parameters.put("userName",userName);
+        parameters.put("password",password);
+
+        List<AdminUsers> adminUsersList = super.findWithNamedQuery("AdminUsers.checkLogin",parameters);
+        if(adminUsersList.size() == 1)
+        {
+            return true;
+
+        }
+        return false;
     }
 }
