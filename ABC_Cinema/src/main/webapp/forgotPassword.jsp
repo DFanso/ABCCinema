@@ -5,6 +5,17 @@
     <title>Forgot Password</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .adminLoginContainer{
+            height: 729px;
+        }
+        @media (max-width: 700px){
+            .adminLoginContainer{
+                width: 80%;
+                height: 459px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -32,6 +43,9 @@
                         <form action="#" method="post">
                             <div class="form-row">
                                 <input type="text" name="secret" placeholder="Secret: " class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="username" placeholder="Username: " class="form-input">
                             </div>
                             <div class="form-row">
                                 <input type="password" name="newPassword" placeholder="New Password: " class="form-input">
