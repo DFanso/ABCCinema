@@ -1,12 +1,9 @@
 package com.abccinema.dao;
 
-import com.abccinema.entity.AdminUsers;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 import java.util.Set;
 
 public abstract class JpaDAO<E> {
@@ -75,6 +72,21 @@ public abstract class JpaDAO<E> {
         }
         return query.getResultList();
     }
+
+    public int getIDByUserName(String queryName,Map<String, Object> parameters)
+    {
+        Query query = entityManager.createNamedQuery(queryName);
+        Set<Map.Entry<String,Object>>  setParameters = parameters.entrySet();
+        for (Map.Entry<String,Object> entry : setParameters)
+        {
+            query.setParameter(entry.getKey(), entry.getValue());
+        }
+        return (int) query.getSingleResult();
+    }
+
+
+
+
 
 
 }

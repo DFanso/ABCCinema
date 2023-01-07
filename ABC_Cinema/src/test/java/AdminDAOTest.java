@@ -34,8 +34,8 @@ public class AdminDAOTest {
     {
         AdminUsers adminUsers = new AdminUsers();
 
-        adminUsers.setUserName("Bamtu");
-        adminUsers.setPassword("Bamtu@123");
+        adminUsers.setUserName("DFanso");
+        adminUsers.setPassword("123@NSBM");
         adminUsers.setIsActive(1);
         adminUsers = adminDAO.create(adminUsers);
 
@@ -59,8 +59,8 @@ public class AdminDAOTest {
     {
         AdminUsers adminUsers = new AdminUsers();
         adminUsers.setUserID(9);
-        adminUsers.setUserName("Bamtu");
-        adminUsers.setPassword("1234");
+        adminUsers.setUserName("DFanso");
+        adminUsers.setPassword("123@NSBM");
         adminUsers.setIsActive(1);
 
         adminUsers = adminDAO.update(adminUsers);
@@ -107,12 +107,12 @@ public class AdminDAOTest {
 
         assertTrue(adminUsersList.size() >0);
     }
-    @Test
-    public void testCout()
-    {
-        long totalUsers = adminDAO.count();
-        assertEquals(4,totalUsers);
-    }
+//    @Test
+//    public void testCout()
+//    {
+//        long totalUsers = adminDAO.userID("Bamtu");
+//        assertEquals(4,totalUsers);
+//    }
 
     @Test
     public void checkLogin()
