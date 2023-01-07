@@ -1,10 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Forgot Password</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+
     <style>
         .adminLoginContainer{
             height: 729px;
@@ -18,6 +22,7 @@
     </style>
 </head>
 <body>
+<script  src="FormValidate.js"></script>
     <nav class="navbar">
         <div class="navbar-container nav-container">
             <input type="checkbox" name="" id="">
@@ -40,27 +45,155 @@
                 <div class="adminLoginContent">
                     <h1>Reset Password</h1>
                     <div class="form-content-admin">
-                        <form action="#" method="post">
+                        <form name="passwordForgot" id="passwordForgot" action="./AdminForgotPasswordServlet" method="post" onsubmit="return validate() ">
+                            <div>
+
+                            <c:if test="${message != null}">
+                            <div align="center">
+                                <h4 class="message" style="color: white">${message}</h4>
+                            </div>
+                            </c:if>
+                                </div>
                             <div class="form-row">
-                                <input type="text" name="secret" placeholder="Secret: " class="form-input">
+                                <input type="password" name="secret" id="secret" placeholder="Secret: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <input type="text" name="username" placeholder="Username: " class="form-input">
+                                <input type="text" name="adminUsername" id="adminUsername" placeholder="Username: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <input type="password" name="newPassword" placeholder="New Password: " class="form-input">
+                                <input type="password" name="adminPassword" id="adminPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="New Password: " class="form-input">
                             </div>
                             <div class="form-row">
-                                <input type="password" name="confirmPassword" placeholder="Confirm Password: " class="form-input">
+                                <input type="password" name="confirmPassword" id="confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Confirm Password: " class="form-input">
+                            </div>
+                            <div id="message">
+                                <h3>Password must contain the following:</h3>
+                                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                <p id="number" class="invalid">A <b>number</b></p>
+                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                             </div>
                             <div class="form-row">
                                 <center><input type="submit" value="Change" class="go-btn "></center>
                             </div>
                         </form>
                     </div>
+
+
+
                 </div>
             </div>
         </section>
+<script type="JavaScript">
+    function validate()
+    {
+
+
+        const myInput = document.getElementById("adminPassword");
+        const letter = document.getElementById("letter");
+        const capital = document.getElementById("capital");
+        const number = document.getElementById("number");
+        const length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+        myInput.onfocus = function() {
+            document.getElementById("message").style.display = "block";
+        }
+
+// When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function() {
+            document.getElementById("message").style.display = "none";
+        }
+
+// When the user starts to type something inside the password field
+        myInput.onkeyup = function() {
+            // Validate lowercase letters
+            const lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+
+            // Validate capital letters
+            const upperCaseLetters = /[A-Z]/g;
+            if(myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+
+            // Validate numbers
+            const numbers = /[0-9]/g;
+            if(myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+
+            // Validate length
+            if(myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+
+        //const regExp1 = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/;
+        //const regExp2 = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+        //const result1 = document.form1.text1.value.match(regExp1);
+        //const result2 = document.form1.text1.value.match(regExp2);
+        if (document.passwordForgot.adminUsername.value == "")
+        {
+            alert("Please Enter Your User Name!")
+            return false
+        }
+
+
+        if (document.passwordForgot.psw.value == "")
+        {
+            alert("Please Enter Your Password!")
+            return false
+        }
+        if (document.passwordForgot.confirmPassword.value == "")
+        {
+            alert("Please Enter Confirm Password Password!")
+            return false
+        }
+        if (document.passwordForgot.confirmPassword.value != document.passwordForgot.adminPassword.value)
+        {
+            alert("Password Dont match with the confirm password")
+            return false
+        }
+        if (document.passwordForgot.secret.value == "")
+        {
+            alert("Please Enter secret code!")
+            return false
+        }
+        if(document.passwordForgot.secret.value != secret)
+        {
+            alert("invalid secret code!")
+            return false
+        }
+
+        else
+        {
+            document.passwordForgot.submit()
+        }
+    }
+</script>
+
+
+
+
         <!-- End -->
         <section id="footer">
             <div class="fcontainer">

@@ -3,6 +3,7 @@ package com.abccinema.dao;
 import com.abccinema.entity.AdminUsers;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,8 @@ public class AdminDAO extends JpaDAO<AdminUsers> implements GenericDAO<AdminUser
     public AdminUsers get(Object UserID) {
         return super.find(AdminUsers.class,UserID);
     }
+
+
 
     @Override
     public void delete(Object UserID) {
@@ -52,4 +55,27 @@ public class AdminDAO extends JpaDAO<AdminUsers> implements GenericDAO<AdminUser
         }
         return false;
     }
+    public boolean checkUserName(String userName)
+    {
+        Map<String,Object> parameters = new HashMap<>();
+        parameters.put("userName",userName);
+
+
+        List<AdminUsers> adminUsersList = super.findWithNamedQuery("AdminUsers.checkUserName",parameters);
+        if(adminUsersList.size() == 1)
+        {
+            return true;
+
+
+        }
+        return false;
+    }
+    public int userID(String userName)
+    {
+        Map<String,Object> parameters = new HashMap<>();
+        parameters.put("userName",userName);
+
+         return super.getIDByUserName("AdminUsers.getIdFromUserName", parameters);
+    }
+
 }

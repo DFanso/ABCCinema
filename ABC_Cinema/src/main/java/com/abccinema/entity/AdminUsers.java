@@ -9,7 +9,9 @@ import javax.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "AdminUsers.findAll", query = "SELECT u FROM AdminUsers u"),
         @NamedQuery(name ="AdminUsers.CountAll", query = "select count (*) from AdminUsers u"),
-        @NamedQuery(name="AdminUsers.checkLogin",query = "select u from AdminUsers u where UserName =:userName and Password =:password")
+        @NamedQuery(name="AdminUsers.checkLogin",query = "select u from AdminUsers u where UserName =:userName and Password =:password"),
+        @NamedQuery(name="AdminUsers.checkUserName",query = "select u from AdminUsers u where UserName =:userName"),
+        @NamedQuery(name="AdminUsers.getIdFromUserName",query = "select userID from AdminUsers u where UserName =:userName")
 
 })
 public class AdminUsers {

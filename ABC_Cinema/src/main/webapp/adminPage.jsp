@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <script language="JavaScript">
+        <script type="JavaScript">
             function validate()
             {
 
