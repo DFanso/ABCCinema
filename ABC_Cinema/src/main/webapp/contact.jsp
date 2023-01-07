@@ -12,17 +12,9 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <title>Contact Us</title>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -34,11 +26,18 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
+                <li><a class="nav-line">|</a></li>
+                <div class="socioNavItem">
+                    <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                    <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                    <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                    <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+                </div>
             </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+            <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
         </div>
     </nav>
 
@@ -119,10 +118,10 @@
             </div>
             <div class="fcol-3">
                 <p class="ftext">Follow us for exclusive offers and content!</p>
-                <a href="#" class="fa soc-icon fb fa-facebook"></a>
-                <a href="#" class="fa soc-icon ig fa-instagram"></a>
-                <a href="#" class="fa soc-icon tw fa-twitter"></a>
-                <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                <a href="#" class="fa soc-icon fb fa-facebook" style="font-size: 24px;"></a>
+                <a href="#" class="fa soc-icon ig fa-instagram" style="font-size: 24px;"></a>
+                <a href="#" class="fa soc-icon tw fa-twitter" style="font-size: 24px;"></a>
+                <a href="#" class="fa soc-icon yt fa-youtube" style="font-size: 24px;"></a>
 
             </div>
         </div>

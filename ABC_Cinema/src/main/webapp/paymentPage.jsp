@@ -20,18 +20,25 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
+                <li><a class="nav-line">|</a></li>
+                <div class="socioNavItem">
+                    <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                    <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                    <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                    <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+                </div>
             </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+            <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
         </div>
     </nav>
     <section class="bg-wallpaper-payment-page-f">
         <div class="paymentContactDetailsContainer">
             <div class="form-content">
                 <h1>Contact Details</h1>
-                <form action="#" method="post">
+                <form action="#" method="post" id="myForm">
                     <div class="form-row">
                         <input type="text" name="ClientName" placeholder="Name: " class="form-input">
                         <input type="text" name="ClientName" placeholder="Email: " class="form-input">
@@ -47,7 +54,7 @@
         </div>
         <hr class="section-divider"><br>
         <h1 class="payment-header">Payment Details</h1>
-            <div class="poster-container">
+            <div class="poster-container" style="display: none;" id="paypalSection">
                 <div class="poster-row">
                     <div class="poster-col-2">
                         <div class="posterContainer">
@@ -192,6 +199,12 @@
 
     }
 
+</script>
+<script>
+    document.getElementById("myForm").onsubmit = function() {
+      document.getElementById("paypalSection").style.display = "block";
+      return false;
+    }
 </script>
 </body>
 </html>

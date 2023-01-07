@@ -17,11 +17,18 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
+                <li><a class="nav-line">|</a></li>
+                <div class="socioNavItem">
+                    <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                    <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                    <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                    <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+                </div>
             </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+            <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
         </div>
     </nav>
     <div class="seating-container">

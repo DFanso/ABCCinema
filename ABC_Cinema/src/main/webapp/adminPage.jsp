@@ -1,7 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,11 +16,18 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
+                <li><a class="nav-line">|</a></li>
+                <div class="socioNavItem">
+                    <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                    <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                    <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                    <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+                </div>
             </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+            <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
         </div>
     </nav>
         <!-- admin Form Section -->
@@ -32,15 +36,7 @@
                 <div class="adminLoginContent">
                     <h1>Admin Login</h1>
                     <div class="form-content-admin">
-                        <form name ="Adminlogin" action="./AdminLoginServlet" method="post" onsubmit="return validate() ">
-                            <div>
-
-                                <c:if test="${message != null}">
-                                    <div align="center">
-                                        <h4 class="message" style="color: white">${message}</h4>
-                                    </div>
-                                </c:if>
-                            </div>
+                        <form name ="Adminlogin" action="index.jsp" method="post" onsubmit="return validate() ">
                             <div class="form-row">
                                 <input type="text" name="adminUsername" id="adminUsername" placeholder="Username: " class="form-input">
                             </div>
@@ -66,7 +62,7 @@
             </div>
         </section>
 
-        <script type="JavaScript">
+        <script language="JavaScript">
             function validate()
             {
 
