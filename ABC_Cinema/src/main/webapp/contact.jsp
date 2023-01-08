@@ -13,34 +13,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <title>Contact Us</title>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        .button-container a input{
+            position: relative;
+            background: #444;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
+            padding: 0.75rem 1.5rem;
+            transition: 0.5s;
+            border: none;
+        }
+
+        .button-container a input:hover {
+            letter-spacing: 0.25rem;
+            background: var(--color);
+            color: white;
+            box-shadow: 0 0 50px 10px var(--color);
+        }
+
+        .button-container a input::before {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background: #27282c;
+        }
+
+        .button-container a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .button-container a input i {
+            position: absolute;
+            inset: 0;
+            display: block;
+        }
+
+        .button-container a input i::before {
+            content: "";
+            position: absolute;
+            top: -3.5px;
+            left: 80%;
+            width: 10px;
+            height: 5px;
+            border: 2px solid var(--color);
+            background: #27282c;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        .button-container a  input:hover i::before {
+            left: 20%;
+            width: 20px;
+        }
+
+        .button-container a input i::after {
+            content: "";
+            position: absolute;
+            bottom: -3.5px;
+            left: 20%;
+            width: 10px;
+            height: 5px;
+            border: 2px solid var(--color);
+            background: #27282c;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        .button-container a input:hover i::after {
+            left: 80%;
+            width: 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container nav-container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+<nav class="navbar">
+    <div class="navbar-container nav-container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-    </nav>
+        <ul class="menu-items">
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a class="nav-line">|</a></li>
+            <div class="socioNavItem">
+                <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+            </div>
+        </ul>
+        <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
+    </div>
+</nav>
 
 <div class="center-container">
     <div class="center-rrow support-body-padding center-row-conactQ">
@@ -91,7 +166,9 @@
                             <input type="email"name="email" class="textboxPadding extraPadding" placeholder="Email"> <br>
                             <textarea class="textboxpadding textbox-des" placeholder="Description"></textarea>
 
-                            <div class="btn-div"><input type="submit" class="submit-btn" name="submit" value="Submit"></div>
+                            <div class="button-container btn-div" style="padding-bottom: 0; margin-bottom: 0">
+                                <a href="#" style="--color: red"><span><input type="submit" value="SUBMIT"></span><i></i></a>
+                            </div>
                         </form></div></div>
             </div>
         </div>
@@ -119,10 +196,10 @@
             </div>
             <div class="fcol-3">
                 <p class="ftext">Follow us for exclusive offers and content!</p>
-                <a href="#" class="fa soc-icon fb fa-facebook"></a>
-                <a href="#" class="fa soc-icon ig fa-instagram"></a>
-                <a href="#" class="fa soc-icon tw fa-twitter"></a>
-                <a href="#" class="fa soc-icon yt fa-youtube"></a>
+                <a href="#" class="fa soc-icon fb fa-facebook" style="font-size: 24px"></a>
+                <a href="#" class="fa soc-icon ig fa-instagram" style="font-size: 24px"></a>
+                <a href="#" class="fa soc-icon tw fa-twitter" style="font-size: 24px"></a>
+                <a href="#" class="fa soc-icon yt fa-youtube" style="font-size: 24px"></a>
 
             </div>
         </div>

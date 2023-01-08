@@ -74,14 +74,14 @@
     </div>
 </nav>
 
-<div class="swiper mySwiper headerBackground-Home">
+<div class="swiper mySwiper" style="height: 90vh">
     <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/blackpanther.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/pussNbootBG.png" alt=""></div>
         <div class="swiper-slide"><img src="img/blackAdamBG.png" alt=""></div>
         <div class="swiper-slide"><img src="img/JW4BG.png" alt=""></div>
-        <div class="swiper-slide"><img src="img/blackpantherBG.png" alt=""></div>
         <div class="swiper-slide"><img src="img/skyfall.png" alt=""></div>
         <div class="swiper-slide"><img src="img/BatMan.png" alt=""></div>
-        <div class="swiper-slide"><img src="img/pussNbootBG.png" alt=""></div>
     </div>
 </div>
 <section class="background-gradient">
@@ -367,10 +367,15 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MovieOneDescription)%>
                         </p class="slider-Content">
-                        <button>Check Now</button>
+                        <button onclick="location.href='movie.jsp'">Check Now</button>
                     </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
+                    <div class="illustration"><div class="inner" style="
+                    background: url('img/strangeWorld.jpg') no-repeat;
+                    background-size: contain;
+                    border-radius: 20px;
+                    transition: 1s;">
+                    </div></div>
                 </div>
                                 
                 
@@ -381,10 +386,15 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MovieTwoDescription)%>
                         </p>
-                        <button>Check Now</button>
+                        <button onclick="location.href='movie.jsp'">Check Now</button>
                     </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
+                    <div class="illustration"><div class="inner" style="
+                    background: url('img/avatarWOW.jpg') no-repeat;
+                    background-size: contain;
+                    border-radius: 20px;
+                    transition: 1s;">
+                    </div></div>
                 </div>
                                 
                 <div class="box3 box">
@@ -394,10 +404,15 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MoviethreeDescription)%>
                         </p>
-                        <button>Check Now</button>
+                        <button onclick="location.href='movie.jsp'">Check Now</button>
                     </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
+                    <div class="illustration"><div class="inner" style="
+                    background: url('img/JW4.jpg') no-repeat;
+                    background-size: contain;
+                    border-radius: 20px;
+                    transition: 1s;">
+                    </div></div>
                 </div>
                                 
                 <div class="box4 box">
@@ -407,10 +422,15 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MoviefourDescription)%>
                         </p>
-                        <button>Check Now</button>
+                        <button onclick="location.href='movie.jsp'">Check Now</button>
                     </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
+                    <div class="illustration"><div class="inner" style="
+                    background: url('img/blackAdam.jpg') no-repeat;
+                    background-size: contain;
+                    border-radius: 20px;
+                    transition: 1s;">
+                    </div></div>
                 </div>
                                 
                 <div class="box5 box">
@@ -420,10 +440,15 @@
                         <p class="slider-Content">
                             <%=escapeHtml(MoviefiveDescription)%>
                         </p>
-                        <button>Check Now</button>
+                        <button onclick="location.href='movie.jsp'">Check Now</button>
                     </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
+                    <div class="illustration"><div class="inner" style="
+                    background: url('img/pussInBoots.jpg') no-repeat;
+                    background-size: contain;
+                    border-radius: 20px;
+                    transition: 1s;">
+                    </div></div>
                 </div>
                                 
             </div>
