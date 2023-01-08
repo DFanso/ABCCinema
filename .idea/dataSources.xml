@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ABC_Cinema/Hibernate" uuid="32abe31f-d695-4f34-a589-733cd38f6f2e">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/vidwa/Documents/GitHub/ABCCinema/ABC_Cinema/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ABC_Cinema/Hibernate" uuid="8dbc5d0b-9826-4747-be06-5765b3a37ff0">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/vidwa/Documents/GitHub/ABCCinema/ABC_Cinema/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ABCCinema@fanso.database.windows.net" uuid="7a0dd11d-b5c6-4545-9a6b-611e72a9364c">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
