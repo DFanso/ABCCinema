@@ -6,6 +6,7 @@
     <title>Booking Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -95,62 +96,62 @@
                 <div class="screen"></div>
           
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
+                  <div id="1" class="seat"></div>
+                  <div id="2" class="seat"></div>
+                  <div id="3" class="seat"></div>
+                  <div id="4" class="seat"></div>
+                  <div id="5" class="seat"></div>
+                  <div id="6" class="seat"></div>
+                  <div id="7" class="seat"></div>
+                  <div id="8"class="seat"></div>
                 </div>
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
+                  <div id="9" class="seat"></div>
+                  <div id="10" class="seat"></div>
+                  <div id="11" class="seat"></div>
+                  <div id="12" class="seat"></div>
+                  <div id="13" class="seat"></div>
+                  <div id="14" class="seat"></div>
+                  <div id="15" class="seat"></div>
+                  <div id="16" class="seat"></div>
                 </div>
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
+                  <div id="17" class="seat"></div>
+                  <div id="18" class="seat"></div>
+                  <div id="19" class="seat"></div>
+                  <div id="20" class="seat"></div>
+                  <div id="21" class="seat"></div>
+                  <div id="22" class="seat"></div>
+                  <div id="23" class="seat"></div>
+                  <div id="24" class="seat"></div>
                 </div>
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
+                  <div id="25" class="seat"></div>
+                  <div id="26" class="seat"></div>
+                  <div id="27" class="seat"></div>
+                  <div id="28" class="seat"></div>
+                  <div id="29" class="seat"></div>
+                  <div id="30" class="seat"></div>
+                  <div id="31" class="seat"></div>
+                  <div id="32" class="seat"></div>
                 </div>
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
+                  <div id="33" class="seat"></div>
+                  <div id="34" class="seat"></div>
+                  <div id="35" class="seat"></div>
+                  <div id="36" class="seat"></div>
+                  <div id="37" class="seat"></div>
+                  <div id="38" class="seat"></div>
+                  <div id="39" class="seat"></div>
+                  <div id="40" class="seat"></div>
                 </div>
                 <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
+                  <div id="41" class="seat"></div>
+                  <div id="42" class="seat"></div>
+                  <div id="43" class="seat"></div>
+                  <div id="44" class="seat"></div>
+                  <div id="45" class="seat"></div>
+                  <div id="46" class="seat"></div>
                 </div>
               </div>
         </div>  
@@ -159,7 +160,7 @@
                 You have selected <span id="count">0</span> seats for a price of $<span
                   id="total">0</span>
                 </p>
-                <button class="go-btn" onclick="location.href='paymentPage.jsp';">Pay</button>
+                <button onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
             </div>
         
     </div>
@@ -232,6 +233,60 @@
 
     }
 
+</script>
+<script>
+    function seatFun2() {
+        var divClass;
+        var myVariable;
+        const selectedSeat=[];
+        for (let i = 1; i <= 16; i++) {
+            divClass = document.getElementById(i).className;
+            $(document).ready(function () {
+                divClass = $(myVariable).attr("class");
+
+            });
+            console.log(divClass);
+            if (divClass === "seat selected") {
+                selectedSeat.push(i)
+
+                console.log(i);
+            }
+        }
+        $.ajax({
+            type: "POST",
+            url: "./config",
+            data: {selectedSeat:selectedSeat.join(",")}, // Send the variable to the servlet
+
+            success: function (response) {
+                // Update the div element with the response from the servlet
+                $("#response").html(response)
+            }
+        })
+    };
+
+</script>
+<script>
+    let selectedSeats = [];
+    let seat="seat occupied"
+    function seatfun () {
+        $.ajax({
+            type: "POST",
+            url: "./config",
+            data: {action: "changeClass"},
+            success: function (response) {
+                selectedSeats = response.split(",");
+                console.log(selectedSeats)
+                for (const x of selectedSeats) {
+                    $("#"+x).attr("class",seat);
+                }
+
+            }
+        });
+    }
+    $(document).ready(function () {
+        seatfun();
+        setInterval(seatfun, 10); // Interval set to 10 seconds
+    });
 </script>
 </body>
 </html>
