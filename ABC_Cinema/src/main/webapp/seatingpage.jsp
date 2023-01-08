@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container nav-container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="contact.jsp">Contact</a></li>
-            </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+<nav class="navbar">
+    <div class="navbar-container nav-container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-    </nav>
+        <ul class="menu-items">
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a class="nav-line">|</a></li>
+            <div class="socioNavItem">
+                <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+            </div>
+        </ul>
+        <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
+    </div>
+</nav>
 
     <div class="seating-container">
         <div class="seating-row">
@@ -47,14 +54,25 @@
 
 
     <!-- Date Selection Section -->
-    <div class="showTimeContainer">
-        <div class="showTimeText">
-            <h2>11.15 A.M<br>Show</h2>
-        </div>
-        <div class="dates">
-            <h2>28th November 2022</h2>
-        </div>
+<div class="showTimeContainer">
+    <div class="showTimeText" style="width: 30%;">
+        <h2>BlackPanther: Wakanda Forever</h2>
     </div>
+    <div class="dates">
+        <select name="MovieDate" id="date">
+            <option><h2>28th November</h2></option>
+            <option><h2>29th November</h2></option>
+            <option><h2>30th November</h2></option>
+            <option><h2>31st November</h2></option>
+        </select>
+        <select name="MovieTime" id="time">
+            <option><h2>8.00 A.M</h2></option>
+            <option><h2>10.30 A.M</h2></option>
+            <option><h2>1.00 P.M</h2></option>
+            <option><h2>9.00 P.M</h2></option>
+        </select>
+    </div>
+</div>
     <!-- Seating Section -->
     <div class="seating-background-gradient">
         <div class="seatingBigContainer">
@@ -141,7 +159,7 @@
                 You have selected <span id="count">0</span> seats for a price of $<span
                   id="total">0</span>
                 </p>
-                <button class="go-btn">Pay</button>
+                <button class="go-btn" onclick="location.href='paymentPage.jsp';">Pay</button>
             </div>
         
     </div>

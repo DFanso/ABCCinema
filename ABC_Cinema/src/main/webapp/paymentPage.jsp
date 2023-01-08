@@ -9,29 +9,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        .button-container a input{
+            position: relative;
+            background: #444;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
+            padding: 0.75rem 1.5rem;
+            transition: 0.5s;
+            border: none;
+        }
+
+        .button-container a input:hover {
+            letter-spacing: 0.25rem;
+            background: var(--color);
+            color: white;
+            box-shadow: 0 0 50px 10px var(--color);
+        }
+
+        .button-container a input::before {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background: #27282c;
+        }
+
+        .button-container a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .button-container a input i {
+            position: absolute;
+            inset: 0;
+            display: block;
+        }
+
+        .button-container a input i::before {
+            content: "";
+            position: absolute;
+            top: -3.5px;
+            left: 80%;
+            width: 10px;
+            height: 5px;
+            border: 2px solid var(--color);
+            background: #27282c;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        .button-container a  input:hover i::before {
+            left: 20%;
+            width: 20px;
+        }
+
+        .button-container a input i::after {
+            content: "";
+            position: absolute;
+            bottom: -3.5px;
+            left: 20%;
+            width: 10px;
+            height: 5px;
+            border: 2px solid var(--color);
+            background: #27282c;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+
+        .button-container a input:hover i::after {
+            left: 80%;
+            width: 20px;
+        }
+
+    </style>
 </head>
 <body class="bg-wallpaper-payment-page">
-    <nav class="navbar">
-        <div class="navbar-container nav-container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+<nav class="navbar">
+    <div class="navbar-container nav-container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-    </nav>
+        <ul class="menu-items">
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a class="nav-line">|</a></li>
+            <div class="socioNavItem">
+                <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+            </div>
+        </ul>
+        <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
+    </div>
+</nav>
     <section class="bg-wallpaper-payment-page-f">
         <div class="paymentContactDetailsContainer">
             <div class="form-content">
                 <h1>Contact Details</h1>
-                <form action="#" method="post">
+                <form action="#" method="post" id="myForm">
                     <div class="form-row">
                         <input type="text" name="ClientName" placeholder="Name: " class="form-input">
                         <input type="text" name="ClientName" placeholder="Email: " class="form-input">
@@ -40,13 +123,16 @@
                         <input type="text" name="ClientName" placeholder="Tel No: " class="form-input">
                     </div>
                     <div class="form-row">
-                        <center><input type="submit" value="Go" class="go-btn"></center>    
+                        <div class="button-container">
+                            <a href="#" style="--color: red"><span><input type="submit" value="SUBMIT"></span><i></i></a>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
         <hr class="section-divider"><br>
-        <h1 class="payment-header">Payment Details</h1>
+        <div id="paypalSection" style="display: none;">
+            <h1 class="payment-header">Payment Details</h1>
             <div class="poster-container">
                 <div class="poster-row">
                     <div class="poster-col-2">
@@ -55,52 +141,54 @@
                                 <img src="img/bookingPage/poster2.png" alt="poster">
                             </div>
                             <div class="posterInfo">
-                                <p><b>BLACK PANTHER: WAKANDA<br>FOREVER</b><br><span>NOW SCREENING</span></p>
+                                <p><b>BLACK PANTHER: WAKANDA<br>FOREVER</b><br><span>Tickets:</span><br><span>Rs. Price</span></p>
                                 <hr/>
                                 <div class="poster-trailer-icon">
                                     <img src="img/bookingPage/TV Show.png" alt="trailer" style="padding-left:15px;">
                                     <p>Play<br>Trailer</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="payment-section">
+                    <div class="payment-content">
+                        <!-- <div class="paywithContent">
+                            <h3>Pay With: </h3>
+                            <a href="#"><img src="img/PayPal.png" alt="paypal"></a>
+                            <a href="#"><img src="img/VISA.png" alt="visa"></a>
+                            <a href="#"><img src="img/mastercard.png" alt="master"></a>
+                        </div>
+                        <div class="form-content-Payment">
+                            <form action="#" method="post">
+                                <div class="form-row">
+                                    <input type="text" name="ClientCardNo" placeholder="Card No: " class="form-input-new">
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" name="CardHolderName" placeholder="Card Holder: " class="form-input-new">
+                                    <input type="text" name="ExpiryDate" placeholder="Expiry Date: " class="form-input-new">
+                                </div>
+                                <div class="form-row">
+                                    <center><input type="text" placeholder="CVC" class="form-input-new"></center>
+                                </div>
+                                <div class="form-row">
+                                    <div class="last-row">
+                                        <input type="checkbox" class="chkBoxInput">
+                                        <p>I agree to the terms and conditions of ABCCINEMA</p>
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <center><input type="submit" value="Confrim" class="go-btn"></center>
+                                </div>
+                            </form>
+                        </div> -->
+                        <div id="paypal-button-container" style="width: 70%;"></div>
                     </div>
                 </div>
             </div>
-            
-        
-            <div class="payment-section">     
-                <div class="payment-content">
-                    <!-- <div class="paywithContent">
-                        <h3>Pay With: </h3>
-                        <a href="#"><img src="img/PayPal.png" alt="paypal"></a>
-                        <a href="#"><img src="img/VISA.png" alt="visa"></a>
-                        <a href="#"><img src="img/mastercard.png" alt="master"></a>
-                    </div>
-                    <div class="form-content-Payment">
-                        <form action="#" method="post">
-                            <div class="form-row">
-                                <input type="text" name="ClientCardNo" placeholder="Card No: " class="form-input-new">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" name="CardHolderName" placeholder="Card Holder: " class="form-input-new">
-                                <input type="text" name="ExpiryDate" placeholder="Expiry Date: " class="form-input-new">
-                            </div>
-                            <div class="form-row">
-                                <center><input type="text" placeholder="CVC" class="form-input-new"></center>
-                            </div>
-                            <div class="form-row">
-                                <div class="last-row">
-                                    <input type="checkbox" class="chkBoxInput">
-                                    <p>I agree to the terms and conditions of ABCCINEMA</p>
-                                </div>
-                                
-                            </div>
-                            <div class="form-row">
-                                <center><input type="submit" value="Confrim" class="go-btn"></center>
-                            </div>
-                        </form> -->
-                        <div id="paypal-button-container" style="width: 70%;"></div>
-                    </div>
-                </div>          
             </div>
         </div>
     </section>
@@ -192,6 +280,12 @@
 
     }
 
+</script>
+<script>
+    document.getElementById("myForm").onsubmit = function() {
+        document.getElementById("paypalSection").style.display = "block";
+        return false;
+    }
 </script>
 </body>
 </html>

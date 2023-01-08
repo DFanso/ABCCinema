@@ -20,22 +20,29 @@
 </head>
 <body>
 <script  src="FormValidate.js"></script>
-    <nav class="navbar">
-        <div class="navbar-container nav-container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+<nav class="navbar">
+    <div class="navbar-container nav-container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-    </nav>
+        <ul class="menu-items">
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a class="nav-line">|</a></li>
+            <div class="socioNavItem">
+                <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+                <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+                <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+                <li><a href="#" class="fa social-icon fa-facebook"></a></li>
+            </div>
+        </ul>
+        <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
+    </div>
+</nav>
         <!-- admin Form Section -->
         <section class="bg-wallpaper-admin-page" style="display: flex; align-items: center; justify-content: center;">
             <div class="adminLoginContainer">

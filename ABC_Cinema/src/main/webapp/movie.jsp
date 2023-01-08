@@ -8,131 +8,90 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Movie</title>
+    <title>Movie Page</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <!----------------------Navigation bar---------------------->
 <nav class="navbar">
   <div class="navbar-container nav-container">
-      <input type="checkbox" name="" id="">
-      <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
+    <input type="checkbox" name="" id="">
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+    <ul class="menu-items">
+      <li><a href="index.jsp">Home</a></li>
+      <li><a href="about.jsp">About</a></li>
+      <li><a href="contact.jsp">Contact</a></li>
+      <li><a class="nav-line">|</a></li>
+      <div class="socioNavItem">
+        <li><a href="#" class="fa social-icon fa-twitter"></a></li>
+        <li><a href="#" class="fa social-icon fa-instagram"></a></li>
+        <li><a href="#" class="fa social-icon fa-youtube"></a></li>
+        <li><a href="#" class="fa social-icon fa-facebook"></a></li>
       </div>
-      <ul class="menu-items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-      </ul>
-      <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
+    </ul>
+    <h1 class="logo"><a href="index.jsp">ABC<font color="red">CINEMA</font></a></h1>
   </div>
 </nav>
-  <!----------------------below navbar---------------------->
-  <div class="Moviecontainer ">
-    <div class="row">
-      <div class="col-1">
-        <img class="below-header-img" src="img/983596.jpg">
+
+<!-------------------Movie Cover Image-------------------->
+<div class="movie-con">
+  <div class="movie-row">
+    <div class="movie-col1">
+      <img src="img/wakandaCover.png" class="movie-cover-img">
+      <div class="movieCover-icon inline-movieIcon">
+        <i class="fa border-icon">&#xf144;
+          <p class="castIcon-text movieIcon-text"  onclick="location.href='#'">Watch Trailer</p></i>
+        <i class="fa border-icon">&#xf145;
+          <p class="castIcon-text movieIcon-text" onclick="location.href='seatingpage.jsp'">Buy Tickets</p></i>
       </div>
     </div>
   </div>
-</section>
-
-<!-------------------------------testing slider-------------------------------------->
-
-
-<!-------------------------below cover image------------------------------->
-<section id="about-movie">
-  <div class="center-container">
-    <div class="center-row">
-      <div class="col-3 padding-col-res">
-        <h1 class="bold-text">KNIVES OUT</h1>
-        <p class="bsmalltext">AVAILBLE NOW</p>
-      </div>
-      <div class="col-3 padding-col-res">
-        <i class="fa border-icon">&#xf144;</i>
-        <p class="smalltext smalltext-align">Watch Trailer</p>
-        <i class="fa border-icon">&#xf145;</i>
-        <p class="smalltext">Buy Tickets</p>
-      </div>
-      <div class="col-3">
-        <img class="movie-banner banner-box-shadow" src="img/knives-out-banner.jpg">
-      </div>
-    </div>
-  </div>
-
-
-
-
-</section>
-
-
-
-<section id="movie-description">
-  <div class="center-container">
-    <h2 class="con-title title-bot">MOVIE DESCRIPTION</h2>
-    <div class="center-rrow">
-      <div class="col-2">
-        <img class="movie-des-img img-grow-movie" src="img/movie-descrip.jpg">
-      </div>
-      <div class="col-2 left-res-padding">
-        <div class="vert-line ">
-          <h3 class="smalltext smalltext-align text-left text-alignPadding">About Knives Out</h3>
-          <div class="content-padding"><b><p class="smalltext smalltext-align text-left">The circumstances surrounding the death of crime novelist
-            Harlan Thrombey are mysterious, but there's one thing that
-            renowned Detective Benoit Blanc knows for sure -- everyone
-            in the wildly dysfunctional Thrombey family is a suspect.
-            Now, Blanc must sift through a web of lies and red herrings
-            to uncover the truth.</p></b>
-            <p class="smalltext smalltext-align text-left">
-              When renowned crime novelist Harlan Thrombey (Christopher
-              Plummer) is found dead at his estate just after his 85th
-              birthday, the inquisitive and debonair Detective Benoit
-              Blanc (Daniel Craig) is mysteriously enlisted to investigate.
-              From Harlan's disfunctional family to his devoted staff,
-              Blanc sifts through  a web of red herrings and self-serving
-              lies to uncover the truth behind Harlan's untimely death.
-            </p></div></div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="center-container">
-    <h2 class="con-title title-padding">TOP CAST</h2>
-    <div class="center-row-two">
-      <div class="col-2">
-        <div class="text-align-img">
-          <div class="vert-line"><b><p class="smalltext cast-text cast-topic-size">Cast</p><br>
-            <p class="smalltext cast-text">Daniel Craig</p>
-            <p class="smalltext cast-text">Ana de Armas</p>
-            <p class="smalltext cast-text">Chris Evans </p>
-            <p class="smalltext cast-text">Michael Shannon</p>
-            <p class="smalltext cast-text">Edi Patterson</p>
-            <p class="smalltext cast-text">Katherine Langford</p>
-            <p class="smalltext cast-text">Jamie Lee Curtis</p>
-            <p class="smalltext cast-text">Christopher Plummer</p>
-            <p class="smalltext cast-text">LaKeith Stanfield</p>
-          </b></div>
+</div>
+<!-----------------Poster sect--------------------------->
+<section id="aboutPoster">
+  <div class="movie-con-poster movie-pos-padding">
+    <div class="movie-row movie-pos-sec">
+      <div class="movie-col2">
+        <div class="movie-image-wrapper"><img src="img/bookingPage/poster2.png" alt="posterImg" class="movie-smallPoster-img"></div>
+        <div class="movie-pos-text"><p class="small-moviePos-content"><b>Director</b>: Ryan Coogler</p>
+          <p class="small-moviePos-content"><b>Main Cast</b>: Lupita Nyong'o, Martin Freeman, Letitia Wright, Danai Gurira, Winston Duke</p>
+          <p class="small-moviePos-content"><b>Genre</b>: Action, Adventure, Drama</p>
+          <p class="small-moviePos-content"><b>Running Time</b>: 161 MIN Release Date: 10</p>
+          <p class="small-moviePos-content"><b>Date</b>: 10 Nov 2022</p>
+          <p class="small-moviePos-content"><b>Rating</b>: M - Mature themes and violence </p>
+          <p class="small-moviePos-content"><b>Language</b>: English</p>
         </div>
       </div>
-      <div class="col-2">
-        <img class="movie-des-img img-grow-movie movie-englarge-res" src="img/cast.jpg">
+    </div>
+
+    <!-------------------Poster description------------------------------------>
+    <div class="movie-con">
+      <div class="movie-row movie-des-padding">
+        <div class="movie-col1">
+          <h1 class="movie-des-topic">Description</h1>
+          <div class="movie-des-text-div"><p class="movie-des-text">In Marvel Studios’ “Black Panther: Wakanda Forever,” Queen Ramonda (Angela Bassett),
+            Shuri (Letitia Wright), M’Baku (Winston Duke), Okoye (Danai Gurira), and the Dora Milaje
+            (including Florence Kasumba), fight to protect their nation from intervening world powers
+            in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter,
+            the heroes must band together with the help of War Dog Nakia (Lupita Nyong’o) and Everett Ross
+            (Martin Freeman) and forge a new path for the kingdom of Wakanda. Introducing Tenoch Huerta
+            as Namor, king of a hidden undersea nation, the film also stars Dominique Thorne, Michaela
+            Coel, Mabel Cadena, and Alex Livanalli.
+          </p></div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-
-
 </section>
+
 <section id="footer">
   <div class="fcontainer">
     <div class="frow row-color">
@@ -155,10 +114,10 @@
       </div>
       <div class="fcol-3">
         <p class="ftext">Follow us for exclusive offers and content!</p>
-        <a href="#" class="fa soc-icon fb fa-facebook"></a>
-        <a href="#" class="fa soc-icon ig fa-instagram"></a>
-        <a href="#" class="fa soc-icon tw fa-twitter"></a>
-        <a href="#" class="fa soc-icon yt fa-youtube"></a>
+        <a href="#" class="fa soc-icon fb fa-facebook" style="font-size: 24px"></a>
+        <a href="#" class="fa soc-icon ig fa-instagram" style="font-size: 24px"></a>
+        <a href="#" class="fa soc-icon tw fa-twitter" style="font-size: 24px"></a>
+        <a href="#" class="fa soc-icon yt fa-youtube" style="font-size: 24px"></a>
 
       </div>
     </div>
