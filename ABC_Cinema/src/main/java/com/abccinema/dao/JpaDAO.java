@@ -49,11 +49,7 @@ public abstract class JpaDAO<E> {
         entityManager.getTransaction().commit();
     }
 
-    public List<E> findWithNamedQuery(String queryName)
-    {
-        Query query = entityManager.createNamedQuery(queryName);
-        return query.getResultList();
-    }
+
 
     public long countWithNamedQuery(String queryName)
     {
@@ -83,6 +79,15 @@ public abstract class JpaDAO<E> {
         }
         return (int) query.getSingleResult();
     }
+
+
+
+
+
+
+
+
+
 
 
 

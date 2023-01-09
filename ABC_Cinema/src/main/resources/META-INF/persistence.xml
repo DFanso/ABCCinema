@@ -9,6 +9,8 @@
     <persistence-unit name="ABC_Cinema"  transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+
+
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"/>
             <property name="javax.persistence.jdbc.user" value="dfanso@fanso"/>

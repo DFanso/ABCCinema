@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +58,7 @@
     <!-- Date Selection Section -->
 <div class="showTimeContainer">
     <div class="showTimeText" style="width: 30%;">
-        <h2>BlackPanther: Wakanda Forever</h2>
+        <h2><c:out value="${MovieName}"/></h2>
     </div>
     <div class="dates">
         <select name="MovieDate" id="date">
