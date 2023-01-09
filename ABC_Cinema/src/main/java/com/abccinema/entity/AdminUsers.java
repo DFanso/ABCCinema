@@ -13,6 +13,8 @@ import javax.persistence.*;
         @NamedQuery(name="AdminUsers.checkUserName",query = "select u from AdminUsers u where UserName =:userName"),
         @NamedQuery(name="AdminUsers.getIdFromUserName",query = "select userID from AdminUsers u where UserName =:userName")
 
+
+
 })
 public class AdminUsers {
     private Integer UserID;

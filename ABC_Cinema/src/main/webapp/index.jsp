@@ -15,6 +15,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         .swiper {
             width: 100%;
@@ -133,6 +134,7 @@
 
         String MovieOneName = null;
         String MovieOneDescription = null;
+        String MovieOneCardURL = null;
         if (rs != null) {
     %>
         <table>
@@ -142,6 +144,7 @@
                     while (rs.next()) {
                         MovieOneName = rs.getString("MovieName");
                         MovieOneDescription = rs.getString("Description");
+                        MovieOneCardURL = rs.getString("CardImageURL");
             %>
 
             <%
@@ -179,6 +182,7 @@
 
         String MovieTwoName = null;
         String MovieTwoDescription = null;
+        String MovieTwoCardURL = null;
         if (two != null) {
     %>
     <table>
@@ -188,6 +192,7 @@
                 while (two.next()) {
                     MovieTwoName = two.getString("MovieName");
                     MovieTwoDescription = two.getString("Description");
+                    MovieTwoCardURL = two.getString("CardImageURL");
         %>
 
         <%
@@ -226,6 +231,7 @@
 
         String MoviethreeName = null;
         String MoviethreeDescription = null;
+        String MovieThreeCardURL = null;
         if (three != null) {
     %>
     <table>
@@ -235,6 +241,7 @@
                 while (three.next()) {
                     MoviethreeName = three.getString("MovieName");
                     MoviethreeDescription = three.getString("Description");
+                    MovieThreeCardURL = three.getString("CardImageURL");
         %>
 
         <%
@@ -273,6 +280,7 @@
 
         String MoviefourName = null;
         String MoviefourDescription = null;
+        String MovieFourCardURL = null;
         if (three != null) {
     %>
     <table>
@@ -284,6 +292,7 @@
                     if (!four.next()) break;
                     MoviefourName = four.getString("MovieName");
                     MoviefourDescription = four.getString("Description");
+                    MovieFourCardURL = four.getString("CardImageURL");
         %>
 
         <%
@@ -322,6 +331,7 @@
 
         String MoviefiveName = null;
         String MoviefiveDescription = null;
+        String MovieFiveCardURL = null;
         if (three != null) {
     %>
     <table>
@@ -333,6 +343,7 @@
                     if (!five.next()) break;
                     MoviefiveName = five.getString("MovieName");
                     MoviefiveDescription = five.getString("Description");
+                    MovieFiveCardURL = five.getString("CardImageURL");
         %>
 
         <%
@@ -357,8 +368,8 @@
 
 
 
-        <h1 class="nowshowingHeading">Now Showing</h1>
-        <div class="container"> 
+    <h1 class="nowshowingHeading">Now Showing</h1>
+        <div class="container">
             <div class="slider">
                 <div class="box1 box">
                     <div class="bg"></div>
@@ -367,18 +378,20 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MovieOneDescription)%>
                         </p class="slider-Content">
-                        <button onclick="location.href='movie.jsp'">Check Now</button>
+                        <button id="movieOne" name="movieOne" onclick="location.href='./MovieServlet'">Check Now</button>
+
+
                     </div>
 
                     <div class="illustration"><div class="inner" style="
-                    background: url('img/strangeWorld.jpg') no-repeat;
+                    background: url( '<%=escapeHtml(MovieOneCardURL)%>') no-repeat;
                     background-size: contain;
                     border-radius: 20px;
                     transition: 1s;">
                     </div></div>
                 </div>
-                                
-                
+
+
                 <div class="box2 box">
                     <div class="bg"></div>
                     <div class="details">
@@ -386,11 +399,11 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MovieTwoDescription)%>
                         </p>
-                        <button onclick="location.href='movie.jsp'">Check Now</button>
+                        <button id="movieTwo" name="movieTwo" onclick="location.href='./MovieServlet'">Check Now</button>
                     </div>
 
                     <div class="illustration"><div class="inner" style="
-                    background: url('img/avatarWOW.jpg') no-repeat;
+                    background: url('<%=escapeHtml(MovieTwoCardURL)%>') no-repeat;
                     background-size: contain;
                     border-radius: 20px;
                     transition: 1s;">
@@ -404,11 +417,11 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MoviethreeDescription)%>
                         </p>
-                        <button onclick="location.href='movie.jsp'">Check Now</button>
+                        <button id="movieThree" name="movieThree" onclick="location.href='./MovieServlet'">Check Now</button>
                     </div>
 
                     <div class="illustration"><div class="inner" style="
-                    background: url('img/JW4.jpg') no-repeat;
+                    background: url('<%=escapeHtml(MovieThreeCardURL)%>') no-repeat;
                     background-size: contain;
                     border-radius: 20px;
                     transition: 1s;">
@@ -422,11 +435,11 @@
                         <p class="slider-Content-p">
                             <%=escapeHtml(MoviefourDescription)%>
                         </p>
-                        <button onclick="location.href='movie.jsp'">Check Now</button>
+                        <button id="movieFour" name="movieFour" onclick="location.href='./MovieServlet'">Check Now</button>
                     </div>
 
                     <div class="illustration"><div class="inner" style="
-                    background: url('img/blackAdam.jpg') no-repeat;
+                    background: url('<%=escapeHtml(MovieFourCardURL)%>') no-repeat;
                     background-size: contain;
                     border-radius: 20px;
                     transition: 1s;">
@@ -440,11 +453,11 @@
                         <p class="slider-Content">
                             <%=escapeHtml(MoviefiveDescription)%>
                         </p>
-                        <button onclick="location.href='movie.jsp'">Check Now</button>
+                        <button id="movieFive" name="movieFive" onclick="location.href='./MovieServlet'">Check Now</button>
                     </div>
 
                     <div class="illustration"><div class="inner" style="
-                    background: url('img/pussInBoots.jpg') no-repeat;
+                    background: url('<%=escapeHtml(MovieFiveCardURL)%>') no-repeat;
                     background-size: contain;
                     border-radius: 20px;
                     transition: 1s;">
@@ -626,5 +639,52 @@
                 })
 
             </script>
+
+
+<script>
+    document.getElementById("movieOne").addEventListener("click", function() {
+        // Send an HTTP GET request to the servlet
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "./MovieServlet?value=1", true);
+        xhr.send();
+        //console.log("Button was clicked");
+    });
+</script>
+<script>
+    document.getElementById("movieTwo").addEventListener("click", function() {
+        // Send an HTTP GET request to the servlet
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "./MovieServlet?value=2", true);
+        xhr.send();
+        //console.log("Button was clicked");
+    });
+</script>
+<script>
+    document.getElementById("movieThree").addEventListener("click", function() {
+        // Send an HTTP GET request to the servlet
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "./MovieServlet?value=3", true);
+        xhr.send();
+        //console.log("Button was clicked");
+    });
+</script>
+<script>
+    document.getElementById("movieFour").addEventListener("click", function() {
+        // Send an HTTP GET request to the servlet
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "./MovieServlet?value=4", true);
+        xhr.send();
+        //console.log("Button was clicked");
+    });
+</script>
+<script>
+    document.getElementById("movieFive").addEventListener("click", function() {
+        // Send an HTTP GET request to the servlet
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "./MovieServlet?value=5", true);
+        xhr.send();
+        //console.log("Button was clicked");
+    });
+</script>
 </body>
 </html>

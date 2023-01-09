@@ -3,7 +3,6 @@ package com.abccinema.dao;
 import com.abccinema.entity.AdminUsers;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +33,8 @@ public class AdminDAO extends JpaDAO<AdminUsers> implements GenericDAO<AdminUser
 
     @Override
     public List<AdminUsers> listAll() {
-        return super.findWithNamedQuery("AdminUsers.findAll");
+
+        return null;
     }
 
     @Override

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jboss.seam.persistence" type="repository">
+    <properties maven-id="org.jboss.seam.persistence:seam-persistence:3.0.0.Final" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/seam/persistence/seam-persistence/3.0.0.Final/seam-persistence-3.0.0.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/seam/solder/seam-solder/3.0.0.Final/seam-solder-3.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
