@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+
+        @media (max-width: 550px){
+            .dates select{
+                font-size: 15px;
+            }
+            .showTimeText h2{
+                font-size: 15px;
+                padding: 0 5px;
+            }
+            .go-btn{
+                width: 72px;
+                height: 42px;
+                font-size: 17px;
+            }
+            .seating-background-gradient{
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar">
@@ -161,7 +181,7 @@
                 You have selected <span id="count">0</span> seats for a price of $<span
                   id="total">0</span>
                 </p>
-                <button onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
+                <button class="go-btn" onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
             </div>
         
     </div>
@@ -246,11 +266,9 @@
                 divClass = $(myVariable).attr("class");
 
             });
-            console.log(divClass);
             if (divClass === "seat selected") {
                 selectedSeat.push(i)
 
-                console.log(i);
             }
         }
         $.ajax({
@@ -276,7 +294,6 @@
             data: {action: "changeClass"},
             success: function (response) {
                 selectedSeats = response.split(",");
-                console.log(selectedSeats)
                 for (const x of selectedSeats) {
                     $("#"+x).attr("class",seat);
                 }

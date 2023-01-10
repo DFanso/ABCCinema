@@ -83,7 +83,11 @@
             left: 80%;
             width: 20px;
         }
-
+        @media (max-width: 550px){
+            .payment-content {
+                margin: 3rem 1.5rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-wallpaper-payment-page">
