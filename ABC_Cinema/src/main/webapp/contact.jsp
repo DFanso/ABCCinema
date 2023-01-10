@@ -158,7 +158,7 @@
     <div class="contact-form-container">
         <div class="row color-contact-form">
             <div class="col-1">
-                <h1 class="form-title" style="color: white">Get in touch With us</h1>
+                <h1 class="form-title" style="color: white">Send Us a Feedback</h1>
                 <div class="form-content-contact">
                     <div class="form-container">
                         <form action="" method="POST">

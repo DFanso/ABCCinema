@@ -913,7 +913,7 @@ justify-content: space-between;
 .showTimeText{
 color: white;
 background: #3D0000;
-width: 236px;
+width: 30%;
 height: 203px;
 display: flex;
 align-items: center;
@@ -1777,6 +1777,28 @@ p.text span {
     }
     .movieIcon-text{
         font-size: 16px;
+    }
+
+}
+@media only screen and (max-width:550px){
+    .movieCover-icon{
+        position: absolute;
+        top:10%;
+        left:5%;
+    }
+    .border-icon{
+        width: 100px;
+        height: 25px;
+        border:1px solid red;
+        padding:4px 9px;
+        border-radius: 22px;
+        font-size:20px;
+        color:red;
+        text-align: center;
+        margin-right: 10px;
+    }
+    .movieIcon-text{
+        font-size: 14px;
     }
 
 }
