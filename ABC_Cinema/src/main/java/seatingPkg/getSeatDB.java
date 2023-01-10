@@ -12,7 +12,7 @@ public class getSeatDB {
     try (Connection conn = DriverManager.getConnection(
             "jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema", "dfanso@fanso", "123@NSBM")) {
 
-        String sql = "SELECT bookedSeats FROM displaySeat WHERE date ='"+myDate+"'and time ='"+myTime+"'";
+        String sql = "SELECT seats FROM seats WHERE date ='"+myDate+"'and time ='"+myTime+"'";
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
 

@@ -71,27 +71,20 @@
         </div>
       </div>
 
-    
-    
-
-
     <!-- Date Selection Section -->
 <div class="showTimeContainer">
     <div class="showTimeText" style="width: 30%;">
         <h2><c:out value="${MovieName}"/></h2>
     </div>
     <div class="dates">
-        <select name="MovieDate" id="date">
-            <option><h2>28th November</h2></option>
-            <option><h2>29th November</h2></option>
-            <option><h2>30th November</h2></option>
-            <option><h2>31st November</h2></option>
+        <select name="MovieDate" id="date" onchange="getTimes(this.value)">
+            <option><h2>Select a Date</h2></option>
+            <c:forEach items="${ShowDates}" var="value">
+               <h2><option value="${value}">${value}</option></h2>
+            </c:forEach>
         </select>
         <select name="MovieTime" id="time">
-            <option><h2>8.00 A.M</h2></option>
-            <option><h2>10.30 A.M</h2></option>
-            <option><h2>1.00 P.M</h2></option>
-            <option><h2>9.00 P.M</h2></option>
+
         </select>
     </div>
 </div>
@@ -255,12 +248,46 @@
     }
 
 </script>
+
+<script>
+    function getTimes(date) {
+        var xhr = new XMLHttpRequest();
+        var MovieID = <c:out value="${movieID}"/>;
+        xhr.open("POST", "./TimeChangeServlet?date="+date+"&MovieID="+MovieID);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var times = JSON.parse(xhr.responseText);
+                updateTimes(times);
+            }
+        };
+        xhr.send();
+
+    }
+
+</script>
+
+
+<script>
+    function updateTimes(times) {
+        var select = document.getElementById("time");
+        select.innerHTML = "";
+        for (var i = 0; i < times.length; i++) {
+            var option = document.createElement("option");
+            option.value = times[i];
+            option.text = times[i];
+            select.appendChild(option);
+        }
+    }
+</script>
+
+
+
 <script>
     function seatFun2() {
         var divClass;
         var myVariable;
         const selectedSeat=[];
-        for (let i = 1; i <= 16; i++) {
+        for (let i = 1; i <= 46; i++) {
             divClass = document.getElementById(i).className;
             $(document).ready(function () {
                 divClass = $(myVariable).attr("class");
@@ -276,35 +303,59 @@
             url: "./config",
             data: {selectedSeat:selectedSeat.join(",")}, // Send the variable to the servlet
 
-            success: function (response) {
-                // Update the div element with the response from the servlet
-                $("#response").html(response)
-            }
+            async: false
         })
     };
 
 </script>
 <script>
+    var dropdownValuedate;
+    var dropdowntimevalue;
+    let value=<c:out value="${movieID}"/>;
+
+
+    $("#date").change(function() {
+        dropdownValuedate = $(this).val();
+    });
+    $("#time").change(function() {
+        dropdowntimevalue = $(this).val();
+    });
+
     let selectedSeats = [];
     let seat="seat occupied"
     function seatfun () {
         $.ajax({
             type: "POST",
             url: "./config",
+            data: {date:dropdownValuedate,time:dropdowntimevalue,movieID:value,// Send the variable to the servlet
+                async: false
+            },
+        })
+
+
+        $.ajax({
+            type: "POST",
+            url: "./config",
             data: {action: "changeClass"},
             success: function (response) {
                 selectedSeats = response.split(",");
+                console.log(selectedSeats)
                 for (const x of selectedSeats) {
                     $("#"+x).attr("class",seat);
                 }
 
             }
+
         });
+
     }
     $(document).ready(function () {
-        seatfun();
-        setInterval(seatfun, 10); // Interval set to 10 seconds
     });
 </script>
+
+
+
+
+
 </body>
 </html>

@@ -98,7 +98,7 @@
 
 
                 <div class="movie-image-wrapper">
-                    <img src="<c:out value="${cardImageURL}" />" alt="posterImg" style="width: 369px @media (max-width: 550px) {
+                    <img src="<c:out value="${cardImageURL}" />" alt="posterImg" style="width: 369px ;@media (max-width: 550px) {
                     width: 120px;
                     }"
                          class="movie-smallPoster-img">

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="com.abccinema.DBConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,13 +102,10 @@
     <!-- Now Showing Movies -->
 
     <%
-        Connection conn = null;
-        try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn = DriverManager.getConnection("jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema", "dfanso@fanso", "123@NSBM");
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
+
+        Connection conn = DBConnection.getConnection();
+
+
     %>
     <%--Movie One DATA fetch--%>
     <%
