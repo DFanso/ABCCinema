@@ -1,5 +1,6 @@
 package com.abccinema.service;
 
+import com.abccinema.DBConnection;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.abccinema.dao.MovieDAO;
@@ -12,7 +13,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.persistence.EntityManager;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
+
+
+
 
 public class SeatingServices {
 
@@ -34,6 +39,9 @@ public class SeatingServices {
     private String Rating;
     private  String Language;
 
+    private String ShowingDates;
+
+
 
 
     public SeatingServices(HttpServletRequest request, HttpServletResponse response, String movieID) {
@@ -47,12 +55,14 @@ public class SeatingServices {
 
     public void SeatDataFetech () throws ServletException, IOException, ClassNotFoundException, SQLException
     {
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection conn = null;
-        conn = DriverManager.getConnection("jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema", "dfanso@fanso", "123@NSBM");
+        Connection connection = DBConnection.getConnection();
+
         Statement stmt = null;
-        stmt = conn.createStatement();
+        Statement seatStatement = null;
+        stmt = connection.createStatement();
+        seatStatement = connection.createStatement();
         ResultSet rs = null;
+        ResultSet seat= null;
 
         String id = MovieID;
         System.out.println("ID: "+MovieID);
@@ -80,8 +90,22 @@ public class SeatingServices {
         }
         rs.close();
         stmt.close();
-        conn.close();
 
+        seat = seatStatement.executeQuery("SELECT date FROM movieDate where movieID='"+MovieID+"'");
+
+
+        List<String> ShowDates = new ArrayList<>();
+
+
+        while (seat.next()) {
+            ShowDates.add(seat.getString("date")) ;
+
+        }
+
+        seat.close();
+        seatStatement.close();
+
+        request.setAttribute("ShowDates", ShowDates);
         request.setAttribute("MovieName", MovieName);
         request.setAttribute("MovieDescription", MovieDescription);
         request.setAttribute("bgImageURL", bgImageURL);
@@ -96,10 +120,21 @@ public class SeatingServices {
         request.setAttribute("Language",Language);
         request.setAttribute("movieID",id);
 
+
+        request.setAttribute("ShowingDates",ShowingDates);
+
         String moviePage = "seatingpage.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(moviePage);
         dispatcher.forward(request, response);
     }
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 package com.abccinema.service;
 
+import com.abccinema.DBConnection;
 import com.abccinema.dao.MovieDAO;
 import com.abccinema.entity.Movies;
 import jakarta.servlet.RequestDispatcher;
@@ -45,17 +46,16 @@ public class MovieServices {
 
     public void movieFetch() throws ServletException, IOException, ClassNotFoundException, SQLException {
 
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        Connection conn = null;
-        conn = DriverManager.getConnection("jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema", "dfanso@fanso", "123@NSBM");
+        Connection connection = DBConnection.getConnection();
+
         Statement stmt = null;
-        stmt = conn.createStatement();
+        stmt = connection.createStatement();
         ResultSet rs = null;
 
         String id = MoiveID;
 
 
-            rs = stmt.executeQuery("SELECT * FROM Movies where MovieId='"+MoiveID+"'");
+        rs = stmt.executeQuery("SELECT * FROM Movies where MovieId='"+MoiveID+"'");
 
 
 
@@ -77,7 +77,7 @@ public class MovieServices {
         }
             rs.close();
             stmt.close();
-            conn.close();
+
 
         request.setAttribute("MovieName", MovieName);
         request.setAttribute("MovieDescription", MovieDescription);
