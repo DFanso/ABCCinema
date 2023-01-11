@@ -10,41 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/frontend/TimeChangeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingTimeServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_activation_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/frontend/FeedbackFromServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/FeedbackServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet-api-4.0.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abe31f-d695-4f34-a589-733cd38f6f2e.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abe31f-d695-4f34-a589-733cd38f6f2e/storage_v2/_src_/database/ABCCinema.0yH_vQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abe31f-d695-4f34-a589-733cd38f6f2e/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abe31f-d695-4f34-a589-733cd38f6f2e/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a0dd11d-b5c6-4545-9a6b-611e72a9364c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a0dd11d-b5c6-4545-9a6b-611e72a9364c/storage_v2/_src_/database/ABCCinema.0yH_vQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a0dd11d-b5c6-4545-9a6b-611e72a9364c/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a0dd11d-b5c6-4545-9a6b-611e72a9364c/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dbc5d0b-9826-4747-be06-5765b3a37ff0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dbc5d0b-9826-4747-be06-5765b3a37ff0/storage_v2/_src_/database/ABCCinema.0yH_vQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dbc5d0b-9826-4747-be06-5765b3a37ff0/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dbc5d0b-9826-4747-be06-5765b3a37ff0/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_3_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_5_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/lib/jakarta.servlet-api-5.0.0.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ABC_Cinema/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/seatingPkg/getSeatDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/seatingPkg/getSeatDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" afterDir="false" />
     </list>
@@ -91,7 +74,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;edfafe15-c2bd-4a00-8282-bf3e1542eeea&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -100,7 +83,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Git/ABC_Cinema/ABC_Cinema/src/main/java/com/abccinema/controller/frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Jar/javax.activation-1.2.0.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -123,6 +106,7 @@
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.abccinema.entity" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
@@ -259,6 +243,12 @@
       <workItem from="1673296898491" duration="25000" />
       <workItem from="1673349557273" duration="180000" />
       <workItem from="1673369506406" duration="15551000" />
+      <workItem from="1673386972010" duration="2697000" />
+      <workItem from="1673390288086" duration="20000" />
+      <workItem from="1673390353382" duration="7000" />
+      <workItem from="1673390820194" duration="51000" />
+      <workItem from="1673423716850" duration="11262000" />
+      <workItem from="1673442033427" duration="1207000" />
     </task>
     <servers />
   </component>

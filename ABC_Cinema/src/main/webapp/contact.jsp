@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: USER
@@ -161,15 +162,22 @@
                 <h1 class="form-title" style="color: white">Send Us a Feedback</h1>
                 <div class="form-content-contact">
                     <div class="form-container">
-                        <form action="" method="POST">
+                        <form action="./FeedbackFromServlet" method="POST" name="form" id="form">
                             <input type="text"name="fname" class="textboxPadding" placeholder="First Name" width="200px"><input type="text" class="textboxPadding" name="lname" placeholder="Last Name"><br>
-                            <input type="email"name="email" class="textboxPadding extraPadding" placeholder="Email"> <br>
-                            <textarea class="textboxpadding textbox-des" placeholder="Description"></textarea>
+                            <input type="email"name="email" id="email" class="textboxPadding extraPadding" placeholder="Email"> <br>
+                            <textarea name="description" class="textboxpadding textbox-des" placeholder="Description"></textarea>
+
+                            <c:if test="${message != null}">
+                                <div align="center">
+                                    <h4 class="message" style="color: white">${message}</h4>
+                                </div>
+                            </c:if>
 
                             <div class="button-container btn-div" style="padding-bottom: 0; margin-bottom: 0">
                                 <a href="#" style="--color: red"><span><input type="submit" value="SUBMIT"></span><i></i></a>
                             </div>
-                        </form></div></div>
+                        </form>
+                    </div></div>
             </div>
         </div>
     </div>
@@ -242,6 +250,45 @@
 
     }
 
+</script>
+
+<script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const firstName = form.querySelector("input[name='fname']");
+        const lastName = form.querySelector("input[name='lname']");
+        const email = form.querySelector("input[name='email']");
+        const description = form.querySelector("textarea");
+
+        if (!firstName.value) {
+            alert("Please enter a first name.");
+            return;
+        }
+
+        if (!lastName.value) {
+            alert("Please enter a last name.");
+            return;
+        }
+
+        if (!email.value) {
+            alert("Please enter an email.");
+            return;
+        }
+        else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+            alert("Please enter a valid email.");
+            return;
+        }
+
+        if (!description.value) {
+            alert("Please enter a description.");
+            return;
+        }
+
+        // If the form is valid, then submit it
+        form.submit();
+    });
 </script>
 </body>
 </html>
