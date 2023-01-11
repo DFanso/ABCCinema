@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ABC_Cinema:war exploded" />
+      <artifact name="ABC_Cinema:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,24 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_activation_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/frontend/FeedbackFromServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/FeedbackServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet-api-4.0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d2ec24c-38c4-4943-aa3e-faa734718425/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/edfafe15-c2bd-4a00-8282-bf3e1542eeea/storage_v2/_src_/database/ABCCinema.0yH_vQ/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_5_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/lib/jakarta.servlet-api-5.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" afterDir="false" />
     </list>
@@ -249,6 +234,8 @@
       <workItem from="1673390820194" duration="51000" />
       <workItem from="1673423716850" duration="11262000" />
       <workItem from="1673442033427" duration="1207000" />
+      <workItem from="1673443418096" duration="52000" />
+      <workItem from="1673444404171" duration="624000" />
     </task>
     <servers />
   </component>
