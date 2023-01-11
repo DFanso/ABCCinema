@@ -15,6 +15,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
 
+        /*.seating-container img{*/
+        /*    width: 100%;*/
+        /*    min-heigh: 500px;*/
+        /*    background-size: contain;*/
+        /*    background-position: center;*/
+        /*    background-attachment: fixed;*/
+        /*}*/
         @media (max-width: 550px){
             .dates select{
                 font-size: 15px;
@@ -64,21 +71,27 @@
     </div>
 </nav>
 
-    <div class="seating-container">
-        <div class="seating-row">
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/shuri.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster1.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster2.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster3.png">
-            </div>
-        </div>
+    <div class="seating-container" style="
+    width: 100%;
+    height: 600px;
+    background: black url('<c:out value="${bgImageURL}" />') no-repeat fixed center;
+    background-size: cover;
+">
+<%--        <div class="seating-row">--%>
+<%--            <div class="seating-col-4">--%>
+<%--                <img class="seating-img" src="img/bookingPage/shuri.png">--%>
+<%--            </div>--%>
+<%--            <div class="seating-col-4">--%>
+<%--                <img class="seating-img" src="img/bookingPage/poster1.png">--%>
+<%--            </div>--%>
+<%--            <div class="seating-col-4">--%>
+<%--                <img class="seating-img" src="img/bookingPage/poster2.png">--%>
+<%--            </div>--%>
+<%--            <div class="seating-col-4">--%>
+<%--                <img class="seating-img" src="img/bookingPage/poster3.png">--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <img src="img/JW4BG.png" alt="JW4">--%>
       </div>
 
     <!-- Date Selection Section -->

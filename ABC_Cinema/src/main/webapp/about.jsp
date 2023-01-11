@@ -89,7 +89,7 @@
         <div class="testimonial mySwiper">
             <div class="testi-content swiper-wrapper">
                 <div class="slide swiper-slide">
-                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">
+                    <img src="img/about-admin.jpg" alt="testimonial image" class="image">
                     <p>The show tim es and the service of ABCCinema are very convenient. It was the first 
                         time I went to it and I loved it. The food was amazing too. Great experience.
 
@@ -97,33 +97,32 @@
                     <i class='bx bxs-quote-alt-left quote-icon'></i>
                     <div class="details">
                         <span class="name">Julie Hart</span>
-                        <span class="job">Art Designer</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
-                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">
-                    <p>Smooth stuff. The cinema hall was very clean and vibrant. Loved watching my 
-                        favourite movie there. It's been a while since I watched a movie at a cinema hall.
-                        Very good choice. 
+<%--                <div class="slide swiper-slide">--%>
+<%--                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">--%>
+<%--                    <p>Smooth stuff. The cinema hall was very clean and vibrant. Loved watching my --%>
+<%--                        favourite movie there. It's been a while since I watched a movie at a cinema hall.--%>
+<%--                        Very good choice. --%>
 
-                    </p>
-                    <i class='bx bxs-quote-alt-left quote-icon'></i>
-                    <div class="details">
-                        <span class="name">Kalhara Almeida</span>
-                        <span class="job">Music Producer</span>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">
-                    <p>Satisfied with the customer service. The employees were very friendly and hospitable.
-                        I've been goin to movie here for a couple of years, and the place always surprises me.
-                    </p>
-                    <i class='bx bxs-quote-alt-left quote-icon'></i>
-                    <div class="details">
-                        <span class="name">Miranda Forbes</span>
-                        <span class="job">School Teacher</span>
-                    </div>
-                </div>
+<%--                    </p>--%>
+<%--                    <i class='bx bxs-quote-alt-left quote-icon'></i>--%>
+<%--                    <div class="details">--%>
+<%--                        <span class="name">Kalhara Almeida</span>--%>
+<%--                        <span class="job">Music Producer</span>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="slide swiper-slide">--%>
+<%--                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">--%>
+<%--                    <p>Satisfied with the customer service. The employees were very friendly and hospitable.--%>
+<%--                        I've been goin to movie here for a couple of years, and the place always surprises me.--%>
+<%--                    </p>--%>
+<%--                    <i class='bx bxs-quote-alt-left quote-icon'></i>--%>
+<%--                    <div class="details">--%>
+<%--                        <span class="name">Miranda Forbes</span>--%>
+<%--                        <span class="job">School Teacher</span>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
             </div>
             <div class="swiper-button-next nav-btn"></div>
             <div class="swiper-button-prev nav-btn"></div>
