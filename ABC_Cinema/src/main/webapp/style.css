@@ -1397,19 +1397,19 @@ font-size: 32px;
 }
 
 /* ---------------------Seating Page------------------------------------------ */
-.seating-container{
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.seating-row{
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-}
+/*.seating-container{*/
+/*  width: 100%;*/
+/*  background-color: black;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+/*.seating-row{*/
+/*  display:flex;*/
+/*  flex-direction:row;*/
+/*  align-items:center;*/
+/*  justify-content:center;*/
+/*}*/
 .seating-col-4{
   width:100%;
   align-items:center;

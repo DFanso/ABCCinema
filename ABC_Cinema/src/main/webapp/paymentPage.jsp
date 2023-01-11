@@ -121,10 +121,11 @@
                 <form action="#" method="post" id="myForm">
                     <div class="form-row">
                         <input type="text" name="ClientName" placeholder="Name: " class="form-input">
-                        <input type="text" name="ClientName" placeholder="Email: " class="form-input">
+                        <input type="text" name="ClientEmail" placeholder="Email: " class="form-input">
                     </div>
                     <div class="form-row">
-                        <input type="text" name="ClientName" placeholder="Tel No: " class="form-input">
+                        <input type="text" name="TelNo" placeholder="Tel No: " class="form-input">
+                        <input type="text" name="NICNo" placeholder="NIC NO: " class="form-input">
                     </div>
                     <div class="form-row">
                         <div class="button-container">
@@ -145,12 +146,8 @@
                                 <img src="img/bookingPage/poster2.png" alt="poster">
                             </div>
                             <div class="posterInfo">
-                                <p><b>BLACK PANTHER: WAKANDA<br>FOREVER</b><br><span>Tickets:</span><br><span>Rs. Price</span></p>
+                                <p><b>BLACK PANTHER: WAKANDA FOREVER</b><br><span>Tickets:</span><br><span>Rs. Price</span></p>
                                 <hr/>
-                                <div class="poster-trailer-icon">
-                                    <img src="img/bookingPage/TV Show.png" alt="trailer" style="padding-left:15px;">
-                                    <p>Play<br>Trailer</p>
-                                </div>
                             </div>
                         </div>
                     </div>
