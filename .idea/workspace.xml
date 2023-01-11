@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ABC_Cinema:war" />
+      <artifact name="ABC_Cinema:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ABC_Cinema_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/about.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +234,9 @@
       <workItem from="1673442033427" duration="1207000" />
       <workItem from="1673443418096" duration="52000" />
       <workItem from="1673444404171" duration="624000" />
+      <workItem from="1673456911993" duration="987000" />
+      <workItem from="1673460815829" duration="5000" />
+      <workItem from="1673460931978" duration="5377000" />
     </task>
     <servers />
   </component>

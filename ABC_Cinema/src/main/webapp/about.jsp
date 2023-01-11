@@ -1,4 +1,9 @@
-<%-- 
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.abccinema.DBConnection" %><%--
     Document   : about
     Created on : Jan 6, 2023, 4:45:32 PM
     Author     : cheth
@@ -85,50 +90,34 @@
       </div>
     </div>
 <!----------------------Testimonials Slider---------------------->
+
+    <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                       url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                       user="dfanso@fanso"  password="123@NSBM"/>
+    <sql:query dataSource="${snapshot}" var="result">
+        SELECT FirstName, LastName, imgURL, Description FROM feedbacks
+    </sql:query>
+
     <section class="container-about">
         <div class="testimonial mySwiper">
             <div class="testi-content swiper-wrapper">
-                <div class="slide swiper-slide">
-                    <img src="img/about-admin.jpg" alt="testimonial image" class="image">
-                    <p>The show tim es and the service of ABCCinema are very convenient. It was the first 
-                        time I went to it and I loved it. The food was amazing too. Great experience.
-
-                    </p>
-                    <i class='bx bxs-quote-alt-left quote-icon'></i>
-                    <div class="details">
-                        <span class="name">Julie Hart</span>
+                <c:forEach var="row" items="${result.rows}">
+                    <div class="slide swiper-slide">
+                        <img src="${row.imgURL}" alt="testimonial image" class="image">
+                        <p>${row.Description}</p>
+                        <i class='bx bxs-quote-alt-left quote-icon'></i>
+                        <div class="details">
+                            <span class="name">${row.FirstName} ${row.LastName}</span>
+                        </div>
                     </div>
-                </div>
-<%--                <div class="slide swiper-slide">--%>
-<%--                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">--%>
-<%--                    <p>Smooth stuff. The cinema hall was very clean and vibrant. Loved watching my --%>
-<%--                        favourite movie there. It's been a while since I watched a movie at a cinema hall.--%>
-<%--                        Very good choice. --%>
-
-<%--                    </p>--%>
-<%--                    <i class='bx bxs-quote-alt-left quote-icon'></i>--%>
-<%--                    <div class="details">--%>
-<%--                        <span class="name">Kalhara Almeida</span>--%>
-<%--                        <span class="job">Music Producer</span>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="slide swiper-slide">--%>
-<%--                    <img src="img/testimonialsImg.png" alt="testimonial image" class="image">--%>
-<%--                    <p>Satisfied with the customer service. The employees were very friendly and hospitable.--%>
-<%--                        I've been goin to movie here for a couple of years, and the place always surprises me.--%>
-<%--                    </p>--%>
-<%--                    <i class='bx bxs-quote-alt-left quote-icon'></i>--%>
-<%--                    <div class="details">--%>
-<%--                        <span class="name">Miranda Forbes</span>--%>
-<%--                        <span class="job">School Teacher</span>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
+                </c:forEach>
             </div>
             <div class="swiper-button-next nav-btn"></div>
             <div class="swiper-button-prev nav-btn"></div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
+
 </div>
 <!--------------------------------------footer----------------------------->
  <section id="footer">
