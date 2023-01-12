@@ -11,6 +11,46 @@
     <title>Booking Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .time-background-gradient{
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .posterInfo button{
+            width: 100px;
+            height: 40px;
+            background: transparent;
+            border: 3px solid white;
+            border-radius: 10px;
+            color: white;
+            float: right;
+            margin-right: 50px;
+            transition: 1s;
+        }
+        .posterInfo button:hover{
+            background-color: red;
+            transition: 1s;
+        }
+        @media (max-width: 550px){
+            .dates select{
+                font-size: 15px;
+            }
+            .showTimeText h2{
+                font-size: 15px;
+                padding: 0 5px;
+            }
+            .go-btn{
+                width: 72px;
+                height: 42px;
+                font-size: 17px;
+            }
+            .seating-background-gradient{
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -22,114 +62,53 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
             </ul>
             <h1 class="logo">ABC<font color="red">CINEMA</font></h1>
         </div>
     </nav>
-    <div class="seating-container">
-        <div class="seating-row">
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/shuri.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster1.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster2.png">
-            </div>
-            <div class="seating-col-4">
-                <img class="seating-img" src="img/bookingPage/poster3.png">
-            </div>
-        </div>
-      </div>
+    <div class="seating-container" style="
+            width: 100%;
+            height: 600px;
+            background: black url('img/JW4BG.png') no-repeat fixed center;
+            background-size: cover;"></div>
     <!-- Date Selection Section -->
     <div class="showTimeContainer">
-        <div class="showTimeText">
-            <h2>Show<br>Times</h2>
+        <div class="showTimeText" style="width: 30%;">
+            <h2>John Wick Chapter 4</h2>
         </div>
         <div class="dates">
-            <button><h2>Today</h2></button>
-            <button><h2>Tomorrow</h2></button>
-            <input type="date" class="calendar">
+            <select name="MovieDate" id="date" onchange="getTimes(this.value)">
+                <option><h2>Select a Date</h2></option>
+<%--                <c:forEach items="${ShowDates}" var="value">--%>
+<%--                    <h2><option value="${value}">${value}</option></h2>--%>
+<%--                </c:forEach>--%>
+            </select>
+            <select name="MovieTime" id="time">
+                <option>Select a Time</option>
+                <option>12.30 A.M</option>
+                <option>4.00 P.M</option>
+            </select>
         </div>
-            
     </div>
     <!-- TIme Selection Section -->
     <div class="time-background-gradient">
-        <div class="timeSelectionContainer">
-            <!-- 1st Hall -->
-            <div class="timeContainer1">
-                <div class="hallName">
-                    <h2>2D<br>Cinema</h2>
-                </div>
-                <div class="hallTimes">
-                    <div class="time-item">
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                    </div>
-                    <hr>
-                    <div class="time-item">
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                    </div>
-                </div>
-            </div>
-            <!-- 2nd Hall -->
-            <div class="timeContainer1">
-                <div class="hallName" style="background-color: #36DC96;">
-                    <h2>LUXE<br>Cinema</h2>
-                </div>
-                <div class="hallTimes">
-                    <div class="time-item">
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                    </div>
-                    <hr>
-                    <div class="time-item">
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                        <a href="seatingpage.jsp"><h3>times</h3></a>
-                    </div>
-                </div>
-            </div>
-            <!-- 3rd hall -->
-            <div class="timeContainer1">
-                <div class="hallName" style="background-color: #FF2E2E;">
-                    <h2>KIDS<br>Cinema</h2>
-                </div>
-                <div class="hallTimes">
-                    <div class="time-item">
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                    </div>
-                    <hr>
-                    <div class="time-item">
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                        <a href="#"><h3>times</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Poster -->
         <div class="timePoster">
-            <div class="posterContainer">
-                <div class="posterImg">
-                    <img src="img/bookingPage/poster2.png" alt="poster">
-                </div>
-                <div class="posterInfo">
-                    <p><b>BLACK PANTHER: WAKANDA<br>FOREVER</b><br><span>NOW SCREENING</span></p>
-                    <hr/>
-                    <div class="poster-trailer-icon">
-                        <img src="img/bookingPage/TV Show.png" alt="trailer" style="padding-left:15px;">
-                        <p>Play<br>Trailer</p>
+            <div class="poster-container">
+                <div class="poster-row">
+                    <div class="poster-col-2">
+                        <div class="posterContainer">
+                            <div class="posterImg">
+                                <img src="img/bookingPage/poster2.png" alt="poster">
+                            </div>
+                            <div class="posterInfo">
+                                <p><b>BLACK PANTHER: WAKANDA FOREVER</b><br><span>Date:</span><br><span>Time</span></p>
+                                <button>Select Seats</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
