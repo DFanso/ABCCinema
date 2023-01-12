@@ -123,7 +123,7 @@ public class SeatingServices {
 
         request.setAttribute("ShowingDates",ShowingDates);
 
-        String moviePage = "seatingpage.jsp";
+        String moviePage = "bookingPage.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(moviePage);
         dispatcher.forward(request, response);
     }
