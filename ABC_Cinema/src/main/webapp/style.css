@@ -1057,11 +1057,12 @@ color: white;
 .posterInfo p{
 padding: 15px;
 }
-.posterInfo hr{
-width: 50px;
-border: 4px solid white;
-float: right;
-margin-right: 50px;
+.posterInfo button{
+    width: 100px;
+    background: transparent;
+    border: 5px solid white;
+    float: right;
+    margin-right: 50px;
 
 }
 .poster-trailer-icon{
