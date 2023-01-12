@@ -40,6 +40,7 @@
 <div class="container col-md-5">
     <div class="card" style="background-color: rgba(255, 255, 255, 0.26);">
         <div class="card-body" style="color:white;">
+            <form action="#" method="post">
                 <form action="#" method="post">
 
                     <caption>
@@ -107,6 +108,7 @@
                     <button type="cancel" class="btn btn-success" style="background: #00acee">Cancel</button>
                     <button type="submit" class="btn btn-success">Create</button>
                 </form>
+            </form>
         </div>
     </div>
 </div>

@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%--
   Created by IntelliJ IDEA.
   User: cheth
@@ -6,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 
 <head>
@@ -29,7 +32,7 @@
     <ul class="navbar-nav">
       <li><a href="#" class="nav-link">Movies</a></li>
       <li><a class="nav-link" href="Dashboard-UI/DateNTIme.jsp">Date and Time</a></li>
-      <li><a class="nav-link" href="#">Feedback</a></li>
+      <li><a class="nav-link" href="Dashboard-UI/Feedback.jsp">Feedback</a></li>
       <li><a class="nav-link" href="#">Transaction</a></li>
     </ul>
   </nav>
@@ -44,7 +47,7 @@
     <hr>
     <div class="container text-left">
 
-      <a href="Dashboard-UI/movie-form.jsp" class="btn btn-success">Add
+      <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add
         New Movie</a>
     </div>
     <br>
@@ -69,22 +72,34 @@
       </thead>
       <tbody>
       <!--   for (Todo todo: todos) {  -->
+
+      <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                         url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                         user="dfanso@fanso"  password="123@NSBM"/>
+
+      <sql:query dataSource="${snapshot}" var="result">
+        SELECT TOP (1000) [MovieId], [MovieName], [BgImageURL], [CardImageURL], [Description], [Cast], [TrailerURL], [Director], [Genre], [RunningTime], [Date], [Rating], [Language] FROM [dbo].[Movies]
+      </sql:query>
+
+
+      <c:forEach var="row" items="${result.rows}">
         <tr style="color: white">
-          <td>ID</td>
-          <td>Movie Name</td>
-          <td>BgImageURL</td>
-          <td>CardImageURL</td>
-          <td>Description</td>
-          <td>Cast</td>
-          <td>Trailer URL</td>
-          <td>Director</td>
-          <td>Genre</td>
-          <td>Running Time</td>
-          <td>Date</td>
-          <td>Rating</td>
-          <td>Language</td>
-          <td><a href="#">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Delete</a></td>
+          <td><c:out value="${row.MovieId}"/></td>
+          <td><c:out value="${row.MovieName}" /></td>
+          <td><c:out value="${row.BgImageURL}" /></td>
+          <td><c:out value="${row.CardImageURL}" /></td>
+          <td><c:out value="${row.Description}" /></td>
+          <td><c:out value="${row.Cast}" /></td>
+          <td><c:out value="${row.TrailerURL}" /></td>
+          <td><c:out value="${row.Director}" /></td>
+          <td><c:out value="${row.Genre}" /></td>
+          <td><c:out value="${row.RunningTime}" /></td>
+          <td><c:out value="${row.Date}" /></td>
+          <td><c:out value="${row.Rating}" /></td>
+          <td><c:out value="${row.Language}" /></td>
+          <td><a href="MovieAdminServlet/edit?id=<c:out value='${row.MovieId}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="MovieAdminServlet/delete?id=<c:out value='${row.MovieId}' />">Delete</a></td>
         </tr>
+      </c:forEach>
       <!-- } -->
       </tbody>
 

@@ -3,8 +3,6 @@ package com.abccinema.service;
 import com.abccinema.DBConnection;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import com.abccinema.dao.MovieDAO;
-import com.abccinema.entity.Movies;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

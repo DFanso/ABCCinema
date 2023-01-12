@@ -1,3 +1,5 @@
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cheth
@@ -52,12 +54,29 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
+
+            <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                               user="dfanso@fanso"  password="123@NSBM"/>
+
+            <sql:query dataSource="${snapshot}" var="result">
+                SELECT TOP (1000) [id], [FirstName], [LastName], [Description] FROM [dbo].[feedbacks]
+            </sql:query>
+
+
+
+            <c:forEach var="row" items="${result.rows}">
+
             <tr style="color: white">
-                <td>ID</td>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Description</td>
+                <td><c:out value="${row.id}"/></td>
+                <td><c:out value="${row.FirstName}"/></td>
+                <td><c:out value="${row.LastName}"/></td>
+                <td><c:out value="${row.Description}"/>n</td>
             </tr>
+
+            </c:forEach>
+
+
             <!-- } -->
             </tbody>
 
