@@ -40,11 +40,6 @@
             }
         }
     </style>
-    <%
-        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-        response.setHeader("Pragma", "no-cache");
-        response.setHeader("Expires", "0");
-    %>
 </head>
 <body>
 <nav class="navbar">
@@ -77,21 +72,6 @@
     background: black url('<c:out value="${bgImageURL}" />') no-repeat fixed center;
     background-size: cover;
 ">
-<%--        <div class="seating-row">--%>
-<%--            <div class="seating-col-4">--%>
-<%--                <img class="seating-img" src="img/bookingPage/shuri.png">--%>
-<%--            </div>--%>
-<%--            <div class="seating-col-4">--%>
-<%--                <img class="seating-img" src="img/bookingPage/poster1.png">--%>
-<%--            </div>--%>
-<%--            <div class="seating-col-4">--%>
-<%--                <img class="seating-img" src="img/bookingPage/poster2.png">--%>
-<%--            </div>--%>
-<%--            <div class="seating-col-4">--%>
-<%--                <img class="seating-img" src="img/bookingPage/poster3.png">--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <img src="img/JW4BG.png" alt="JW4">--%>
       </div>
 
     <!-- Date Selection Section -->
@@ -100,15 +80,9 @@
         <h2><c:out value="${MovieName}"/></h2>
     </div>
     <div class="dates">
-        <select name="MovieDate" id="date" onchange="getTimes(this.value)">
-            <option><h2>Select a Date</h2></option>
-            <c:forEach items="${ShowDates}" var="value">
-               <h2><option value="${value}">${value}</option></h2>
-            </c:forEach>
-        </select>
-        <select name="MovieTime" id="time">
+        <h1><c:out value="${date}"/></h1>
 
-        </select>
+        <h1><c:out value="${time}"/></h1>
     </div>
 </div>
     <!-- Seating Section -->
@@ -272,36 +246,7 @@
 
 </script>
 
-<script>
-    function getTimes(date) {
-        var xhr = new XMLHttpRequest();
-        var MovieID = <c:out value="${movieID}"/>;
-        xhr.open("POST", "./TimeChangeServlet?date="+date+"&MovieID="+MovieID);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var times = JSON.parse(xhr.responseText);
-                updateTimes(times);
-            }
-        };
-        xhr.send();
 
-    }
-
-</script>
-
-
-<script>
-    function updateTimes(times) {
-        var select = document.getElementById("time");
-        select.innerHTML = "";
-        for (var i = 0; i < times.length; i++) {
-            var option = document.createElement("option");
-            option.value = times[i];
-            option.text = times[i];
-            select.appendChild(option);
-        }
-    }
-</script>
 
 
 
@@ -374,6 +319,22 @@
     }
     $(document).ready(function () {
     });
+</script>
+
+<script>
+    window.onload = function bcd(){
+        <% System.out.println("SeatsfromDB: " + request.getAttribute("bookedSeats")); %>
+
+        let abc='<c:out value="${bookedSeats}"/>';
+
+        selectedSeats = abc.split(",");
+        console.log(<c:out value="${bookedSeats}"/>);
+        for (const x of selectedSeats) {
+            $("#" + x).attr("class", seat);
+        };
+
+    }
+
 </script>
 
 

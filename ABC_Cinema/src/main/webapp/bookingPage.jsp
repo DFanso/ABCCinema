@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     response.setHeader("Pragma", "no-cache");
@@ -72,24 +73,22 @@
     <div class="seating-container" style="
             width: 100%;
             height: 600px;
-            background: black url('img/JW4BG.png') no-repeat fixed center;
+            background: black url('<c:out value="${bgImageURL}" />') no-repeat fixed center;
             background-size: cover;"></div>
     <!-- Date Selection Section -->
     <div class="showTimeContainer">
         <div class="showTimeText" style="width: 30%;">
-            <h2>John Wick Chapter 4</h2>
+            <h2><c:out value="${MovieName}"/></h2>
         </div>
         <div class="dates">
             <select name="MovieDate" id="date" onchange="getTimes(this.value)">
                 <option><h2>Select a Date</h2></option>
-<%--                <c:forEach items="${ShowDates}" var="value">--%>
-<%--                    <h2><option value="${value}">${value}</option></h2>--%>
-<%--                </c:forEach>--%>
+                <c:forEach items="${ShowDates}" var="value">
+                    <h2><option value="${value}">${value}</option></h2>
+                </c:forEach>
             </select>
             <select name="MovieTime" id="time">
-                <option>Select a Time</option>
-                <option>12.30 A.M</option>
-                <option>4.00 P.M</option>
+                <option><h2>Select a Time</h2></option>
             </select>
         </div>
     </div>
@@ -102,11 +101,11 @@
                     <div class="poster-col-2">
                         <div class="posterContainer">
                             <div class="posterImg">
-                                <img src="img/bookingPage/poster2.png" alt="poster">
+                                <img src="<c:out value="${cardImageURL}"/>" alt="poster" style="width:360px; height: 474px">
                             </div>
                             <div class="posterInfo">
-                                <p><b>BLACK PANTHER: WAKANDA FOREVER</b><br><span>Date:</span><br><span>Time</span></p>
-                                <button>Select Seats</button>
+                                <p><b><c:out value="${MovieName}"/></b><br><span>Price: Rs.1500 </span></p>
+                                <button id="SeatButton" name="SeatButton" onclick="location.href='./SeatingBookingServlet'">Select Seats</button>
                             </div>
                         </div>
                     </div>
@@ -182,6 +181,54 @@
 
         }
 
+    </script>
+
+
+    <script>
+        function getTimes(date) {
+            var xhr = new XMLHttpRequest();
+            var MovieID = <c:out value="${movieID}"/>;
+            xhr.open("POST", "./TimeChangeServlet?date="+date+"&MovieID="+MovieID);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var times = JSON.parse(xhr.responseText);
+                    updateTimes(times);
+                }
+            };
+            xhr.send();
+
+        }
+
+    </script>
+
+
+    <script>
+        function updateTimes(times) {
+            var select = document.getElementById("time");
+            select.innerHTML = "";
+            for (var i = 0; i < times.length; i++) {
+                var option = document.createElement("option");
+                option.value = times[i];
+                option.text = times[i];
+                select.appendChild(option);
+            }
+        }
+    </script>
+
+
+    <script>
+        document.getElementById("SeatButton").addEventListener("click", function () {
+// Send an HTTP GET request to the servlet
+            let dropdown = document.getElementById("date");
+            dropdownValuedate = dropdown.options[dropdown.selectedIndex].value;
+
+            dropdown = document.getElementById("time");
+            dropdowntimevalue = dropdown.options[dropdown.selectedIndex].value;
+            const xhr = new XMLHttpRequest();
+            const MovieId = <c:out value="${movieID}"/> ;
+            xhr.open("POST", "./SeatingBookingServlet?movieID="+MovieId+"&dropDownValueDate="+dropdownValuedate+"&dropDownTimeValue="+dropdowntimevalue+"", true);
+            xhr.send();
+        });
     </script>
 </body>
 </html>
