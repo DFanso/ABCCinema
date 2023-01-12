@@ -171,7 +171,7 @@
                 You have selected <span id="count">0</span> seats for a price of $<span
                   id="total">0</span>
                 </p>
-                <button class="go-btn" onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
+                <button id="payBtn" class="go-btn" onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
             </div>
         
     </div>
@@ -249,12 +249,13 @@
 
 
 
-
 <script>
     function seatFun2() {
         var divClass;
         var myVariable;
         const selectedSeat=[];
+
+        let dataFromDB='<c:out value="${bookedSeats}"/>';
         for (let i = 1; i <= 46; i++) {
             divClass = document.getElementById(i).className;
             $(document).ready(function () {
@@ -269,59 +270,17 @@
         $.ajax({
             type: "POST",
             url: "./config",
-            data: {selectedSeat:selectedSeat.join(",")}, // Send the variable to the servlet
+            data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB}, // Send the variable to the servlet
 
             async: false
         })
     };
 
 </script>
+
 <script>
-    var dropdownValuedate;
-    var dropdowntimevalue;
-    let value=<c:out value="${movieID}"/>;
-
-
-    $("#date").change(function() {
-        dropdownValuedate = $(this).val();
-    });
-    $("#time").change(function() {
-        dropdowntimevalue = $(this).val();
-    });
-
     let selectedSeats = [];
     let seat="seat occupied"
-    function seatfun () {
-        $.ajax({
-            type: "POST",
-            url: "./config",
-            data: {date:dropdownValuedate,time:dropdowntimevalue,movieID:value,// Send the variable to the servlet
-                async: false
-            },
-        })
-
-
-        $.ajax({
-            type: "POST",
-            url: "./config",
-            data: {action: "changeClass"},
-            success: function (response) {
-                selectedSeats = response.split(",");
-                console.log(selectedSeats)
-                for (const x of selectedSeats) {
-                    $("#"+x).attr("class",seat);
-                }
-
-            }
-
-        });
-
-    }
-    $(document).ready(function () {
-    });
-</script>
-
-<script>
     window.onload = function bcd(){
         <% System.out.println("SeatsfromDB: " + request.getAttribute("bookedSeats")); %>
 
@@ -336,10 +295,6 @@
     }
 
 </script>
-
-
-
-
 
 </body>
 </html>

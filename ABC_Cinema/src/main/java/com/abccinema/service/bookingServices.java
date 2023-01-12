@@ -38,7 +38,7 @@ public class bookingServices {
     private String Rating;
     private  String Language;
 
-        private boolean paymentStatus;
+        private boolean paymentStatus=true;
         public String[] selectedSeats = new String[]{};
         public String[] tempArray = new String[]{};
         public  String[] secTempArray = new String[]{};
@@ -122,11 +122,12 @@ public class bookingServices {
                 System.out.println("accc"+tempVar);
                 secTempArray = myVariable.split(",");
 
-                // Copy the elements of array1 to result
-
+                String[] selectedSeats = new String[tempArray.length + secTempArray.length];
+                System.arraycopy(tempArray, 0, selectedSeats, 0, tempArray.length);
                 // Copy the elements of array2 to result
                 System.arraycopy(secTempArray, 0, selectedSeats, tempArray.length, secTempArray.length);
                 Arrays.sort(selectedSeats);
+
                 myVariable = String.join(",", selectedSeats);
 
 
