@@ -144,7 +144,7 @@
             </div>
             <hr class="footerhr">
         </div>
-    
+
         <div class="fcontainer ">
             <div class="frow row-end-color">
                 <div class="fcol-3">
@@ -157,7 +157,7 @@
                     <p class="ftext grey-text">All rights reserved. </p>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <script src="navtoggle.js"></script>
