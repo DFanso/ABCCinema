@@ -18,6 +18,7 @@ public class AddNewTime {
     private String Date;
     private String time;
     private String MovieID;
+    private String Seat = "0";
 
     public AddNewTime(HttpServletRequest request, HttpServletResponse response, String movieName, String date,String Time) {
         this.request = request;
@@ -53,7 +54,7 @@ public class AddNewTime {
         stmt.close();
 
 
-        String insertQuery = "INSERT INTO showTime (movieID,date,time) VALUES (?, ?, ?)";
+        String insertQuery = "INSERT INTO showTime (movieID,date,time,seats) VALUES (?, ?, ?,?)";
 
 
         PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
@@ -61,6 +62,7 @@ public class AddNewTime {
         preparedStatement.setString(1, MovieID);
         preparedStatement.setString(2, Date);
         preparedStatement.setString(3, time);
+        preparedStatement.setString(4, Seat);
         preparedStatement.executeUpdate();
         preparedStatement.close();
 
