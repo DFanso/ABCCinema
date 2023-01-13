@@ -24,6 +24,7 @@ public class TimeChangeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         SeatingTimeServices seatingTimeServices = new  SeatingTimeServices(request,response,date,movieID);
         try {
             seatingTimeServices.timeFetch();

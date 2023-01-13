@@ -1,3 +1,5 @@
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cheth
@@ -44,7 +46,7 @@
         <hr>
         <div class="container text-left">
 
-            <a href="DateNTime-Form.jsp" class="btn btn-success">Add
+            <a href="../MovieFetchToNewADDServlet" class="btn btn-success">Add
                 New Date</a>
         </div>
         <br>
@@ -60,13 +62,29 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
+
+            <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                               user="dfanso@fanso"  password="123@NSBM"/>
+
+            <sql:query dataSource="${snapshot}" var="date">
+                SELECT TOP (1000) [id]
+                ,[movieID]
+                ,[movieName]
+                ,[date]
+                FROM [dbo].[movieDate]
+            </sql:query>
+
+            <c:forEach var="row" items="${date.rows}">
             <tr style="color: white">
-                <td>ID</td>
-                <td>Movie ID</td>
-                <td>Movie Name</td>
-                <td>Date</td>
-                <td><a href="#">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Delete</a></td>
+                <td><c:out value="${row.id}"/></td>
+                <td><c:out value="${row.movieID}"/></td>
+                <td><c:out value="${row.movieName}"/></td>
+                <td><c:out value="${row.date}"/></td>
+                <td><a href="../DateActionServlet?action=edit&id=<c:out value="${row.id}"/>">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="../DateActionServlet?action=delete&id=<c:out value="${row.id}"/>">Delete</a></td>
             </tr>
+
+            </c:forEach>
             <!-- } -->
             </tbody>
 
@@ -80,7 +98,7 @@
         <hr>
         <div class="container text-left">
 
-            <a href="Time-Form.jsp" class="btn btn-success">Add
+            <a href="../MovieFetchToTimeServlet" class="btn btn-success">Add
                 New Time</a>
         </div>
         <br>
@@ -89,20 +107,42 @@
             <tr style="color: white">
                 <th>ID</th>
                 <th>Movie ID</th>
-                <th>Movie Name</th>
                 <th>Date</th>
+                <th>Time</th>
+                <th>Seats</th>
                 <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
+
+            <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                               user="dfanso@fanso"  password="123@NSBM"/>
+
+            <sql:query dataSource="${snapshot}" var="time">
+                SELECT TOP (1000) [id]
+                ,[movieID]
+                ,[date]
+                ,[date]
+                ,[time]
+                ,[seats]
+                FROM [dbo].[showTime]
+            </sql:query>
+
+
+            <c:forEach var="row" items="${time.rows}">
+
             <tr style="color: white">
-                <td>ID</td>
-                <td>Movie ID</td>
-                <td>Movie Name</td>
-                <td>Date</td>
-                <td><a href="#">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Delete</a></td>
+                <td><c:out value="${row.id}"/></td>
+                <td><c:out value="${row.movieID}"/></td>
+                <th><c:out value="${row.date}"/></th>
+                <th><c:out value="${row.time}"/></th>
+                <th><c:out value="${row.seats}"/></th>
+                <td><a href="../TimeActionServlet?action=edit&id=<c:out value="${row.id}"/>">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="../TimeActionServlet?action=delete&id=<c:out value="${row.id}"/>">Delete</a></td>
             </tr>
+
+            </c:forEach>
             <!-- } -->
             </tbody>
 
