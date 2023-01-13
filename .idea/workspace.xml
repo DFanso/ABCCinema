@@ -11,9 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/NewTimeADDServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/NewTimeADDServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/AddNewTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/AddNewTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/new-time-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/new-time-form.jsp" afterDir="false" />
     </list>
     <list id="02c06ed7-cd2a-4fe3-a265-f18d0352e803" name="Changes by cheth" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +67,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Jar/jersey-media-multipart-2.24.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vidwa/Documents/GitHub/ABCCinema&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -273,6 +270,9 @@
         <option name="BuildArtifacts" enabled="true">
           <artifact name="ABC_Cinema:war exploded" />
         </option>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ABC_Cinema:war exploded" />
+        </option>
       </method>
     </configuration>
     <list>
@@ -329,6 +329,8 @@
       <workItem from="1673614313117" duration="8099000" />
       <workItem from="1673629258001" duration="15100000" />
       <workItem from="1673644590024" duration="296000" />
+      <workItem from="1673645532549" duration="72000" />
+      <workItem from="1673645757916" duration="176000" />
     </task>
     <servers />
   </component>
