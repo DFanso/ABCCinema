@@ -44,7 +44,7 @@ public class SeatingTimeServices {
 
 
 
-        seatStatement.executeQuery("SELECT time FROM showTime where date='"+date+"' AND movieID='"+movieID+"'");
+        Time = seatStatement.executeQuery("SELECT time FROM showTime where date='"+date+"' AND movieID='"+movieID+"'");
 
 
         List<String> times = new ArrayList<>();

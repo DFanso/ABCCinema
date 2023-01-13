@@ -3,6 +3,8 @@ package com.abccinema.service;
 import com.abccinema.DBConnection;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import com.abccinema.dao.MovieDAO;
+import com.abccinema.entity.Movies;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -56,15 +58,10 @@ public class SeatingServices {
         Connection connection = DBConnection.getConnection();
 
         Statement stmt = null;
-
         Statement seatStatement = null;
-
         stmt = connection.createStatement();
-
         seatStatement = connection.createStatement();
-
         ResultSet rs = null;
-
         ResultSet seat= null;
 
         String id = MovieID;

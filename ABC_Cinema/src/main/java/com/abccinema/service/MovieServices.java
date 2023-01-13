@@ -1,6 +1,8 @@
 package com.abccinema.service;
 
 import com.abccinema.DBConnection;
+import com.abccinema.dao.MovieDAO;
+import com.abccinema.entity.Movies;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,7 +15,7 @@ import java.util.List;
 
 public class MovieServices {
     private EntityManager entityManager;
-
+    private MovieDAO movieDAO;
     private HttpServletRequest request;
     private HttpServletResponse response;
     private String MoiveID;

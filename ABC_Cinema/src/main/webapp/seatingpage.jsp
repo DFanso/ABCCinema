@@ -171,7 +171,7 @@
                 You have selected <span id="count">0</span> seats for a price of $<span
                   id="total">0</span>
                 </p>
-                <button id="payBtn" class="go-btn" onclick="seatFun2(),location.href='paymentPage.jsp'">Pay</button>
+                <button id="payBtn" class="go-btn" onclick="seatFun2(),location.href='./config'">Pay</button>
             </div>
         
     </div>
@@ -224,6 +224,8 @@
     </section>
     <script src="navtoggle.js"></script>
     <script src="script.js"></script>
+
+
 <script>
     function myFunction() {
         var x = document.getElementById("menuitems");
@@ -248,35 +250,43 @@
 
 
 
+<h2></h2>
+</div>
+<div class="dates">
+    <h1></h1>
 
-<script>
-    function seatFun2() {
-        var divClass;
-        var myVariable;
-        const selectedSeat=[];
+    <h1></h1>
+    <script>
+        function seatFun2() {
+            var divClass;
+            var myVariable;
+            const selectedSeat=[];
 
-        let dataFromDB='<c:out value="${bookedSeats}"/>';
-        for (let i = 1; i <= 46; i++) {
-            divClass = document.getElementById(i).className;
-            $(document).ready(function () {
-                divClass = $(myVariable).attr("class");
+            let dataFromDB='<c:out value="${bookedSeats}"/>';
+            let date='<c:out value="${date}"/>';
+            let time='<c:out value="${time}"/>';
+            let movieName='<c:out value="${MovieName}"/>';
+            for (let i = 1; i <= 46; i++) {
+                divClass = document.getElementById(i).className;
+                $(document).ready(function () {
+                    divClass = $(myVariable).attr("class");
 
-            });
-            if (divClass === "seat selected") {
-                selectedSeat.push(i)
+                });
+                if (divClass === "seat selected") {
+                    selectedSeat.push(i)
 
+                }
             }
-        }
-        $.ajax({
-            type: "POST",
-            url: "./config",
-            data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB}, // Send the variable to the servlet
+            $.ajax({
+                type: "POST",
+                url: "./config",
+                data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB,date:date,time:time,movieName:movieName}, // Send the variable to the servlet
 
-            async: false
-        })
-    };
+                async: false
+            })
+        };
 
-</script>
+    </script>
 
 <script>
     let selectedSeats = [];
@@ -297,4 +307,5 @@
 </script>
 
 </body>
+
 </html>
