@@ -10,10 +10,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jersey_media_multipart_2_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/AddNewDateServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/AddNewMovieServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/DateActionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/DateEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/GetDatesServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/MovieActionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/MovieEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/MovieFetchToNewADDServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/MovieFetchToTimeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/NewTimeADDServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/TimeActionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/TimeEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/AddNewDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/AddNewMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/AddNewTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/DateDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/DateEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/DateFetch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/DateUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieNameFetch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieNameFetchToTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/MovieUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/TImeUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/TimeDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/TimeEdit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/bookingServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/bookingServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/seatingPkg/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/seatingPkg/config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/frontend/TimeChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/frontend/TimeChangeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingTimeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/SeatingTimeServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTIme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTIme.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTime-Form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTime-Form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Time-Form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Time-Form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/movie-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/movie-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/dashboard.jsp" afterDir="false" />
+    </list>
+    <list id="02c06ed7-cd2a-4fe3-a265-f18d0352e803" name="Changes by cheth" comment="">
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/new-date-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/new-movie-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/new-time-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/transaction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTIme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTIme.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTime-Form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTime-Form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Time-Form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Time-Form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/movie-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/movie-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +70,90 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Time-Form.jsp">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="9" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="33" end1="35" start2="35" end2="37" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="42" end1="43" start2="44" end2="45" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="45" end1="46" start2="47" end2="54" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="47" end1="64" start2="55" end2="57" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="66" end1="67" start2="59" end2="60" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="69" end1="70" start2="62" end2="63" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/movie-form.jsp">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="2" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="8" end1="8" start2="9" end2="13" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="31" end1="32" start2="36" end2="37" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="33" end1="34" start2="38" end2="39" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="42" end1="44" start2="47" end2="48" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="46" end1="47" start2="50" end2="57" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="48" end1="50" start2="58" end2="59" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="51" end1="52" start2="60" end2="61" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="55" end1="61" start2="64" end2="65" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="64" end1="70" start2="68" end2="69" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="73" end1="74" start2="72" end2="73" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="77" end1="78" start2="76" end2="77" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="81" end1="82" start2="80" end2="81" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="85" end1="86" start2="84" end2="85" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="89" end1="90" start2="88" end2="89" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="93" end1="94" start2="92" end2="93" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="97" end1="98" start2="96" end2="97" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="101" end1="102" start2="100" end2="101" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="105" end1="106" start2="104" end2="105" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="108" end1="109" start2="107" end2="110" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="110" end1="111" start2="111" end2="118" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTIme.jsp">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="46" end1="47" start2="48" end2="49" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="62" end1="62" start2="64" end2="78" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="63" end1="68" start2="79" end2="84" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="69" end1="69" start2="85" end2="87" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="82" end1="83" start2="100" end2="101" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="91" end1="92" start2="109" end2="109" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="93" end1="93" start2="110" end2="112" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="98" end1="98" start2="117" end2="135" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="99" end1="104" start2="136" end2="142" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="105" end1="105" start2="143" end2="145" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/dashboard.jsp">
+      <ranges>
+        <range start1="35" end1="36" start2="35" end2="36" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="49" end1="50" start2="49" end2="50" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="99" end1="100" start2="99" end2="102" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/WEB-INF/web.xml">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="6" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="8" end1="8" start2="8" end2="10" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="9" end1="9" start2="11" end2="13" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/DateNTime-Form.jsp">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="10" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="11" end1="12" start2="13" end2="14" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="43" end1="44" start2="45" end2="46" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="46" end1="47" start2="48" end2="56" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+        <range start1="48" end1="59" start2="57" end2="59" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="60" end1="61" start2="60" end2="61" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="63" end1="64" start2="63" end2="64" changelist="02c06ed7-cd2a-4fe3-a265-f18d0352e803" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -55,35 +180,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JPA.DatabaseSchemaImportDialog": "edfafe15-c2bd-4a00-8282-bf3e1542eeea",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vidwa/Documents/ABCCinema",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.60348165",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;edfafe15-c2bd-4a00-8282-bf3e1542eeea&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Jar/jersey-media-multipart-2.24.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.60348165&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "azure"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;azure&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\ABC_Cinema\ABC_Cinema\src\main\java\com\abccinema\controller\frontend" />
@@ -94,6 +220,77 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+    <configuration name="GlassFish 6.2.4" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.2.4" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ABC_Cinema:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ABC_Cinema:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration name="AdminDAOTest.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ABC_Cinema" />
       <option name="PACKAGE_NAME" value="" />
@@ -202,6 +399,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="GlassFish Server.GlassFish 6.2.4" />
       <item itemvalue="JUnit.AdminDAOTest.testCreateUser" />
       <item itemvalue="JUnit.AdminDAOTest.testListAll" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
@@ -247,6 +445,12 @@
       <workItem from="1673507714773" duration="748000" />
       <workItem from="1673512266314" duration="4666000" />
       <workItem from="1673523822308" duration="11715000" />
+      <workItem from="1673537747528" duration="60000" />
+      <workItem from="1673541880444" duration="15877000" />
+      <workItem from="1673558477433" duration="2139000" />
+      <workItem from="1673594781919" duration="13473000" />
+      <workItem from="1673614313117" duration="8099000" />
+      <workItem from="1673629258001" duration="15100000" />
     </task>
     <servers />
   </component>
@@ -255,5 +459,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

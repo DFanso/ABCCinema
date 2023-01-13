@@ -14,57 +14,55 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class SeatingTimeServices {
+public class DateFetch {
 
     private HttpServletRequest request;
     private HttpServletResponse response;
 
     private String date;
     private String movieID;
+    private String movieName;
 
 
-    public SeatingTimeServices(HttpServletRequest request, HttpServletResponse response, String Date,String MovieID) {
+    public DateFetch(HttpServletRequest request, HttpServletResponse response, String MovieName) {
         this.request = request;
         this.response = response;
-        date = Date;
-        movieID = MovieID;
+        movieName = MovieName;
     }
 
-    public void timeFetch () throws ServletException, IOException, ClassNotFoundException, SQLException
+    public void dateFetch () throws ServletException, IOException, ClassNotFoundException, SQLException
     {
 
-        System.out.println("Date is: "+date);
+        System.out.println("Name: "+movieName);
 
         Connection connection = DBConnection.getConnection();
         Statement seatStatement = null;
         seatStatement = connection.createStatement();
         ResultSet rs = null;
-        ResultSet Time= null;
+        ResultSet Date= null;
 
 
 
-        seatStatement.executeQuery("SELECT time FROM showTime where date='"+date+"' AND movieID='"+movieID+"'");
+        Date = seatStatement.executeQuery("SELECT date FROM movieDate where movieName='"+movieName+"'");
 
 
-        List<String> times = new ArrayList<>();
+        List<String> dates = new ArrayList<>();
 
 
-        while (Time.next()) {
-            times.add(Time.getString("time")) ;
+        while (Date.next()) {
+            dates.add(Date.getString("date")) ;
 
         }
 
-        Time.close();
+        Date.close();
         seatStatement.close();
 
-        for (int i = 0; i < times.size(); i++) {
-            System.out.println(times.get(i));
+        for (int i = 0; i < dates.size(); i++) {
+            System.out.println(dates.get(i));
         }
 
 
         response.setContentType("application/json");
-        response.getWriter().write(new Gson().toJson(times));
-
-    }
+        response.getWriter().write(new Gson().toJson(dates));
+}
 }

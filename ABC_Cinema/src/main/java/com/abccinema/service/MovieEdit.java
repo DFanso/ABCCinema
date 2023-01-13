@@ -1,28 +1,23 @@
 package com.abccinema.service;
 
 import com.abccinema.DBConnection;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import javax.persistence.EntityManager;
 import java.io.IOException;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
-
-
-public class SeatingServices {
+public class MovieEdit {
 
     private HttpServletRequest request;
     private HttpServletResponse response;
-
-    private String MovieID;
+    private String MoiveID;
 
     private String MovieName;
     private String   MovieDescription;
@@ -37,41 +32,25 @@ public class SeatingServices {
     private String Rating;
     private  String Language;
 
-    private String ShowingDates;
-
-
-
-
-    public SeatingServices(HttpServletRequest request, HttpServletResponse response, String movieID) {
+    public MovieEdit(HttpServletRequest request, HttpServletResponse response, String movieID) {
         this.request = request;
         this.response = response;
-        MovieID = movieID;
-
-
+        MoiveID = movieID;
 
     }
 
-    public void SeatDataFetech () throws ServletException, IOException, ClassNotFoundException, SQLException
-    {
+    public void movieEdit() throws SQLException, ServletException, IOException {
+        System.out.println("MovieEdit "+MoiveID);
         Connection connection = DBConnection.getConnection();
 
         Statement stmt = null;
-
-        Statement seatStatement = null;
-
         stmt = connection.createStatement();
-
-        seatStatement = connection.createStatement();
-
         ResultSet rs = null;
 
-        ResultSet seat= null;
-
-        String id = MovieID;
-        System.out.println("ID: "+MovieID);
+        String id = MoiveID;
 
 
-        rs = stmt.executeQuery("SELECT * FROM Movies where MovieId='"+MovieID+"'");
+        rs = stmt.executeQuery("SELECT * FROM Movies where MovieId='"+MoiveID+"'");
 
 
 
@@ -94,21 +73,7 @@ public class SeatingServices {
         rs.close();
         stmt.close();
 
-        seat = seatStatement.executeQuery("SELECT date FROM movieDate where movieID='"+MovieID+"'");
 
-
-        List<String> ShowDates = new ArrayList<>();
-
-
-        while (seat.next()) {
-            ShowDates.add(seat.getString("date")) ;
-
-        }
-
-        seat.close();
-        seatStatement.close();
-
-        request.setAttribute("ShowDates", ShowDates);
         request.setAttribute("MovieName", MovieName);
         request.setAttribute("MovieDescription", MovieDescription);
         request.setAttribute("bgImageURL", bgImageURL);
@@ -121,24 +86,12 @@ public class SeatingServices {
         request.setAttribute("Date",Date);
         request.setAttribute("Rating",Rating);
         request.setAttribute("Language",Language);
-        request.setAttribute("movieID",id);
+        request.setAttribute("movieID",MoiveID);
 
-
-        request.setAttribute("ShowingDates",ShowingDates);
-
-        String moviePage = "bookingPage.jsp";
+        String moviePage = "Dashboard-UI/movie-form.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(moviePage);
         dispatcher.forward(request, response);
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
 }

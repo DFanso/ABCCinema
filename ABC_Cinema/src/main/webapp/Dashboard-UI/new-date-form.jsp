@@ -1,13 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: cheth
-  Date: 1/12/2023
-  Time: 12:25 AM
+  Date: 1/11/2023
+  Time: 11:43 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
 <head>
@@ -33,8 +33,8 @@
         <ul class="navbar-nav">
             <li><a href="../dashboard.jsp" class="nav-link">Movies</a></li>
             <li><a class="nav-link" href="DateNTIme.jsp">Date and Time</a></li>
-            <li><a class="nav-link" href="Feedback.jsp">Feedback</a></li>
-            <li><a class="nav-link" href="transaction.jsp">Transaction</a></li>
+            <li><a class="nav-link" href="#">Feedback</a></li>
+            <li><a class="nav-link" href="#">Transaction</a></li>
         </ul>
     </nav>
 </header>
@@ -42,29 +42,57 @@
 <div class="container col-md-5">
     <div class="card" style="background-color: rgba(255, 255, 255, 0.26);">
         <div class="card-body" style="color:white;">
-            <form action="TimeEditServlet" method="post">
+            <%--            <form action="update" method="post">--%>
+
+
 
                 <caption>
-                    <h2>Update Time</h2>
+                    <h2>Add New Date</h2>
 
                     <c:if test="${message != null}">
                         <div align="center">
                             <h4 class="message" style="color: white">${message}</h4>
                         </div>
                     </c:if>
+
                 </caption>
-                <input type="hidden" name="TimeId"  value="<c:out value="${timeID}"/> "/>
-                <input type="hidden" name="MovieId" />
+                <input type="hidden" name="DateId"  />
+                <input type="hidden" name="MovieId"  />
+                <fieldset class="form-group">
+                    <label>Movie Name</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="names">
+                        <option selected>Select The Movie</option>
+                        <c:forEach items="${MovieName}" var="value">
+                            <option  value="${value}">${value}</option>
+                        </c:forEach>
+                    </select>
+                </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Movie Time</label> <input type="text"  class="form-control" name="MovieTime" placeholder="12.30 P.M" value="<c:out value="${time}"/> ">
+                    <label>Movie Date</label> <input id="new-date" type="text"  class="form-control" name="MovieDate" placeholder="28th December">
                 </fieldset>
                 <button type="cancel" class="btn btn-success" style="background: #00acee;">Cancel</button>
-                <button type="submit" class="btn btn-success">Update</button>
-            </form>
+                <button type="submit" class="btn btn-success" id="myButton">Create</button>
+
+            <%--            </form>--%>
         </div>
     </div>
 </div>
+<script>
+    document.getElementById("myButton").addEventListener("click", function () {
+        // Send an HTTP GET request to the servlet
+        let dropdown = document.getElementById("names");
+        var dropdownValuedate = dropdown.options[dropdown.selectedIndex].value;
+
+        const xhr = new XMLHttpRequest();
+        const Date =document.getElementById("new-date").value;
+
+        console.log(Date,dropdownValuedate);
+        xhr.open("POST", "./AddNewDateServlet?Date="+Date+"&dropDownValueDate="+dropdownValuedate+"", true);
+        xhr.send();
+        location.href='./AddNewDateServlet';
+    });
+</script>
 </body>
 
 </html>

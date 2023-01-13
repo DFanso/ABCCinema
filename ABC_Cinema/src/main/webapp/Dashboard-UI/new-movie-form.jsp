@@ -1,5 +1,5 @@
-<%@ page import="java.nio.file.Paths" %>
-<%@ page import="java.io.File" %><%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
   Created by IntelliJ IDEA.
   User: cheth
   Date: 1/11/2023
@@ -7,10 +7,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
 <html>
 
 <head>
@@ -34,9 +30,9 @@
         <div><a href="#" class="navbar-brand">ABC<font color="red">CINEMA</font></a></div>
 
         <ul class="navbar-nav">
-            <li><a href="dashboard.jsp" class="nav-link">Movies</a></li>
+            <li><a href="../dashboard.jsp" class="nav-link">Movies</a></li>
             <li><a class="nav-link" href="DateNTIme.jsp">Date and Time</a></li>
-            <li><a class="nav-link" href="Feedback.jsp">Feedback</a></li>
+            <li><a class="nav-link" href="#">Feedback</a></li>
             <li><a class="nav-link" href="#">Transaction</a></li>
         </ul>
     </nav>
@@ -45,10 +41,11 @@
 <div class="container col-md-5">
     <div class="card" style="background-color: rgba(255, 255, 255, 0.26);">
         <div class="card-body" style="color:white;">
-                <form action="MovieEditServlet" method="POST" id="editFrom"  >
+                <form action="../AddNewMovieServlet" method="POST">
 
                     <caption>
-                        <h2>Update <c:out value="${MovieName}"/> Movie</h2>
+                        <h2>Add New Movie</h2>
+
                         <c:if test="${message != null}">
                             <div align="center">
                                 <h4 class="message" style="color: white">${message}</h4>
@@ -56,66 +53,59 @@
                         </c:if>
 
                     </caption>
-                    <input type="hidden" name="MovieID" value="<c:out value="${movieID}"/>">
+
                     <fieldset class="form-group">
-                        <label>Movie Name</label> <input type="text" class="form-control"  value="<c:out value='${MovieName}'/>" name="MovieName" >
+                        <label>Movie ID</label> <input type="text" class="form-control" name="MovieID" required="required">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Movie Name</label> <input type="text" class="form-control" name="MovieName" required="required">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Movie Background URL</label> <input class="form-control" name="bgImageURL">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Background Image</label> <input class="form-control" value="<c:out value='${bgImageURL}'/>" name="bgImageURL">
+                        <label>Movie Card Image URL</label> <input class="form-control" name="cardImageURL">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Card Image</label> <input class="form-control" value="<c:out value='${cardImageURL}'/>" name="cardImageURL">
+                        <label>Movie Description</label> <input class="form-control" name="MovieDescription" style="height: 150px">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Description</label> <input class="form-control" value="<c:out value='${MovieDescription}'/>" name="MovieDescription" style="height: 150px">
+                        <label>Movie Cast</label> <input type="text"  class="form-control" name="MovieCast">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Cast</label> <input type="text"  class="form-control" value="<c:out value='${Cast}'/>" name="MovieCast">
+                        <label>Movie TrailerURL</label> <input type="text"  class="form-control" name="MovieTrailerURL">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie TrailerURL</label> <input type="text"  class="form-control" value="<c:out value='${trailerURL}'/>" name="MovieTrailerURL">
+                        <label>Movie Director</label> <input type="text"  class="form-control" name="MovieDirector">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Director</label> <input type="text"  class="form-control" value="<c:out value='${Director}'/>" name="MovieDirector">
+                        <label>Movie Genre</label> <input type="text"  class="form-control" name="MovieGenre">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Genre</label> <input type="text"  class="form-control" value="<c:out value='${Genre}'/>" name="MovieGenre">
+                        <label>Movie Running Time</label> <input type="text"  class="form-control" name="MovieRunningTime">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Running Time</label> <input type="text"  class="form-control" value="<c:out value='${RunningTime}'/>" name="MovieRunningTime">
+                        <label>Movie Released Date</label> <input type="text"  class="form-control" name="MovieReleasedDate">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Released Date</label> <input type="text"  class="form-control" value="<c:out value='${Date}'/>" name="MovieReleasedDate">
+                        <label>Movie Raing</label> <input type="text"  class="form-control" name="MovieRating">
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label>Movie Rating</label> <input type="text"  class="form-control" value="<c:out value='${Rating}'/>" name="MovieRating">
-                    </fieldset>
-
-                    <fieldset class="form-group">
-                        <label>Movie Language</label> <input type="text"  class="form-control" value="<c:out value='${Language}'/>" name="MovieLanguage">
+                        <label>Movie Language</label> <input type="text"  class="form-control" name="MovieLanguage">
                     </fieldset>
                     <button type="cancel" class="btn btn-success" style="background: #00acee">Cancel</button>
-
-
-                    <button type="submit" class="btn btn-success">Update</button>
+                    <button type="submit" class="btn btn-success">Create</button>
                 </form>
-
-
-
-
-
-
-
         </div>
     </div>
 </div>

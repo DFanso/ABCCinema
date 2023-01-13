@@ -33,7 +33,7 @@
       <li><a href="#" class="nav-link">Movies</a></li>
       <li><a class="nav-link" href="Dashboard-UI/DateNTIme.jsp">Date and Time</a></li>
       <li><a class="nav-link" href="Dashboard-UI/Feedback.jsp">Feedback</a></li>
-      <li><a class="nav-link" href="#">Transaction</a></li>
+      <li><a class="nav-link" href="Dashboard-UI/transaction.jsp">Transaction</a></li>
     </ul>
   </nav>
 </header>
@@ -47,7 +47,7 @@
     <hr>
     <div class="container text-left">
 
-      <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add
+      <a href="Dashboard-UI/new-movie-form.jsp" class="btn btn-success">Add
         New Movie</a>
     </div>
     <br>
@@ -97,7 +97,9 @@
           <td><c:out value="${row.Date}" /></td>
           <td><c:out value="${row.Rating}" /></td>
           <td><c:out value="${row.Language}" /></td>
-          <td><a href="MovieAdminServlet/edit?id=<c:out value='${row.MovieId}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="MovieAdminServlet/delete?id=<c:out value='${row.MovieId}' />">Delete</a></td>
+
+
+          <td><a href="MovieActionServlet?action=edit&id=<c:out value='${row.MovieId}' />">Edit </a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="MovieActionServlet?action=delete&id=<c:out value='${row.MovieId}' />">Delete</a></td>
         </tr>
       </c:forEach>
       <!-- } -->
