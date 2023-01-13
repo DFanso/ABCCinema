@@ -38,12 +38,12 @@ public class NewTimeADDServlet extends HttpServlet {
         System.out.println("New Time Add Servlet: "+Date);
         System.out.println("New Time Add Servlet: "+Time);
 
-        AddNewTime addNewDate = new AddNewTime(request,response,MovieName,Date,Time);
-        try {
-            addNewDate.addNewTime();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+//        AddNewTime addNewDate = new AddNewTime(request,response,MovieName,Date,Time);
+//        try {
+//            addNewDate.addNewTime();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 }
