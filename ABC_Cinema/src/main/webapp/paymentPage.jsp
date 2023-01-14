@@ -146,7 +146,7 @@
                                 <img src="<c:out value='${movieCardImageURL}'/> " alt="poster" style="width:360px; height: 474px">
                             </div>
                             <div class="posterInfo">
-                                <p><b><c:out value="${movieName}"/></b><br><span>Date:<c:out value="${date}"/></span><br><br><span>Time:<c:out value="${time}"/></span><br><span>Rs. Price</span></p>
+                                <p><b><c:out value="${movieName}"/></b><br><span>Date:<c:out value="${date}"/></span><br><br><span>Time:<c:out value="${time}"/></span><br><span>$ <c:out value="${totalPrice}"/></span></p>
                                 <hr/>
                             </div>
                         </div>
@@ -156,36 +156,6 @@
 
                 <div id="payment-section" class="payment-section">
                     <div class="payment-content">
-                        <!-- <div class="paywithContent">
-                            <h3>Pay With: </h3>
-                            <a href="#"><img src="img/PayPal.png" alt="paypal"></a>
-                            <a href="#"><img src="img/VISA.png" alt="visa"></a>
-                            <a href="#"><img src="img/mastercard.png" alt="master"></a>
-                        </div>
-                        <div class="form-content-Payment">
-                            <form action="#" method="post">
-                                <div class="form-row">
-                                    <input type="text" name="ClientCardNo" placeholder="Card No: " class="form-input-new">
-                                </div>
-                                <div class="form-row">
-                                    <input type="text" name="CardHolderName" placeholder="Card Holder: " class="form-input-new">
-                                    <input type="text" name="ExpiryDate" placeholder="Expiry Date: " class="form-input-new">
-                                </div>
-                                <div class="form-row">
-                                    <center><input type="text" placeholder="CVC" class="form-input-new"></center>
-                                </div>
-                                <div class="form-row">
-                                    <div class="last-row">
-                                        <input type="checkbox" class="chkBoxInput">
-                                        <p>I agree to the terms and conditions of ABCCINEMA</p>
-                                    </div>
-
-                                </div>
-                                <div class="form-row">
-                                    <center><input type="submit" value="Confrim" class="go-btn"></center>
-                                </div>
-                            </form>
-                        </div> -->
                         <div id="paypal-button-container" style="width: 70%;"></div>
                     </div>
                 </div>
@@ -240,36 +210,39 @@
             
         </div>
     </section>
+
     <script src="navtoggle.js"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=AUunmkeJhxwrVs97CClrFbt6NtUIv8UjZwolUOi1xVNV07ZbNNFShG8Y1T_cOQEXU_kCzadutOqfI5GW"></script>
-        <script>
-            paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
+<%--<c:set var="totalPricePerDay" value="'${totalPrice / 360}'" />--%>
+<script>
+    <%--var totalvalue = '<c:out value="${totalPricePerDay}"/360>';--%>
+    // var offerPriceValue = offerFooterPriceValue[i].innerHTML;
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
                 purchase_units: [{
                     amount: {
-                    value: '10.00'
+                        value: '<c:out value="${totalPrice}"/>'
                     }
                 }]
-                });
-            },
-            onApprove: function(data, actions) {
-                // This function captures the funds from the transaction.
-                return actions.order.capture().then(function(details) {
-                    let transactionId = data.orderID;
-                    console.log(transactionId);
-                    onTransactionComplete(transactionId);
+            });
+        },
+        onApprove: function(data, actions) {
+            // This function captures the funds from the transaction.
+            return actions.order.capture().then(function(details) {
+                let transactionId = data.orderID;
+                console.log(transactionId);
+                onTransactionComplete(transactionId);
 
-                });
-            },
-            oncancel:function (data){
-                window.location.href = "index.jsp";
-            }
+            });
+        },
+        oncancel:function (data){
+            window.location.href = "index.jsp";
+        }
 
+    }).render('#paypal-button-container');
+</script>
 
-
-            }).render('#paypal-button-container');
-        </script>
 <script>
     function myFunction() {
         var x = document.getElementById("menuitems");
@@ -304,36 +277,6 @@
         async: false
     })};
 </script>
-<%--<script>--%>
-<%--    document.getElementById("myForm").onsubmit = function() {--%>
-<%--        document.getElementById("paypalSection").style.display = "block";--%>
-<%--        return false;--%>
-<%--    }--%>
-<%--</script>--%>
-<%--script of vidwa--%>
-<%--<script>--%>
-<%--    function Oncomplete(transID){--%>
-
-<%--        let name = document.getElementById("name").value;--%>
-<%--        let email = document.getElementById("email").value;--%>
-<%--        let phone = document.getElementById("phone").value;--%>
-<%--        let NIC = document.getElementById("NIC").value;--%>
-
-<%--        let selectedSeat='<c:out value="${selectedSeats}"/>'--%>
-<%--        let dataFromDB='<c:out value="${dataFromDB}"/>';--%>
-<%--        let date='<c:out value="${date}"/>';--%>
-<%--        let time='<c:out value="${time}"/>';--%>
-<%--        let movieName='<c:out value="${movieName}"/>';--%>
-
-<%--        $.ajax({--%>
-<%--            type: "POST",--%>
-<%--            url: "./config",--%>
-<%--            data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB,date:date,time:time,movieName:movieName}, // Send the variable to the servlet--%>
-<%--            --%>
-<%--        })        --%>
-<%--        --%>
-<%--</script>--%>
-
 
 <script>
     function onTransactionComplete(transID) {
