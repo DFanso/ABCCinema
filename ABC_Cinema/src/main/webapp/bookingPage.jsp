@@ -105,7 +105,7 @@
                             </div>
                             <div class="posterInfo">
                                 <p><b><c:out value="${MovieName}"/></b><br><span>Price: $.4.00 </span></p>
-                                <button id="SeatButton" name="SeatButton" onclick="location.href='./SeatingBookingServlet'">Select Seats</button>
+                                <button id="SeatButton" name="SeatButton" onclick="seatButton()">Select Seats</button>
                             </div>
                         </div>
                     </div>
@@ -217,8 +217,7 @@
 
 
     <script>
-        document.getElementById("SeatButton").addEventListener("click", function () {
-// Send an HTTP GET request to the servlet
+        function seatButton(){
             let dropdown = document.getElementById("date");
             dropdownValuedate = dropdown.options[dropdown.selectedIndex].value;
 
@@ -228,7 +227,13 @@
             const MovieId = <c:out value="${movieID}"/> ;
             xhr.open("POST", "./SeatingBookingServlet?movieID="+MovieId+"&dropDownValueDate="+dropdownValuedate+"&dropDownTimeValue="+dropdowntimevalue+"", true);
             xhr.send();
-        });
+
+            if(dropdownValuedate!="Select a Date"){
+                location.href='./SeatingBookingServlet'
+            }else{
+                alert("Select a Date");
+            }
+        }
     </script>
 </body>
 </html>

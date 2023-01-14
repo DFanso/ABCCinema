@@ -357,12 +357,19 @@
         });
         return true;
     }
-</script>
-<script>
     function TestsFunction() {
         var T = document.getElementById("paypalSection");
-        T.style.display = "block";  // <-- Set it to block
+        if(validateForm()===true){
+            T.style.display = "block";// <-- Set it to block
+        }
+        window.scrollTo(0,700,'slow');
     }
 </script>
+<%--<script>--%>
+<%--    function TestsFunction() {--%>
+<%--        var T = document.getElementById("paypalSection");--%>
+<%--        T.style.display = "block";  // <-- Set it to block--%>
+<%--    }--%>
+<%--</script>--%>
 </body>
 </html>
