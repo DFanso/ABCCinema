@@ -85,6 +85,20 @@
             left: 80%;
             width: 20px;
         }
+        .payment-sub-btn{
+            font-size: 20px;
+            padding:18px 50px;
+            border-radius:25px;
+            background-color:#3D0000;
+            color: white;
+            border: 2px solid white;
+
+        }
+        .payment-sub-btn:hover{
+            transition: 1s;
+            background-color:red;
+
+        }
         @media (max-width: 550px){
             .payment-content {
                 margin: 3rem 1.5rem;
@@ -130,13 +144,13 @@
                     </div>
                     <div class="form-row">
                         <div class="button-container">
-                            <input id="submit" type="submit"  value="SUBMIT" onclick="return validateForm();" >
+                            <input id="submit" type="submit" class="payment-sub-btn" value="SUBMIT" onclick="return validateForm(),TestsFunction()" >
                         </div>
                     </div>
             </div>
         </div>
         <hr class="section-divider"><br>
-        <div id="paypalSection">
+        <div id="paypalSection" style="display:none">
             <h1 class="payment-header">Payment Details</h1>
             <div class="poster-container">
                 <div class="poster-row">
@@ -342,6 +356,12 @@
             behavior: 'smooth'
         });
         return true;
+    }
+</script>
+<script>
+    function TestsFunction() {
+        var T = document.getElementById("paypalSection");
+        T.style.display = "block";  // <-- Set it to block
     }
 </script>
 </body>
