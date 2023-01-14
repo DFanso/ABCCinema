@@ -104,7 +104,7 @@
                                 <img src="<c:out value="${cardImageURL}"/>" alt="poster" style="width:360px; height: 474px">
                             </div>
                             <div class="posterInfo">
-                                <p><b><c:out value="${MovieName}"/></b><br><span>Price: Rs.1500 </span></p>
+                                <p><b><c:out value="${MovieName}"/></b><br><span>Price: $.4.00 </span></p>
                                 <button id="SeatButton" name="SeatButton" onclick="location.href='./SeatingBookingServlet'">Select Seats</button>
                             </div>
                         </div>

@@ -13,6 +13,21 @@
 <head>
     <title>Transaction page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+            rel="stylesheet"
+    />
     <style>
         body{
             background: radial-gradient(circle, rgba(61,0,0,1) 18%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 100%);
@@ -45,63 +60,69 @@
         <h3 class="text-center">List of Transaction</h3>
         <hr>
         <br>
-        <table class="table table-bordered">
-            <thead>
-            <tr style="color: white">
-                <th>ID</th>
-                <th>Customer Name</th>
-                <th>Customer Email</th>
-                <th>Customer Phone No</th>
-                <th>Customer NIC</th>
-                <th>PayPal Transaction ID</th>
-                <th>Movie Name</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Selected Seats</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!--   for (Todo todo: todos) {  -->
+        <div class="table-bordered text-nowrap">
+            <table class="table">
+                <thead>
+                <tr style="color: white">
+                    <th>ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Email</th>
+                    <th>Customer Phone No</th>
+                    <th>Customer NIC</th>
+                    <th>PayPal Transaction ID</th>
+                    <th>Movie Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Selected Seats</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--   for (Todo todo: todos) {  -->
 
-            <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
-                               user="dfanso@fanso"  password="123@NSBM"/>
+                <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                                   url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
+                                   user="dfanso@fanso"  password="123@NSBM"/>
 
-            <sql:query dataSource="${snapshot}" var="result">
-                SELECT TOP (1000) [transactionID]
-                ,[customerName]
-                ,[customerEmail]
-                ,[customerPhone]
-                ,[customerNIC]
-                ,[payPalTransactionID]
-                ,[movieName]
-                ,[date]
-                ,[time]
-                ,[selectedSeats]
-                FROM [dbo].[transactionHistory]
-            </sql:query>
+                <sql:query dataSource="${snapshot}" var="result">
+                    SELECT TOP (1000) [transactionID]
+                    ,[customerName]
+                    ,[customerEmail]
+                    ,[customerPhone]
+                    ,[customerNIC]
+                    ,[payPalTransactionID]
+                    ,[movieName]
+                    ,[date]
+                    ,[time]
+                    ,[selectedSeats]
+                    FROM [dbo].[transactionHistory]
+                </sql:query>
 
-            <c:forEach var="row" items="${result.rows}">
-            <tr style="color: white">
-                <td><c:out value="${row.transactionID}"/></td>
-                <td><c:out value="${row.customerName}"/></td>
-                <td><c:out value="${row.customerEmail}"/></td>
-                <td><c:out value="${row.customerPhone}"/></td>
-                <td><c:out value="${row.customerNIC}"/></td>
-                <td><c:out value="${row.payPalTransactionID}"/></td>
-                <td><c:out value="${row.movieName}"/></td>
-                <td><c:out value="${row.date}"/></td>
-                <td><c:out value="${row.time}"/></td>
-                <td><c:out value="${row.selectedSeats}"/></td>
-            </tr>
-            </c:forEach>
-            <!-- } -->
-            </tbody>
+                <c:forEach var="row" items="${result.rows}">
+                    <tr style="color: white">
+                        <td scope="row"><c:out value="${row.transactionID}"/></td>
+                        <td><c:out value="${row.customerName}"/></td>
+                        <td><c:out value="${row.customerEmail}"/></td>
+                        <td><c:out value="${row.customerPhone}"/></td>
+                        <td><c:out value="${row.customerNIC}"/></td>
+                        <td><c:out value="${row.payPalTransactionID}"/></td>
+                        <td><c:out value="${row.movieName}"/></td>
+                        <td><c:out value="${row.date}"/></td>
+                        <td><c:out value="${row.time}"/></td>
+                        <td><c:out value="${row.selectedSeats}"/></td>
+                    </tr>
+                </c:forEach>
+                <!-- } -->
+                </tbody>
 
-        </table>
+            </table>
+        </div>
     </div>
 </div>
-
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+></script>
 </body>
 
 </html>
