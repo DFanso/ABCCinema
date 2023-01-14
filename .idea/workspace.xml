@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/AdminDashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/controller/admin/AdminDashboardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Feedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/Dashboard-UI/Feedback.jsp" afterDir="false" />
     </list>
     <list id="02c06ed7-cd2a-4fe3-a265-f18d0352e803" name="Changes by cheth" comment="" />
     <list id="28767fa0-20f8-4da7-ad9e-b7956982b7c7" name="Changes by USER" comment="" />
@@ -350,6 +349,7 @@
       <workItem from="1673679214272" duration="2571000" />
       <workItem from="1673705832669" duration="10384000" />
       <workItem from="1673716641766" duration="3330000" />
+      <workItem from="1673724772159" duration="295000" />
     </task>
     <servers />
   </component>
