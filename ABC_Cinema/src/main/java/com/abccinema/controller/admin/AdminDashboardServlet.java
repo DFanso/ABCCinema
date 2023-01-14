@@ -16,7 +16,7 @@ public class AdminDashboardServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String homepage = "index.jsp";
+        String homepage = "dashboard.jsp";
         System.out.println("AdminDashboardServlet");
         RequestDispatcher dispatcher = request.getRequestDispatcher(homepage);
         dispatcher.forward(request,response);
