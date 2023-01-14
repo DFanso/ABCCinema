@@ -71,7 +71,7 @@
                 <td><c:out value="${row.id}"/></td>
                 <td><c:out value="${row.FirstName}"/></td>
                 <td><c:out value="${row.LastName}"/></td>
-                <td><c:out value="${row.Description}"/>n</td>
+                <td><c:out value="${row.Description}"/></td>
             </tr>
 
             </c:forEach>
