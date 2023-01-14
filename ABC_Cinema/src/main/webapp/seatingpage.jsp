@@ -171,7 +171,7 @@
                 You have selected <span id="count">0</span> seats for a price of $.<span
                   id="total">0</span>
                 </p>
-                <button id="payBtn" class="go-btn" onclick="seatFun2(),location.href='./config'">Pay</button>
+                <button id="payBtn" class="go-btn" onclick="seatFun2()">Pay</button>
             </div>
         
     </div>
@@ -299,14 +299,23 @@
 
                 }
             }
-            $.ajax({
-                type: "POST",
-                url: "./config",
-                data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB,date:date,time:time,movieName:movieName,totalPrice:totalPrice}, // Send the variable to the servlet
+            if(selectedSeat.join(",")!='') {
+                $.ajax({
+                    type: "POST",
+                    url: "./config",
+                    data: {
+                        selectedSeat: selectedSeat.join(","),
+                        dataFromDB: dataFromDB,
+                        date: date,
+                        time: time,
+                        movieName: movieName,
+                        totalPrice: totalPrice
+                    }, // Send the variable to the servlet
 
-                async: false
-            })
-        };
+                    async: false
+                })
+                location.href='./config'
+            } };
 
     </script>
 
