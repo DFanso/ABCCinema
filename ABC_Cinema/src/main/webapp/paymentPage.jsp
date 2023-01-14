@@ -247,6 +247,7 @@
                 let transactionId = data.orderID;
                 console.log(transactionId);
                 onTransactionComplete(transactionId);
+                location.href='payment-successful.jsp';
 
             });
         },
@@ -313,6 +314,7 @@
                 movieName:movieName, date:movieDate, time:time, transID:transID,
                 name:name, email:email, phone:telNo, NIC:NICNo},
             success: function() {
+
                 console.log("Data sent to Servlet!");
             },
             error: function() {
