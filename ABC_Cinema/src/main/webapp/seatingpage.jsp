@@ -168,7 +168,7 @@
         </div>  
             <div class="redgradientContainer">
                 <p class="text">
-                You have selected <span id="count">0</span> seats for a price of $<span
+                You have selected <span id="count">0</span> seats for a price of $.<span
                   id="total">0</span>
                 </p>
                 <button id="payBtn" class="go-btn" onclick="seatFun2(),location.href='./config'">Pay</button>
@@ -223,9 +223,30 @@
         </div>
     </section>
     <script src="navtoggle.js"></script>
-    <script src="script.js"></script>
+<%--    <script src="script.js"></script>--%>
 
+<script>
+    const seatcontainer = document.querySelector('.seatcontainer');
+    let selectedSeats = 0;
+    let totalPrice = 0;
 
+    seatcontainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
+            if (!e.target.classList.contains('selected')) {
+                e.target.classList.add('selected');
+                selectedSeats++;
+                totalPrice += 4.10;
+            } else {
+                e.target.classList.remove('selected');
+                selectedSeats--;
+                totalPrice -= 4.10;
+            }
+            document.querySelector('#count').innerText = selectedSeats;
+            document.querySelector('#total').innerText = totalPrice;
+        }
+    });
+
+</script>
 <script>
     function myFunction() {
         var x = document.getElementById("menuitems");
@@ -266,6 +287,7 @@
             let date='<c:out value="${date}"/>';
             let time='<c:out value="${time}"/>';
             let movieName='<c:out value="${MovieName}"/>';
+            let totalPrice = document.getElementById("total").innerHTML;
             for (let i = 1; i <= 46; i++) {
                 divClass = document.getElementById(i).className;
                 $(document).ready(function () {
@@ -280,7 +302,7 @@
             $.ajax({
                 type: "POST",
                 url: "./config",
-                data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB,date:date,time:time,movieName:movieName}, // Send the variable to the servlet
+                data: {selectedSeat:selectedSeat.join(","),dataFromDB:dataFromDB,date:date,time:time,movieName:movieName,totalPrice:totalPrice}, // Send the variable to the servlet
 
                 async: false
             })
@@ -289,16 +311,16 @@
     </script>
 
 <script>
-    let selectedSeats = [];
+    let selectedSeatsOccupied = [];
     let seat="seat occupied"
     window.onload = function bcd(){
         <% System.out.println("SeatsfromDB: " + request.getAttribute("bookedSeats")); %>
 
         let abc='<c:out value="${bookedSeats}"/>';
 
-        selectedSeats = abc.split(",");
+        selectedSeatsOccupied = abc.split(",");
         console.log(<c:out value="${bookedSeats}"/>);
-        for (const x of selectedSeats) {
+        for (const x of selectedSeatsOccupied) {
             $("#" + x).attr("class", seat);
         };
 

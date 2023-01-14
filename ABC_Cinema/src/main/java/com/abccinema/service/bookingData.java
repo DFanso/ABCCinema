@@ -23,8 +23,9 @@ public class bookingData {
     private String SelectedSeats;
     private String DataFromDB;
     private String CardImageURL;
+    private String TotalPrice;
 
-    public bookingData(HttpServletRequest request, HttpServletResponse response,String date,String time,String movieName, String selectedSeats, String dataFromDB, String cardImageURL)
+    public bookingData(HttpServletRequest request, HttpServletResponse response,String date,String time,String movieName, String selectedSeats, String dataFromDB, String cardImageURL, String totalPrice)
     {
 
 
@@ -36,6 +37,7 @@ public class bookingData {
         SelectedSeats = selectedSeats;
         DataFromDB = dataFromDB;
         CardImageURL = cardImageURL;
+        TotalPrice = totalPrice;
 
     }
 
@@ -73,6 +75,7 @@ public class bookingData {
         request.setAttribute("selectedSeats",SelectedSeats);
         request.setAttribute("dataFromDB",DataFromDB);
         request.setAttribute("movieCardImageURL",CardImageURL);
+        request.setAttribute("totalPrice",TotalPrice);
 
 
         String paymentPage = "paymentPage.jsp";

@@ -33,6 +33,7 @@ public class config extends HttpServlet {
     private String date;
     private String time;
     private String movieBgImageURL;
+    private String totalPrice;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,10 +43,13 @@ public class config extends HttpServlet {
         movieName= request.getParameter("movieName");
         date = request.getParameter("date");
         time = request.getParameter("time");
+        totalPrice = request.getParameter("totalPrice");
+
         System.out.println("help" + SelectedSeats);
         System.out.println(dataFromDB);
         System.out.println("date"+date);
         System.out.println("movieName"+movieName);
+        System.out.println("totalPrice: "+totalPrice);
 
 
 
@@ -62,7 +66,7 @@ public class config extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        bookingData bookingdata = new bookingData(req,resp, date, time, movieName,SelectedSeats,dataFromDB,movieBgImageURL);
+        bookingData bookingdata = new bookingData(req,resp, date, time, movieName,SelectedSeats,dataFromDB,movieBgImageURL,totalPrice);
         try {
             bookingdata.bookingData();
         } catch (
