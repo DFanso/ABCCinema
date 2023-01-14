@@ -235,11 +235,11 @@
             if (!e.target.classList.contains('selected')) {
                 e.target.classList.add('selected');
                 selectedSeats++;
-                totalPrice += 4.10;
+                totalPrice += 4;
             } else {
                 e.target.classList.remove('selected');
                 selectedSeats--;
-                totalPrice -= 4.10;
+                totalPrice -= 4;
             }
             document.querySelector('#count').innerText = selectedSeats;
             document.querySelector('#total').innerText = totalPrice;

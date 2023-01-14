@@ -31,7 +31,7 @@
         <div><a href="../index.jsp" class="navbar-brand">ABC<font color="red">CINEMA</font></a></div>
 
         <ul class="navbar-nav">
-            <li><a href="../dashboard.jsp" class="nav-link">Movies</a></li>
+            <li><a href="dashboard.jsp" class="nav-link">Movies</a></li>
             <li><a class="nav-link" href="DateNTIme.jsp">Date and Time</a></li>
             <li><a class="nav-link" href="Feedback.jsp">Feedback</a></li>
             <li><a class="nav-link" href="transaction.jsp">Transaction</a></li>
