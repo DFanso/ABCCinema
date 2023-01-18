@@ -41,7 +41,10 @@
 <body>
   <div style="display: flex; flex-direction: column; align-content: center; justify-content: center">
     <h1 style="padding-bottom: 50px; font-size: 36px">Payment Successful</h1>
+
     <center><i class="fa fa-check-circle" aria-hidden="true" style="color: #3C9721; font-size: 90px; padding-bottom: 50px"></i></center>
+    <center><h5 style="padding-bottom: 25px; font-size: 15px" >An email was sent along with your Ticket!</h5></center>
+
     <center><button onclick="location.href='index.jsp'">Return to Home</button></center>
   </div>
 </body>
