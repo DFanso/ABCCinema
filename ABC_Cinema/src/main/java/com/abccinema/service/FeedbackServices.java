@@ -89,10 +89,11 @@ public class FeedbackServices {
     }
     public void addToDB() throws ServletException, IOException, ClassNotFoundException, SQLException
 
-    {
+    {  String des = '"'+ Description+'"';
+        System.out.println(des);
         Connection connection = DBConnection.getConnection();
         Statement createStatement = connection.createStatement();
-        createStatement.executeUpdate("insert into feedbacks (FirstName,LastName,Description) VALUEs('"+FirstName+"','"+LastName+"','"+Description+"');");
+        createStatement.executeUpdate("insert into feedbacks (FirstName,LastName,Description) VALUEs('"+FirstName+"','"+LastName+"','"+des+"');");
         createStatement.close();
 
     }

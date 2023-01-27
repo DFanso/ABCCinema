@@ -61,7 +61,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar">
+<nav id="#hhhomePageSlider" class="navbar">
     <div class="navbar-container nav-container">
         <input type="checkbox" name="" id="">
         <div class="hamburger-lines">
@@ -489,89 +489,88 @@
     </section>
     <!-- upcoming movies -->
     
-        <div class="up-coming-movie-section">
-            <center><h1 class="upcomingHeading">Upcoming Movies</h1></center>
-            <section class="product" style="background: transparent;"> 
-                <h2 class="product-category">best selling</h2>
-                <button class="pre-btn"><img src="img/icon-next.png" alt=""></button>
-                <button class="nxt-btn"><img src="img/icon-next.png" alt=""></button>
-                <div class="product-container">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/avatarWOW.jpg" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Avatar: The Way Of Water</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/blackAdam.png" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Black Adam</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/drishyam.png" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Drishyam Movie</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/ends.png" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Ends Movie</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/ticketToParadisePoster.png" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Ticket To Paradise</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/pussInBoots.jpg" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">Puss in Boots: The Last Wish</h2>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="img/strangeWorld.jpg" class="product-thumb" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product-brand">The Strange World</h2>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+<%--        <div class="up-coming-movie-section">--%>
+<%--            <center><h1 class="upcomingHeading">Upcoming Movies</h1></center>--%>
+<%--            <section class="product" style="background: transparent;"> --%>
+<%--                <h2 class="product-category">best selling</h2>--%>
+<%--                <button class="pre-btn"><img src="img/icon-next.png" alt=""></button>--%>
+<%--                <button class="nxt-btn"><img src="img/icon-next.png" alt=""></button>--%>
+<%--                <div class="product-container">--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/avatarWOW.jpg" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Avatar: The Way Of Water</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/blackAdam.png" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Black Adam</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/drishyam.png" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Drishyam Movie</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/ends.png" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Ends Movie</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/ticketToParadisePoster.png" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Ticket To Paradise</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/pussInBoots.jpg" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">Puss in Boots: The Last Wish</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="product-card">--%>
+<%--                        <div class="product-image">--%>
+<%--                            <img src="img/strangeWorld.jpg" class="product-thumb" alt="">--%>
+<%--                        </div>--%>
+<%--                        <div class="product-info">--%>
+<%--                            <h2 class="product-brand">The Strange World</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </section>--%>
+<%--        </div>--%>
     <!-- Footer -->
     <section id="footer">
         <div class="fcontainer">
             <div class="frow row-color">
                 <div class="fcol-3">
                     <ul class="footer-ul first-sec-res">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="index.jsp">Home</a></li>
+                        <li><a href="about.jsp">About us</a></li>
+                        <li><a href="contact.jsp">Contact us</a></li>
                         <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="contact.jsp#cccontactFormID">Feedback</a></li>
                     </ul>
                 </div>
                 <div class="fcol-3">
                     <ul class="footer-ul second-sec-res">
-                        <li><a href="#">Now Showing</a></li>
-                        <li><a href="#">Upcoming movies</a></li>
+                        <li><a href="index.jsp#hhhomePageSlider">Now Showing</a></li>
                         <li><a href="#">Privacy policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
