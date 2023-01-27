@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ABC_Cinema:war" />
+      <artifact name="ABC_Cinema:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,10 +11,25 @@
   <component name="ChangeListManager">
     <list default="true" id="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/payment-successful.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/payment-successful.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/FeedbackServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/java/com/abccinema/service/FeedbackServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/BatMan.png" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/BatMan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/JW4BG.png" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/JW4BG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/blackAdamBG.png" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/blackAdamBG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/pussNbootBG.png" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/pussNbootBG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/skyfall.png" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/img/skyfall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <list id="02c06ed7-cd2a-4fe3-a265-f18d0352e803" name="Changes by cheth" comment="" />
-    <list id="28767fa0-20f8-4da7-ad9e-b7956982b7c7" name="Changes by USER" comment="" />
+    <list id="28767fa0-20f8-4da7-ad9e-b7956982b7c7" name="Changes by USER" comment="">
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/bookingPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/movie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/paymentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/paymentPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/seatingpage.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +45,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ABC_Cinema/src/main/webapp/index.jsp">
+      <ranges>
+        <range start1="63" end1="64" start2="63" end2="64" changelist="28767fa0-20f8-4da7-ad9e-b7956982b7c7" />
+        <range start1="491" end1="557" start2="491" end2="557" changelist="d4252c24-bc01-40c4-8f36-3ed0bc0cc39f" />
+        <range start1="563" end1="566" start2="563" end2="566" changelist="28767fa0-20f8-4da7-ad9e-b7956982b7c7" />
+        <range start1="567" end1="568" start2="567" end2="568" changelist="28767fa0-20f8-4da7-ad9e-b7956982b7c7" />
+        <range start1="572" end1="574" start2="572" end2="573" changelist="28767fa0-20f8-4da7-ad9e-b7956982b7c7" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -353,6 +379,9 @@
       <workItem from="1673771987865" duration="29000" />
       <workItem from="1673787697973" duration="137000" />
       <workItem from="1674049061854" duration="671000" />
+      <workItem from="1674049947862" duration="170000" />
+      <workItem from="1674056559489" duration="443000" />
+      <workItem from="1674808134628" duration="2535000" />
     </task>
     <servers />
   </component>

@@ -125,17 +125,16 @@
         <div class="frow row-color">
             <div class="fcol-3">
                 <ul class="footer-ul first-sec-res">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="about.jsp">About us</a></li>
+                    <li><a href="contact.jsp">Contact us</a></li>
                     <li><a href="#">FAQ's</a></li>
-                    <li><a href="#">Feedback</a></li>
+                    <li><a href="contact.jsp#cccontactFormID">Feedback</a></li>
                 </ul>
             </div>
             <div class="fcol-3">
                 <ul class="footer-ul second-sec-res">
-                    <li><a href="#">Now Showing</a></li>
-                    <li><a href="#">Upcoming movies</a></li>
+                    <li><a href="index.jsp#hhhomePageSlider">Now Showing</a></li>
                     <li><a href="#">Privacy policy</a></li>
                     <li><a href="#">Terms & Conditions</a></li>
                 </ul>
