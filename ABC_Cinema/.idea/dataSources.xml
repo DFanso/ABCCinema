@@ -19,5 +19,12 @@ D:/Git/ABC_Cinema/ABC_Cinema/src/main/resources/META-INF/persistence.xml</remark
       <jdbc-url>jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ABCCinema@20.2.80.190" uuid="5024b777-7d19-4487-910a-216150a1ab70">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

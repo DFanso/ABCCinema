@@ -15,7 +15,7 @@ public class DBConnection {
             try {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 connection = DriverManager.getConnection(
-                        "jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema", "dfanso@fanso", "123@NSBM");
+                        "jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false", "sa", "123@Fanso");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException e) {
