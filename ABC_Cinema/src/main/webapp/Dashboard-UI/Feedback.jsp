@@ -32,7 +32,7 @@
             <li><a href="../dashboard.jsp" class="nav-link">Movies</a></li>
             <li><a class="nav-link" href="DateNTIme.jsp">Date and Time</a></li>
             <li><a class="nav-link" href="Feedback.jsp">Feedback</a></li>
-            <li><a class="nav-link" href="#">Transaction</a></li>
+            <li><a class="nav-link" href="transaction.jsp">Transaction</a></li>
         </ul>
     </nav>
 </header>
@@ -56,8 +56,8 @@
             <!--   for (Todo todo: todos) {  -->
 
             <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
-                               user="dfanso@fanso"  password="123@NSBM"/>
+                               url="jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false"
+                               user="sa"  password="123@Fanso"/>
 
             <sql:query dataSource="${snapshot}" var="result">
                 SELECT TOP (1000) [id], [FirstName], [LastName], [Description] FROM [dbo].[feedbacks]

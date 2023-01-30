@@ -12,9 +12,9 @@
 
 
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"/>
-            <property name="javax.persistence.jdbc.user" value="dfanso@fanso"/>
-            <property name="javax.persistence.jdbc.password" value="123@NSBM"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="123@Fanso"/>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
 
         <property name="hibernate.transaction.platform" value="org.hibernate.service.platform.internal.JBossAppServerJtaPlatform" />
@@ -32,10 +32,10 @@
 
 
 
-            <property name="hibernate.connection.url" value="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"/>
+            <property name="hibernate.connection.url" value="jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false"/>
             <property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-            <property name="hibernate.connection.username" value="dfanso@fanso"/>
-            <property name="hibernate.connection.password" value="123@NSBM"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value="123@Fanso"/>
 
 
         </properties>
