@@ -64,8 +64,8 @@
             <!--   for (Todo todo: todos) {  -->
 
             <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
-                               user="dfanso@fanso"  password="123@NSBM"/>
+                               url="jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false"
+                               user="sa"  password="123@Fanso"/>
 
             <sql:query dataSource="${snapshot}" var="date">
                 SELECT TOP (1000) [id]
@@ -117,8 +117,8 @@
             <!--   for (Todo todo: todos) {  -->
 
             <sql:setDataSource var="snapshot" driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-                               url="jdbc:sqlserver://fanso.database.windows.net:1433;database=ABCCinema"
-                               user="dfanso@fanso"  password="123@NSBM"/>
+                               url="jdbc:sqlserver://20.2.80.190:1433;database=ABCCinema;encrypt=false"
+                               user="sa"  password="123@Fanso"/>
 
             <sql:query dataSource="${snapshot}" var="time">
                 SELECT TOP (1000) [id]
