@@ -76,7 +76,7 @@ public class FeedbackServices {
 
         } catch (MessagingException e) {
 
-            sucusessMessage = "Your Feedback Recorded failed to record";
+            sucusessMessage = "Your Feedback failed to record";
             request.setAttribute("message", sucusessMessage);
             String contactPage = "contact.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(contactPage);
